@@ -367,7 +367,7 @@ window.$docsify = {
 ## routerMode
 
 - type: `String`
-- default: `history`
+- default: `hash`
 
 ```js
 window.$docsify = {
