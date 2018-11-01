@@ -42,7 +42,7 @@ _\_navbar.md_
 
 如果导航内容过多，可以写成嵌套的列表，会被渲染成下拉列表的形式。
 
-_\_navbar.md_
+_navbar.md_
 
 ```markdown
 * 基础
