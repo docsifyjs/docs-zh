@@ -80,3 +80,9 @@ docsify 扩展了一些 Markdown 语法，可以让文档更易读。
 
 ![logo](https://docsify.js.org/_media/icon.svg ':size=50x100')
 ![logo](https://docsify.js.org/_media/icon.svg ':size=100')
+
+## 设置标题的 id 属性
+
+```md
+### 你好，世界！ :id=hello-world
+```
