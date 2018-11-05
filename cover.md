@@ -17,7 +17,7 @@ _index.html_
 <script src="//unpkg.com/docsify"></script>
 ```
 
-_\_coverpage.md_
+`_coverpage.md`
 
 ```markdown
 ![logo](_media/icon.svg)
@@ -40,7 +40,7 @@ _\_coverpage.md_
 
 目前的背景是随机生成的渐变色，我们自定义背景色或者背景图。在文档末尾用添加图片的 Markdown 语法设置背景。
 
-_\_coverpage.md_
+`_coverpage.md`
 
 ```markdown
 # docsify
