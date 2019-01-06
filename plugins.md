@@ -84,11 +84,9 @@
 
 ## Demo code with instant preview and jsfiddle integration
 
-With this plugin, sample code can be rendered on the page instantly, so that the readers can see the preview immediately.
-When readers expand the demo box, the source code and description are shown there. if they click the button `Try in Jsfiddle`,
-`jsfiddle.net` will be open with the code of this sample, which allow readers to revise the code and try on their own.
+使用这个插件，示例代码可以在页面上立刻渲染，这样就可以立刻看到效果。当示例框被展开时，源码和描述会被显示出来，如果他们点击`Try in Jsfiddle`这个按钮，将会在`jsfiddle.net`中打开一个包含这些示例代码的项目，这样就可以修改源码和测试了。
 
-[Vue](https://njleonzhang.github.io/docsify-demo-box-vue/) and [React](https://njleonzhang.github.io/docsify-demo-box-react/) are both supported.
+docsify同时支持[Vue](https://njleonzhang.github.io/docsify-demo-box-vue/)和[React](https://njleonzhang.github.io/docsify-demo-box-react/)版本的插件。
 
 ## 图片缩放 - Zoom image
 
@@ -108,9 +106,9 @@ Medium's 风格的图片缩放插件. 基于 [medium-zoom](https://github.com/fr
 
 在每一页上添加 `Edit on github` 按钮. 由第三方库提供, 查看 [document](https://github.com/njleonzhang/docsify-edit-on-github)
 
-## Copy to Clipboard
+## 复制到剪贴板
 
-Add a simple `Click to copy` button to all preformatted code blocks to effortlessly allow users to copy example code from your docs. Provided by [@jperasmus](https://github.com/jperasmus)
+在所有的代码块上添加一个简单的`Click to copy`按钮来允许用户从你的文档中轻易地复制代码。由[@jperasmus](https://github.com/jperasmus)提供。
 
 ```html
 <script src="//unpkg.com/docsify-copy-code"></script>
@@ -120,7 +118,7 @@ See [here](https://github.com/jperasmus/docsify-copy-code/blob/master/README.md)
 
 ## Disqus
 
-Disqus comments. https://disqus.com/
+Disqus评论系统支持。 https://disqus.com/
 
 ```html
 <script>
@@ -133,7 +131,7 @@ Disqus comments. https://disqus.com/
 
 ## Gitalk
 
-[Gitalk](https://github.com/gitalk/gitalk) is a modern comment component based on Github Issue and Preact.
+[Gitalk](https://github.com/gitalk/gitalk)，一个现代化的，基于Preact和Github Issue的评论系统。
 
 ```html
 <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
@@ -153,9 +151,9 @@ Disqus comments. https://disqus.com/
 </script>
 ```
 
-## Pagination
+## [Pagination](https://github.com/imyelo/docsify-pagination#readme)
 
-Pagination for docsify. By [@imyelo](https://github.com/imyelo)
+docsify的分页导航插件，由[@imyelo](https://github.com/imyelo)提供。
 
 ```html
 <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
