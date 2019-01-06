@@ -31,4 +31,4 @@ docsify 是一个动态生成文档网站的工具。不同于 GitBook、Hexo �
 
 ## 社区
 
-在[Gitter](https://gitter.im/docsifyjs/Lobby)上可以找到用户和开发者团队。
+在[Gitter](https://gitter.im/docsifyjs/Lobby)的社区里可以找到docsify的用户和开发者团队。
