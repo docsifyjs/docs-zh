@@ -58,13 +58,13 @@ server {
 
 ## Netlify
 
-1.  Login to your [Netlify](https://www.netlify.com/) account.
-2.  In the [dashboard](https://app.netlify.com/) page, click **New site from Git**.
-3.  Choose a repository where you store your docs, leave the **Build Command** area blank, fill in the Publish directory area with the directory of your `index.html`, for example it should be docs if you populated it at `docs/index.html`.
+1.  登陆你的[Netlify](https://www.netlify.com/)账号
+2.  在[dashboard](https://app.netlify.com/)页上点击 **New site from Git**.
+3.  选择那个你用来存储文档的git仓库，将 **Build Command** 留空, 将 **Publish directory** 区域填入你的`index.html`所在的目录，例如：填入`docs`(如果你的`index.html`的相对路径是`docs/index.html`的话).
 
 ### HTML5 router
 
-When using the HTML5 router, you need to set up redirect rules that redirect all requests to your `index.html`, it's pretty simple when you're using Netlify, populate a `\redirects` file in the docs directory and you're all set:
+当使用HTML5路由时，你需要设置一条将所有请求重定向到你的`index.html`的重定向规则。当你使用Netlify时这相当简单，在你的**Publish Directory**下创建一个`\redirects`文件，写进以下内容，然后——:tada:就好了：
 
 ```sh
 /*    /index.html   200

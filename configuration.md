@@ -177,9 +177,9 @@ window.$docsify = {
 
 ## logo
 
-- Type: `String`
+- 类型: `String`
 
-Website logo as it appears in the sidebar, you can resize by CSS.
+在侧边栏中出现的网站图标，你可以使用`CSS`来更改大小
 
 ```js
 window.$docsify = {
@@ -311,7 +311,7 @@ window.$docsify = {
 
 ## noEmoji
 
-- type: `Boolean`
+- 类型: `Boolean`
 
 禁用 emoji 解析。
 
@@ -323,7 +323,7 @@ window.$docsify = {
 
 ## mergeNavbar
 
-- type: `Boolean`
+- 类型: `Boolean`
 
 小屏设备下合并导航栏到侧边栏。
 
@@ -335,7 +335,7 @@ window.$docsify = {
 
 ## formatUpdated
 
-- type: `String|Function`
+- 类型: `String|Function`
 
 我们可以显示文档更新日期通过 **{docsify-updated<span>}</span>** 变量. 并且格式化日期通过 `formatUpdated`。参考 https://github.com/lukeed/tinydate#patterns
 
@@ -353,8 +353,8 @@ window.$docsify = {
 
 ## externalLinkTarget
 
-- type: `String`
-- default: `_blank`
+- 类型: `String`
+- 默认: `_blank`
 
 当前默认为 \_blank, 配置一下就可以：
 
@@ -366,8 +366,8 @@ window.$docsify = {
 
 ## routerMode
 
-- type: `String`
-- default: `hash`
+- 类型: `String`
+- 默认: `hash`
 
 ```js
 window.$docsify = {
@@ -389,7 +389,7 @@ window.$docsify = {
 
 ## requestHeaders
 
-- type: `Object`
+- 类型: `Object`
 
 设置请求资源的请求头。
 
@@ -403,7 +403,7 @@ window.$docsify = {
 
 ## ext
 
-- type: `String`
+- 类型: `String`
 
 资源的文件扩展名。
 
@@ -415,15 +415,15 @@ window.$docsify = {
 
 ## fallbackLanguages
 
-- type: `Array<string>`
+- 类型: `Array<string>`
 
-List of languages that will fallback to the default language when a page is request and didn't exists for the given local.
+一个语言列表。在浏览这个列表中的语言的翻译文档时都会在请求到一个对应语言的翻译文档不存在时显示默认语言的同名文档
 
 Example:
 
-- try to fetch the page of `/de/overview`. If this page exists, it'll be displayed
-- then try to fetch the default page `/overview` (depending on the default language). If this page exists, it'll be displayed
-- then display 404 page.
+- 尝试访问`/de/overview`，如果存在则显示
+- 如果不存在则尝试`/overview`（取决于默认语言），如果存在即显示 
+- 如果也不存在，显示404页面
 
 ```js
 window.$docsify = {
@@ -433,9 +433,9 @@ window.$docsify = {
 
 ## notFoundPage
 
-- type: `Boolean` | `String` | `Object`
+- 类型: `Boolean` | `String` | `Object`
 
-Load the `_404.md` file:
+在找不到指定页面时加载`_404.md`:
 
 ```js
 window.$docsify = {
@@ -443,7 +443,7 @@ window.$docsify = {
 };
 ```
 
-Load the customised path of the 404 page:
+加载自定义404页面:
 
 ```js
 window.$docsify = {
@@ -451,7 +451,7 @@ window.$docsify = {
 };
 ```
 
-Load the right 404 page according to the localisation:
+加载正确的本地化过的404页面:
 
 ```js
 window.$docsify = {
@@ -462,4 +462,4 @@ window.$docsify = {
 };
 ```
 
-> Note: The options with fallbackLanguages didn't work with the `notFoundPage` options.
+> 注意: 配置过`fallbackLanguages`这个选项的页面与这个选项`notFoundPage`冲突。

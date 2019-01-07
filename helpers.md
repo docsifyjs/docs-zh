@@ -71,7 +71,7 @@ docsify 扩展了一些 Markdown 语法，可以让文档更易读。
   - [ ] bim
   - [ ] lim
 
-## Image resizing
+## 图片缩放
 
 ```md
 ![logo](https://docsify.js.org/_media/icon.svg ':size=50x100')
