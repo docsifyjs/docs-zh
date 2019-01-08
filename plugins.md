@@ -114,7 +114,7 @@ Medium's 风格的图片缩放插件. 基于 [medium-zoom](https://github.com/fr
 <script src="//unpkg.com/docsify-copy-code"></script>
 ```
 
-See [here](https://github.com/jperasmus/docsify-copy-code/blob/master/README.md) for more details.
+从[这里](https://github.com/jperasmus/docsify-copy-code#readme)获取更多信息。
 
 ## Disqus
 
@@ -151,7 +151,7 @@ Disqus评论系统支持。 https://disqus.com/
 </script>
 ```
 
-## [Pagination](https://github.com/imyelo/docsify-pagination#readme)
+## Pagination
 
 docsify的分页导航插件，由[@imyelo](https://github.com/imyelo)提供。
 
@@ -159,6 +159,8 @@ docsify的分页导航插件，由[@imyelo](https://github.com/imyelo)提供。
 <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
 <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
 ```
+
+从[这里](https://github.com/imyelo/docsify-pagination#readme)获取更多信息。
 
 ## Code Fund
 
