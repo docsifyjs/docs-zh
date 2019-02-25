@@ -28,6 +28,7 @@
   <a data-theme="buble">buble.css</a>
   <a data-theme="dark">dark.css</a>
   <a data-theme="pure">pure.css</a>
+  <a data-theme="dolphin">dolphin.css</a>
 </div>
 
 
