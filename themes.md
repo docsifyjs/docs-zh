@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="//unpkg.com/docsify/themes/buble.css">
   <link rel="stylesheet" href="//unpkg.com/docsify/themes/dark.css">
   <link rel="stylesheet" href="//unpkg.com/docsify/themes/pure.css">
+  <link rel="stylesheet" href="//unpkg.com/docsify/themes/dolphin.css">
 ```
 
 !> CSS 的压缩文件位于 `/lib/themes/`
@@ -16,6 +17,7 @@
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/buble.css">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/dark.css">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/pure.css">
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/dolphin.css">
 ```
 
 如果你有其他想法或者想开发别的主题，欢迎提 [PR](https://github.com/docsifyjs/docsify/pulls)。
@@ -28,6 +30,7 @@
   <a data-theme="buble">buble.css</a>
   <a data-theme="dark">dark.css</a>
   <a data-theme="pure">pure.css</a>
+  <a data-theme="dolphin">dolphin.css</a>
 </div>
 
 
