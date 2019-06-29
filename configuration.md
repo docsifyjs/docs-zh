@@ -337,7 +337,7 @@ window.$docsify = {
 
 - 类型: `String|Function`
 
-我们可以显示文档更新日期通过 **{docsify-updated<span>}</span>** 变量. 并且格式化日期通过 `formatUpdated`。参考 https://github.com/lukeed/tinydate#patterns
+我们可以通过 **{docsify-updated<span>}</span>** 变量显示文档更新日期. 并且通过 `formatUpdated`配置日期格式。参考 https://github.com/lukeed/tinydate#patterns
 
 ```js
 window.$docsify = {
@@ -417,7 +417,7 @@ window.$docsify = {
 
 - 类型: `Array<string>`
 
-一个语言列表。在浏览这个列表中的语言的翻译文档时都会在请求到一个对应语言的翻译文档不存在时显示默认语言的同名文档
+一个语言列表。在浏览这个列表中的语言的翻译文档时都会在请求到一个对应语言的翻译文档，不存在时显示默认语言的同名文档
 
 Example:
 
