@@ -12,6 +12,10 @@ window.$docsify = {
       // 初始化时调用，只调用一次，没有参数。
     })
 
+    hook.mounted(function() {
+      // 初始化完成后调用，只调用一次，没有参数。
+    })
+
     hook.beforeEach(function(content) {
       // 每次开始解析 Markdown 内容时调用
       // ...
@@ -30,12 +34,8 @@ window.$docsify = {
       // ...
     })
 
-    hook.mounted(function() {
-      // 初始化完成后调用 ，只调用一次，没有参数。
-    })
-
     hook.ready(function() {
-      // 初始化并第一次加完成数据后调用，没有参数。
+      // 初始化并第一次加载完成数据后调用，没有参数。
     })
   }
  ]
