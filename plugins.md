@@ -162,6 +162,32 @@ docsify的分页导航插件，由[@imyelo](https://github.com/imyelo)提供。
 
 从[这里](https://github.com/imyelo/docsify-pagination#readme)获取更多信息。
 
+## 字数统计
+
+这是一款为docsify提供文字统计的插件. [@827652549](https://github.com/827652549)提供
+
+它提供了统计中文汉字和英文单词的功能，并且排除了一些markdown语法的特殊字符例如*、-等
+
+**Add JS**
+```html
+<script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+```
+
+**Add settings**
+```js
+window.$docsify = {
+  count:{
+    countable:true,
+    fontsize:'0.9em',
+    color:'rgb(90,90,90)',
+    language:'chinese'
+  }
+}
+```
+
+check [document](https://github.com/827652549/docsify-count)
+
+
 ## Code Fund
 
 帮你快速接入[Code Fund](https://codesponsor.io/)的[插件](https://github.com/njleonzhang/docsify-plugin-codefund), 由[@njleonzhang](https://github.com/njleonzhang)提供。
