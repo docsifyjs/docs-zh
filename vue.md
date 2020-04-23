@@ -8,8 +8,12 @@
 在 `index.html` 里引入 Vue。
 
 ```html
-<script src="//unpkg.com/vue"></script>
-<script src="//unpkg.com/docsify"></script>
+<script src="//cdn.jsdelivr.net/npm/vue"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify"></script>
+
+<!-- 或者使用压缩版文件  -->
+<script src="//cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 ```
 
 接着就可以愉快地在 Markdown 里写 Vue 了。默认会执行 `new Vue({ el: '#main' })` 创建示例。
@@ -25,12 +29,12 @@
 <ul>
   <li v-for="i in 10">{{ i }}</li>
 </ul>
-``
+```
 
 <ul>
   <li v-for="i in 10">{{ i }}</li>
 </ul>
-```
+````
 
 当然你也可以手动初始化 Vue，这样你可以自定义一些配置。
 
@@ -39,7 +43,7 @@
 ```markdown
 # Vue 的基本用法
 
-<div>hello {{ msg }}</div>
+<div id="main">hello {{ msg }}</div>
 
 <script>
   new Vue({
@@ -58,18 +62,18 @@
 *index.html*
 
 ```html
-<!-- inject css file -->
-<link rel="stylesheet" href="//unpkg.com/vuep/dist/vuep.css">
+<!-- 注入 CSS 文件 -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/vuep/dist/vuep.css">
 
-<!-- inject javascript file -->
-<script src="//unpkg.com/vue"></script>
-<script src="//unpkg.com/vuep"></script>
-<script src="//unpkg.com/docsify"></script>
+<!-- 注入 JavaScript 文件 -->
+<script src="//cdn.jsdelivr.net/npm/vue"></script>
+<script src="//cdn.jsdelivr.net/npm/vuep"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify"></script>
 
-<!-- or use the compressed files -->
-<script src="//unpkg.com/vue/dist/vue.min.js"></script>
-<script src="//unpkg.com/vuep/dist/vuep.min.js"></script>
-<script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+<!-- 或注入压缩版文件 -->
+<script src="//cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vuep/dist/vuep.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 ```
 
 *README.md*
@@ -93,20 +97,5 @@
 </script>
 ```
 
-<vuep template="#example"></vuep>
-
-<script v-pre type="text/x-template" id="example">
-  <template>
-    <div>Hello, {{ name }}!</div>
-  </template>
-
-  <script>
-    module.exports = {
-      data: function () {
-        return { name: 'Vue' }
-      }
-    }
-  </script>
-</script>
 
 ?> 具体效果参考 [Vuep 文档](https://qingwei-li.github.io/vuep/)。

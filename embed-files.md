@@ -1,6 +1,7 @@
 # 文件嵌入
 
-docsify 4.6 开始支持嵌入任何类型的文件到文档里。你可以将文件当成 `iframe`、`video`、`audio` 或者 `code block`，如果是 Markdown 文件，甚至可以直接插入到当前文档里。
+docsify 4.6 开始支持嵌入任何类型的文件到文档里。
+你可以将文件当成 `iframe`、`video`、`audio` 或者 `code block`，如果是 Markdown 文件，甚至可以直接插入到当前文档里。
 
 这是一个嵌入 Markdown 文件的例子。
 
@@ -27,14 +28,27 @@ docsify 4.6 开始支持嵌入任何类型的文件到文档里。你可以将�
 * **code** other file extension
 
 当然，你也可以强制设置嵌入类型。例如你想将 Markdown 文件当作一个 `code block` 嵌入。
-
 ```markdown
 [filename](../_media/example.md ':include :type=code')
 ```
 
-你将得到
+你会看到：
 
 [filename](../_media/example.md ':include :type=code')
+
+## 嵌入代码片段
+有时候你并不想嵌入整个文件，可能你只想要其中的几行代码，但你还要在 CI 系统中编译和测试该文件。
+
+```markdown
+[filename](../_media/example.js ':include :type=code :fragment=demo')
+```
+
+In your code file you need to surround the fragment between `/// [demo]` lines (before and after the fragment).  
+Alternatively you can use `### [demo]`.
+
+Example:
+
+[filename](../_media/example.js ':include :type=code :fragment=demo')
 
 ## 标签属性
 

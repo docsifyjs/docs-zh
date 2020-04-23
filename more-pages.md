@@ -5,12 +5,13 @@
 假设你的目录结构如下：
 
 ```text
--| docs/
-  -| README.md
-  -| guide.md
-  -| zh-cn/
-    -| README.md
-    -| guide.md
+.
+└── docs
+    ├── README.md
+    ├── guide.md
+    └── zh-cn
+        ├── README.md
+        └── guide.md
 ```
 
 那么对应的访问页面将是
@@ -29,22 +30,32 @@ docs/zh-cn/guide.md   => http://domain.com/zh-cn/guide
 首先配置 `loadSidebar` 选项，具体配置规则见[配置项#loadSidebar](zh-cn/configuration.md#loadsidebar)。
 
 ```html
+<!-- index.html -->
+
 <script>
   window.$docsify = {
     loadSidebar: true
   }
 </script>
-<script src="//unpkg.com/docsify"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 ```
 
 接着创建 `_sidebar.md` 文件，内容如下
 
 ```markdown
+<!-- docs/_sidebar.md -->
+
 * [首页](zh-cn/)
 * [指南](zh-cn/guide)
 ```
 
-!> 需要在文档根目录创建 `.nojekyll` 命名的空文件，阻止 GitHub Pages 忽略命名是下划线开头的文件。
+需要在 `./docs` 目录创建 `.nojekyll` 命名的空文件，阻止 GitHub Pages 忽略命名是下划线开头的文件。
+
+## 嵌套的侧边栏
+
+你也许想要浏览到一个目录时，就显示这个目录自己的侧边栏， 你可以通过添加 `_sidebar.md` 到每个文件夹来办到这一点。
+
+
 
 `_sidebar.md` 的加载逻辑是从每层目录下获取文件，如果当前目录不存在该文件则回退到上一级目录。例如当前路径为 `/zh-cn/more-pages` 则从 `/zh-cn/_sidebar.md` 获取文件，如果不存在则从 `/_sidebar.md` 获取。
 
@@ -61,18 +72,32 @@ docs/zh-cn/guide.md   => http://domain.com/zh-cn/guide
 </script>
 ```
 
+!> 你可以在一个子目录中创建一个 `README.md` 文件来作为路由的默认网页。
+
+## 用侧边栏中选定的条目名称作为页面标题
+
+一个页面的 `title` 标签是由 _selected_ sidebar 属性生成的。为了更好的 SEO ，你可以在文件名后面指定页面标题。
+
+```markdown
+<!-- docs/_sidebar.md -->
+* [Home](/)
+* [Guide](guide.md "The greatest guide in the world")
+```
+
 ## 显示目录
 
 自定义侧边栏同时也可以开启目录功能。设置 `subMaxLevel` 配置项，具体介绍见 [配置项#sub-max-level](zh-cn/configuration#sub-max-level)。
 
 ```html
+<!-- index.html -->
+
 <script>
   window.$docsify = {
     loadSidebar: true,
     subMaxLevel: 2
   }
 </script>
-<script src="//unpkg.com/docsify"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 ```
 
 ## 忽略副标题
@@ -90,9 +115,9 @@ docs/zh-cn/guide.md   => http://domain.com/zh-cn/guide
 要忽略特定页面上的所有标题，你可以在页面的第一个标题上使用 `{docsify-ignore-all}` 。
 
 ```markdown
-# Getting Started {docsify-ignore-all}
+# 入门 {docsify-ignore-all}
 
-## Header
+## 标题
 
 该标题不会出现在侧边栏的目录中。
 ```
