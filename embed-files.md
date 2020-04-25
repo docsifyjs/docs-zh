@@ -1,7 +1,6 @@
 # 文件嵌入
 
-docsify 4.6 开始支持嵌入任何类型的文件到文档里。
-你可以将文件当成 `iframe`、`video`、`audio` 或者 `code block`，如果是 Markdown 文件，甚至可以直接插入到当前文档里。
+docsify 4.6 开始支持嵌入任何类型的文件到文档里。你可以将文件当成 `iframe`、`video`、`audio` 或者 `code block`，如果是 Markdown 文件，甚至可以直接插入到当前文档里。
 
 这是一个嵌入 Markdown 文件的例子。
 
