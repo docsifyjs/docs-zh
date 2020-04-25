@@ -114,8 +114,6 @@ docsify 扩展了一些 Markdown 语法，可以让文档更易读。
 
 ## html 标签中的 Markdown
 
-You need to insert a space between the html and markdown content.
-This is useful for rendering markdown content in the details element.
 你需要在 html 和 Markdown 内容中插入空行。
 当你需要在 details 元素中渲染 Markdown 时很有用。
 
