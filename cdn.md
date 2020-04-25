@@ -1,6 +1,6 @@
 # CDN
 
-推荐使用 [jsDelivr](//cdn.jsdelivr.net) —— 能及时获取到最新版。
+推荐使用 [jsDelivr](//cdn.jsdelivr.net)，能及时获取到最新版。你也可以在[cdn.jsdelivr.net/npm/docsify/](cdn.jsdelivr.net/npm/docsify/)中浏览npm包的源代码。
 
 ## 获取最新版本
 
@@ -32,8 +32,7 @@
 
 ## 压缩版
 
-CSS 的压缩文件位于 `/lib/themes/` 目录下，
-JS 的压缩文件是原有文件路径的基础上加 `.min`后缀。
+CSS 的压缩文件位于 `/lib/themes/` 目录下，JS 的压缩文件是原有文件路径的基础上加 `.min` 后缀。
 
 ```html
 <!-- 引入 css -->
