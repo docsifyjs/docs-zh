@@ -20,7 +20,7 @@ window.$docsify = {
 
       hook.afterEach(function(html, next) {
         // 解析成 html 后调用。
-	// beforeEach 和 afterEach 支持处理异步逻辑
+        // beforeEach 和 afterEach 支持处理异步逻辑
         // ...
         // 异步处理完成后调用 next(html) 返回结果
         next(html);

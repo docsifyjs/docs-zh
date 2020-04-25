@@ -53,8 +53,7 @@ docs/zh-cn/guide.md   => http://domain.com/zh-cn/guide
 
 ## 嵌套的侧边栏
 
-你也许想要浏览到一个目录时，就显示这个目录自己的侧边栏， 你可以通过添加 `_sidebar.md` 到每个文件夹来办到这一点。
-
+你可能想要浏览到一个目录时，只显示这个目录自己的侧边栏，这可以通过在每个文件夹中添加一个 `_sidebar.md` 文件来实现。
 
 
 `_sidebar.md` 的加载逻辑是从每层目录下获取文件，如果当前目录不存在该文件则回退到上一级目录。例如当前路径为 `/zh-cn/more-pages` 则从 `/zh-cn/_sidebar.md` 获取文件，如果不存在则从 `/_sidebar.md` 获取。
@@ -76,7 +75,7 @@ docs/zh-cn/guide.md   => http://domain.com/zh-cn/guide
 
 ## 用侧边栏中选定的条目名称作为页面标题
 
-一个页面的 `title` 标签是由 _selected_ sidebar 属性生成的。为了更好的 SEO ，你可以在文件名后面指定页面标题。
+一个页面的 `title` 标签是由侧边栏中选中条目的名称所生成的。为了更好的 SEO ，你可以在文件名后面指定页面标题。
 
 ```markdown
 <!-- docs/_sidebar.md -->

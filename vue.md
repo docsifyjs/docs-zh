@@ -62,15 +62,15 @@
 *index.html*
 
 ```html
-<!-- 注入 CSS 文件 -->
+<!-- 引入 CSS 文件 -->
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/vuep/dist/vuep.css">
 
-<!-- 注入 JavaScript 文件 -->
+<!-- 引入 JavaScript 文件 -->
 <script src="//cdn.jsdelivr.net/npm/vue"></script>
 <script src="//cdn.jsdelivr.net/npm/vuep"></script>
 <script src="//cdn.jsdelivr.net/npm/docsify"></script>
 
-<!-- 或注入压缩版文件 -->
+<!-- 或引入压缩版文件 -->
 <script src="//cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/vuep/dist/vuep.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
