@@ -14,8 +14,7 @@ GitHub Pages 支持从三个地方读取文件
 
 ![github pages](../_images/deploy-github-pages.png)
 
-!> 可以将文档放在根目录下，然后选择 **master 分支** 作为文档目录。
-你也许需要在部署位置下放一个 `.nojekyll` 文件（比如 `/docs` 目录或者 gh-pages 分支）
+!> 可以将文档放在根目录下，然后选择 **master 分支** 作为文档目录。你需要在部署位置下放一个 `.nojekyll` 文件（比如 `/docs` 目录或者 gh-pages 分支）
 
 ## GitLab Pages
 
@@ -36,7 +35,9 @@ pages:
   only:
   - master
 ```
+
 !> 你可以用 `- cp -r docs/. public` 替换脚本, 如果 `./docs` 是你的 docsify 子文件夹。
+
 ## Firebase 主机
 
 !> 你需要先使用谷歌账号登陆 [Firebase 控制台](https://console.firebase.google.com) ，然后使用 `npm i -g firebase-tools` 命令安装 Firebase CLI 。
@@ -125,7 +126,6 @@ frontend:
       - '**/*'
   cache:
     paths: []
-
 ```
 
 6. 依次添加如下跳转规则。注意第二条的 PNG 是图片格式，如果你要使用其它图片格式，可以相应修改。

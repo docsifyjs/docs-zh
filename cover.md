@@ -26,7 +26,7 @@ _index.html_
 
 # docsify <small>3.5</small>
 
-> 一个魔性的文档网站生成器。
+> 一个神奇的文档网站生成器。
 
 - 简单、轻便 (压缩后 ~21kB)
 - 无需生成 html 文件
@@ -35,8 +35,6 @@ _index.html_
 [GitHub](https://github.com/docsifyjs/docsify/)
 [Get Started](#docsify)
 ```
-
-!> 一份文档只会在根目录下加载封面，其他页面或者二级目录下都不会加载。
 
 ## 自定义背景
 

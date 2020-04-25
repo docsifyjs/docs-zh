@@ -1,6 +1,6 @@
 # 配置项
 
-你可以 `window.$docsify` 里配置。
+你可以配置在 `window.$docsify` 里。
 
 ```html
 <script>
@@ -168,9 +168,9 @@ window.$docsify = {
 - 类型: `Boolean`
 - 默认值: `false`
 
-若为 **true** ，链接会使用相对路径。
+如果该选项设为 **true** ，那么链接会使用相对路径。
 
-比方说，像这样的目录结构：
+例如，像这样的目录结构：
 
 ```text
 .
@@ -184,7 +184,7 @@ window.$docsify = {
             └── example.md
 ```
 
-如果 **启用** 了相对路径，当前链接是 `http://domain.com/zh-cn/README` ，给出的链接将解析为：
+如果 **启用** 了相对路径，当前链接是 `http://domain.com/zh-cn/README` ，对应的链接会解析为：
 
 ```text
 guide.md              => http://domain.com/zh-cn/guide
@@ -400,8 +400,7 @@ window.$docsify = {
 
 - 类型: `String|Function`
 
-我们可以通过 **{docsify-updated<span>}</span>** 变量显示文档更新日期. 并且通过 `formatUpdated`配置日期格式。
-参考 https://github.com/lukeed/tinydate#patterns
+我们可以通过 **{docsify-updated<span>}</span>** 变量显示文档更新日期. 并且通过 `formatUpdated`配置日期格式。参考 [https://github.com/lukeed/tinydate#patterns](https://github.com/lukeed/tinydate#patterns)
 
 ```js
 window.$docsify = {
@@ -420,7 +419,7 @@ window.$docsify = {
 - 类型: `String`
 - 默认: `_blank`
 
-外部链接的打开方式。默认为 `'_blank'` （在新窗口或者标签页中打开）
+外部链接的打开方式。默认为 `_blank` （在新窗口或者标签页中打开）
 
 ```js
 window.$docsify = {
@@ -433,7 +432,7 @@ window.$docsify = {
 - 类型:`String`
 - 默认值:`_blank`
 
-右上角链接的打开方式。默认为 `'_blank'` （在新窗口或者标签页中打开）
+右上角链接的打开方式。默认为 `_blank` （在新窗口或者标签页中打开）
 
 ```js
 window.$docsify = {
@@ -446,7 +445,7 @@ window.$docsify = {
 - 类型: `String`
 - 默认值: `noopener`
 
-默认为 `'noopener'` (no opener) 可以防止新打开的外部页面（当 [externalLinkTarget](#externallinktarget) 设为 `'_blank'` 时）能够控制我们的页面，没有设为 `'_blank'` 的话就不需要设置这个选项了。
+默认为 `noopener` (no opener) 可以防止新打开的外部页面（当 [externalLinkTarget](#externallinktarget) 设为 `_blank` 时）能够控制我们的页面，没有设为 `_blank` 的话就不需要设置这个选项了。
 
 ```js
 window.$docsify = {
@@ -481,7 +480,7 @@ window.$docsify = {
 
 - 类型: `Boolean`
 
-当访问主页时，只加载封面。
+只在访问主页时加载封面。
 
 ```js
 window.$docsify = {
@@ -503,7 +502,7 @@ window.$docsify = {
 };
 ```
 
-比如设置缓存
+例如设置缓存
 
 ```js
 window.$docsify = {
@@ -581,7 +580,7 @@ window.$docsify = {
 - 类型: `Number`
 - 默认值: `0`
 
-让你的内容页在滚动到指定的锚点时，距离页面顶部有一定空间。当你使用 _固顶_ 布局时这个选项很有用，可以让你的锚点对齐标题栏。
+让你的内容页在滚动到指定的锚点时，距离页面顶部有一定空间。当你使用 `固定页头` 布局时这个选项很有用，可以让你的锚点对齐标题栏。
 
 ```js
 window.$docsify = {

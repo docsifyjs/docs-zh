@@ -33,8 +33,6 @@
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 ```
 
-_\_navbar.md_
-
 ```markdown
 <!-- _navbar.md -->
 
@@ -91,7 +89,7 @@ _\_navbar.md_
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
 ```
 
-比方说，你可以在你的导航栏 Markdown 文件中使用旗帜表情：
+例如，你可以在自定义导航栏 Markdown 文件中使用旗帜表情：
 
 ```markdown
 <!-- _navbar.md -->
