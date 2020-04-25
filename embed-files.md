@@ -42,8 +42,6 @@ docsify 4.6 开始支持嵌入任何类型的文件到文档里。你可以将�
 [filename](../_media/example.js ':include :type=code :fragment=demo')
 ```
 
-In your code file you need to surround the fragment between `/// [demo]` lines (before and after the fragment).  
-Alternatively you can use `### [demo]`.
 在你的代码文件中，你需要用斜线 `/// [demo]` 包裹该片段（片段的前后都要有）。
 你也可以使用 `### [demo]` 来包裹。
 
