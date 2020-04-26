@@ -55,7 +55,7 @@ pages:
 }
 ```
 
-完成后，执行 `docsify init ./site` 构建起始模板（在执行 `firebase init` 指令时用你的部署目录替换 site - 默认是 public ）。 添加/编辑文档，然后在项目根目录执行 `firebase deploy` 。
+完成后，执行 `docsify init ./site` 构建起始模板（将`site`替换为你在运行`firebase init`时确定的部署目录 - 默认情况下为`public`）。 添加/编辑文档，然后在项目根目录执行 `firebase deploy`。
 
 ## VPS
 
