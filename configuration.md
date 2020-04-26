@@ -7,8 +7,8 @@
   window.$docsify = {
     repo: 'docsifyjs/docsify',
     maxLevel: 3,
-    coverpage: true
-  }
+    coverpage: true,
+  };
 </script>
 ```
 
@@ -21,7 +21,7 @@ docsify 初始化的挂载元素，可以是一个 CSS 选择器，默认为 `#a
 
 ```js
 window.$docsify = {
-  el: '#app'
+  el: '#app',
 };
 ```
 
@@ -36,7 +36,7 @@ window.$docsify = {
 window.$docsify = {
   repo: 'docsifyjs/docsify',
   // or
-  repo: 'https://github.com/docsifyjs/docsify/'
+  repo: 'https://github.com/docsifyjs/docsify/',
 };
 ```
 
@@ -49,7 +49,7 @@ window.$docsify = {
 
 ```js
 window.$docsify = {
-  maxLevel: 4
+  maxLevel: 4,
 };
 ```
 
@@ -66,7 +66,7 @@ window.$docsify = {
   loadNavbar: true,
 
   // 加载 nav.md
-  loadNavbar: 'nav.md'
+  loadNavbar: 'nav.md',
 };
 ```
 
@@ -83,7 +83,20 @@ window.$docsify = {
   loadSidebar: true,
 
   // 加载 summary.md
-  loadSidebar: 'summary.md'
+  loadSidebar: 'summary.md',
+};
+```
+
+## hideSidebar
+
+- 类型 : `Boolean`
+- 默认值: `true`
+
+这个选项用来完全隐藏侧边栏，侧边栏的任何内容都不会被渲染。
+
+```js
+window.$docsify = {
+  hideSidebar: true,
 };
 ```
 
@@ -96,7 +109,7 @@ window.$docsify = {
 
 ```js
 window.$docsify = {
-  subMaxLevel: 2
+  subMaxLevel: 2,
 };
 ```
 
@@ -109,7 +122,7 @@ window.$docsify = {
 
 ```js
 window.$docsify = {
-  auto2top: true
+  auto2top: true,
 };
 ```
 
@@ -127,7 +140,7 @@ window.$docsify = {
 
   // 文档和仓库根目录下的 README.md 内容一致
   homepage:
-    'https://raw.githubusercontent.com/docsifyjs/docsify/master/README.md'
+    'https://raw.githubusercontent.com/docsifyjs/docsify/master/README.md',
 };
 ```
 
@@ -144,9 +157,49 @@ window.$docsify = {
   // 直接渲染其他域名的文档
   basePath: 'https://docsify.js.org/',
 
-  // 甚至直接渲染其他仓库 readme
+  // 甚至直接渲染其他仓库
   basePath:
-    'https://raw.githubusercontent.com/ryanmcdermott/clean-code-javascript/master/'
+    'https://raw.githubusercontent.com/ryanmcdermott/clean-code-javascript/master/',
+};
+```
+
+## relativePath
+
+- 类型: `Boolean`
+- 默认值: `false`
+
+如果该选项设为 **true** ，那么链接会使用相对路径。
+
+例如，像这样的目录结构：
+
+```text
+.
+└── docs
+    ├── README.md
+    ├── guide.md
+    └── zh-cn
+        ├── README.md
+        ├── guide.md
+        └── config
+            └── example.md
+```
+
+如果 **启用** 了相对路径，当前链接是 `http://domain.com/zh-cn/README` ，对应的链接会解析为：
+
+```text
+guide.md              => http://domain.com/zh-cn/guide
+config/example.md     => http://domain.com/zh-cn/config/example
+../README.md          => http://domain.com/README
+/README.md            => http://domain.com/README
+```
+
+```js
+window.$docsify = {
+  // 启用相对路径
+  relativePath: true,
+
+  // 禁用相对路径（默认值）
+  relativePath: false,
 };
 ```
 
@@ -164,14 +217,14 @@ window.$docsify = {
   // 自定义文件名
   coverpage: 'cover.md',
 
-  // mutiple covers
+  // 多个封面页
   coverpage: ['/', '/zh-cn/'],
 
-  // mutiple covers and custom file name
+  // 多个封面页，并指定文件名
   coverpage: {
     '/': 'cover.md',
-    '/zh-cn/': 'cover.md'
-  }
+    '/zh-cn/': 'cover.md',
+  },
 };
 ```
 
@@ -183,7 +236,7 @@ window.$docsify = {
 
 ```js
 window.$docsify = {
-  logo: '/_media/icon.svg'
+  logo: '/_media/icon.svg',
 };
 ```
 
@@ -195,7 +248,15 @@ window.$docsify = {
 
 ```js
 window.$docsify = {
-  name: 'docsify'
+  name: 'docsify',
+};
+```
+
+name 项也可以包含自定义 HTML 代码来方便地定制。
+
+```js
+window.$docsify = {
+  name: '<span>docsify</span>',
 };
 ```
 
@@ -213,8 +274,8 @@ window.$docsify = {
   // 按照路由切换
   nameLink: {
     '/zh-cn/': '/zh-cn/',
-    '/': '/'
-  }
+    '/': '/',
+  },
 };
 ```
 
@@ -232,15 +293,15 @@ window.$docsify = {
     renderer: {
       link: function() {
         // ...
-      }
-    }
+      },
+    },
   },
 
   // function
   markdown: function(marked, renderer) {
     // ...
     return marked;
-  }
+  },
 };
 ```
 
@@ -269,8 +330,8 @@ window.$docsify = {
     '/zh-cn/changelog': '/changelog',
     '/changelog':
       'https://raw.githubusercontent.com/docsifyjs/docsify/master/CHANGELOG',
-    '/.*/_sidebar.md': '/_sidebar.md' // See #301
-  }
+    '/.*/_sidebar.md': '/_sidebar.md', // See #301
+  },
 };
 ```
 
@@ -283,7 +344,7 @@ window.$docsify = {
 ```js
 window.$docsify = {
   loadSidebar: true,
-  autoHeader: true
+  autoHeader: true,
 };
 ```
 
@@ -295,7 +356,7 @@ window.$docsify = {
 
 ```js
 window.$docsify = {
-  executeScript: true
+  executeScript: true,
 };
 ```
 
@@ -317,9 +378,11 @@ window.$docsify = {
 
 ```js
 window.$docsify = {
-  noEmoji: true
+  noEmoji: true,
 };
 ```
+
+?> 如果该选项设为 `false` ，但是你不想解析一些特别的表情符，[参考这里](https://github.com/docsifyjs/docsify/issues/742#issuecomment-586313143)
 
 ## mergeNavbar
 
@@ -329,7 +392,7 @@ window.$docsify = {
 
 ```js
 window.$docsify = {
-  mergeNavbar: true
+  mergeNavbar: true,
 };
 ```
 
@@ -337,7 +400,7 @@ window.$docsify = {
 
 - 类型: `String|Function`
 
-我们可以通过 **{docsify-updated<span>}</span>** 变量显示文档更新日期. 并且通过 `formatUpdated`配置日期格式。参考 https://github.com/lukeed/tinydate#patterns
+我们可以通过 **{docsify-updated<span>}</span>** 变量显示文档更新日期. 并且通过 `formatUpdated`配置日期格式。参考 [https://github.com/lukeed/tinydate#patterns](https://github.com/lukeed/tinydate#patterns)
 
 ```js
 window.$docsify = {
@@ -347,7 +410,7 @@ window.$docsify = {
     // ...
 
     return time;
-  }
+  },
 };
 ```
 
@@ -356,11 +419,37 @@ window.$docsify = {
 - 类型: `String`
 - 默认: `_blank`
 
-当前默认为 \_blank, 配置一下就可以：
+外部链接的打开方式。默认为 `_blank` （在新窗口或者标签页中打开）
 
 ```js
 window.$docsify = {
-  externalLinkTarget: '_self' // default: '_blank'
+  externalLinkTarget: '_self', // default: '_blank'
+};
+```
+
+## cornerExternalLinkTarget
+
+- 类型:`String`
+- 默认值:`_blank`
+
+右上角链接的打开方式。默认为 `_blank` （在新窗口或者标签页中打开）
+
+```js
+window.$docsify = {
+  cornerExternalLinkTarget: '_self', // default: '_blank'
+};
+```
+
+## externalLinkRel
+
+- 类型: `String`
+- 默认值: `noopener`
+
+默认为 `noopener` (no opener) 可以防止新打开的外部页面（当 [externalLinkTarget](#externallinktarget) 设为 `_blank` 时）能够控制我们的页面，没有设为 `_blank` 的话就不需要设置这个选项了。
+
+```js
+window.$docsify = {
+  externalLinkRel: '', // default: 'noopener'
 };
 ```
 
@@ -371,7 +460,7 @@ window.$docsify = {
 
 ```js
 window.$docsify = {
-  routerMode: 'history' // default: 'hash'
+  routerMode: 'history', // default: 'hash'
 };
 ```
 
@@ -383,7 +472,19 @@ window.$docsify = {
 
 ```js
 window.$docsify = {
-  noCompileLinks: ['/foo', '/bar/.*']
+  noCompileLinks: ['/foo', '/bar/.*'],
+};
+```
+
+## onlyCover
+
+- 类型: `Boolean`
+
+只在访问主页时加载封面。
+
+```js
+window.$docsify = {
+  onlyCover: false,
 };
 ```
 
@@ -396,8 +497,18 @@ window.$docsify = {
 ```js
 window.$docsify = {
   requestHeaders: {
-    'x-token': 'xxx'
-  }
+    'x-token': 'xxx',
+  },
+};
+```
+
+例如设置缓存
+
+```js
+window.$docsify = {
+  requestHeaders: {
+    'cache-control': 'max-age=600',
+  },
 };
 ```
 
@@ -409,7 +520,7 @@ window.$docsify = {
 
 ```js
 window.$docsify = {
-  ext: '.md'
+  ext: '.md',
 };
 ```
 
@@ -427,7 +538,7 @@ Example:
 
 ```js
 window.$docsify = {
-  fallbackLanguages: ['fr', 'de']
+  fallbackLanguages: ['fr', 'de'],
 };
 ```
 
@@ -439,7 +550,7 @@ window.$docsify = {
 
 ```js
 window.$docsify = {
-  notFoundPage: true
+  notFoundPage: true,
 };
 ```
 
@@ -447,7 +558,7 @@ window.$docsify = {
 
 ```js
 window.$docsify = {
-  notFoundPage: 'my404.md'
+  notFoundPage: 'my404.md',
 };
 ```
 
@@ -457,9 +568,22 @@ window.$docsify = {
 window.$docsify = {
   notFoundPage: {
     '/': '_404.md',
-    '/de': 'de/_404.md'
-  }
+    '/de': 'de/_404.md',
+  },
 };
 ```
 
 > 注意: 配置过`fallbackLanguages`这个选项的页面与这个选项`notFoundPage`冲突。
+
+## topMargin
+
+- 类型: `Number`
+- 默认值: `0`
+
+让你的内容页在滚动到指定的锚点时，距离页面顶部有一定空间。当你使用 `固定页头` 布局时这个选项很有用，可以让你的锚点对齐标题栏。
+
+```js
+window.$docsify = {
+  topMargin: 90, // default: 0
+};
+```

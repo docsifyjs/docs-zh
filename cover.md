@@ -9,29 +9,31 @@
 _index.html_
 
 ```html
+<!-- index.html -->
+
 <script>
   window.$docsify = {
     coverpage: true
   }
 </script>
-<script src="//unpkg.com/docsify"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 ```
 
-`_coverpage.md`
-
 ```markdown
+<!-- _coverpage.md -->
+
 ![logo](_media/icon.svg)
 
-# docsify
+# docsify <small>3.5</small>
 
-> A magical documentation site generator.
+> 一个神奇的文档网站生成器。
 
-* Simple and lightweight (~12kb gzipped)
-* Multiple themes
-* Not build static html files
+- 简单、轻便 (压缩后 ~21kB)
+- 无需生成 html 文件
+- 众多主题
 
 [GitHub](https://github.com/docsifyjs/docsify/)
-[Get Started](#quick-start)
+[Get Started](#docsify)
 ```
 
 ## 自定义背景
@@ -41,7 +43,9 @@ _index.html_
 `_coverpage.md`
 
 ```markdown
-# docsify
+<!-- _coverpage.md -->
+
+# docsify <small>3.5</small>
 
 [GitHub](https://github.com/docsifyjs/docsify/)
 [Get Started](#quick-start)

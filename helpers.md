@@ -53,6 +53,12 @@ docsify 扩展了一些 Markdown 语法，可以让文档更易读。
 [link](/demo2 ':target=_self')
 ```
 
+## 禁用链接
+
+```md
+[link](/demo ':disabled')
+```
+
 ## Github 任务列表
 
 ```md
@@ -71,18 +77,79 @@ docsify 扩展了一些 Markdown 语法，可以让文档更易读。
   - [ ] bim
   - [ ] lim
 
-## 图片缩放
+## 图片处理
+
+### 缩放
 
 ```md
+![logo](https://docsify.js.org/_media/icon.svg ':size=WIDTHxHEIGHT')
 ![logo](https://docsify.js.org/_media/icon.svg ':size=50x100')
 ![logo](https://docsify.js.org/_media/icon.svg ':size=100')
+
+<!-- 支持按百分比缩放 -->
+
+![logo](https://docsify.js.org/_media/icon.svg ':size=10%')
 ```
 
 ![logo](https://docsify.js.org/_media/icon.svg ':size=50x100')
 ![logo](https://docsify.js.org/_media/icon.svg ':size=100')
+![logo](https://docsify.js.org/_media/icon.svg ':size=10%')
+
+### 设置图片的 Class
+
+```md
+![logo](https://docsify.js.org/_media/icon.svg ':class=someCssClass')
+```
+### 设置图片的 ID
+
+```md
+![logo](https://docsify.js.org/_media/icon.svg ':id=someCssId')
+```
 
 ## 设置标题的 id 属性
 
 ```md
 ### 你好，世界！ :id=hello-world
 ```
+
+## html 标签中的 Markdown
+
+你需要在 html 和 Markdown 内容中插入空行。
+当你需要在 details 元素中渲染 Markdown 时很有用。
+
+```markdown
+<details>
+<summary>自我评价（点击展开）</summary>
+
+- Abc
+- Abc
+
+</details>
+```
+
+<details>
+<summary>自我评价（点击展开）</summary>
+
+- Abc
+- Abc
+
+</details>
+
+Markdown 内容也可以被 html 标签包裹。
+
+```markdown
+<div style='color: red'>
+
+- listitem
+- listitem
+- listitem
+
+</div>
+```
+
+<div style='color: red'>
+
+- Abc
+- Abc
+
+</div>
