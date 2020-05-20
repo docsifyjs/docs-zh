@@ -83,16 +83,16 @@ server {
 
 ### HTML5 路由
 
-当使用HTML5路由时，你需要设置一条将所有请求重定向到你的`index.html`的重定向规则。当你使用Netlify时这相当简单，在你的**Publish Directory**下创建一个`\redirects`文件，写进以下内容，然后——:tada:就好了：
+当使用HTML5路由时，你需要设置一条将所有请求重定向到你的`index.html`的重定向规则。当你使用Netlify时这相当简单，在你的**Publish Directory**下创建一个`_redirects`文件，写进以下内容就可以了 :tada:
 
 ```sh
-/*    /index.html   200
+/* /index.html 200
 ```
 
 ## ZEIT Now
 
 1. 安装 [Now CLI](https://zeit.co/download) ： `npm i -g now`
-2. 切换到你的 docsify 网站的文档目录，比方说 `cd docs`
+2. 切换到你的 docsify 网站的文档目录，例如 `cd docs`
 3. 用一个指令来部署： `now` 
 
 ## AWS Amplify
@@ -111,7 +111,7 @@ server {
 2. 登录到你的 [AWS 控制台](https://aws.amazon.com)。
 3. 到 [AWS Amplify 仪表盘](https://aws.amazon.com/amplify)。
 4. 选择 **Deploy** 路线来设置你的项目。
-5. 若有提示，如果你希望在项目根目录下保存你的文档，保持构建设置为空；如果你想保存文档到其它目录，修改 amplify.yml ：
+5. 若有提示，如果你希望在项目根目录下保存你的文档，保持构建设置为空；如果你想保存文档到其它目录，修改`amplify.yml`:
 
 ```yml
 version: 0.1
@@ -134,4 +134,13 @@ frontend:
 |----------------|----------------|---------------|
 | /<*>.md        | /<*>.md        | 200 (Rewrite) |
 | /<*>.png       | /<*>.png       | 200 (Rewrite) |
-| /<*>           | /index.html    | 200 (Rewrite) |        
+| /<*>           | /index.html    | 200 (Rewrite) |    
+
+## 21云盒子
+
+1. 在 [21云盒子](https://www.21yunbox.com) 中， 创建一个新的 `静态网页` ，使用以下配置部署：
+
+- 构建命令：` `
+- 发布目录：填写为你的 docsify 网站的文档目录，例如 `./docs`
+
+2. 点击 "部署" 按钮！
