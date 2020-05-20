@@ -128,10 +128,24 @@ frontend:
     paths: []
 ```
 
+
 6. 依次添加如下跳转规则。注意第二条的 PNG 是图片格式，如果你要使用其它图片格式，可以相应修改。
 
 | Source address | Target address | Type          |
 |----------------|----------------|---------------|
 | /<*>.md        | /<*>.md        | 200 (Rewrite) |
 | /<*>.png       | /<*>.png       | 200 (Rewrite) |
-| /<*>           | /index.html    | 200 (Rewrite) |        
+| /<*>           | /index.html    | 200 (Rewrite) |    
+
+## 21云盒子
+
+1. 在 [21云盒子](https://www.21yunbox.com) 中， 创建一个新的 `静态网页` ，使用以下配置部署：
+
+- **构建命令:** ` `
+- **发布目录:** `./docs`
+
+2. 点击 "部署" 按钮！
+
+样例已经部署在 [https://docsify.21yunbox.com/](https://docsify.21yunbox.com/).
+
+以下是详细的教程 [用21云盒子部署 Docsify 示例](https://www.21yunbox.com/docs/v2/static.html#docsify)
