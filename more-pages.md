@@ -101,24 +101,24 @@ docs/zh-cn/guide.md   => http://domain.com/zh-cn/guide
 
 ## 忽略副标题
 
-当设置了 `subMaxLevel` 时，默认情况下每个标题都会自动添加到目录中。如果你想忽略特定的标题，可以给它添加  `{docsify-ignore}` 。
+当设置了 `subMaxLevel` 时，默认情况下每个标题都会自动添加到目录中。如果你想忽略特定的标题，可以给它添加 `<!-- {docsify-ignore} -->` 。
 
 ```markdown
 # Getting Started
 
-## Header {docsify-ignore}
+## Header <!-- {docsify-ignore} -->
 
 该标题不会出现在侧边栏的目录中。
 ```
 
-要忽略特定页面上的所有标题，你可以在页面的第一个标题上使用 `{docsify-ignore-all}` 。
+要忽略特定页面上的所有标题，你可以在页面的第一个标题上使用 `<!-- {docsify-ignore-all} -->` 。
 
 ```markdown
-# 入门 {docsify-ignore-all}
+# Getting Started <!-- {docsify-ignore-all} -->
 
-## 标题
+## Header
 
 该标题不会出现在侧边栏的目录中。
 ```
 
-在使用时， `{docsify-ignore}` 和 `{docsify-ignore-all}` 都不会在页面上呈现。
+在使用时， `<!-- {docsify-ignore} -->` 和 `<!-- {docsify-ignore-all} -->` 都不会在页面上呈现。

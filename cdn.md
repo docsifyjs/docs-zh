@@ -52,7 +52,8 @@ CSS 的压缩文件位于 `/lib/themes/` 目录下，JS 的压缩文件是原有
 
 ## 其他 CDN
 
-- http://www.bootcdn.cn/docsify (支持国内)
+- https://www.bootcdn.cn/docsify/ (支持国内)
 - https://cdn.jsdelivr.net/npm/docsify/ (国内外都支持)
 - https://cdnjs.com/libraries/docsify
+- https://unpkg.com/browse/docsify/
 
