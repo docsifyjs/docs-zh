@@ -59,6 +59,14 @@ docsify 扩展了一些 Markdown 语法，可以让文档更易读。
 [link](/demo ':disabled')
 ```
 
+## 跨域链接
+
+只有当你同时设置了 `routerMode: 'history'` 和 `externalLinkTarget: '_self'` 时，你需要为这些跨域链接添加这个配置。
+
+```md
+[example.com](https://example.com/ ':crossorgin')
+```
+
 ## Github 任务列表
 
 ```md
@@ -100,6 +108,7 @@ docsify 扩展了一些 Markdown 语法，可以让文档更易读。
 ```md
 ![logo](https://docsify.js.org/_media/icon.svg ':class=someCssClass')
 ```
+
 ### 设置图片的 ID
 
 ```md
