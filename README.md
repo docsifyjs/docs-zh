@@ -29,7 +29,7 @@ docsify 可以快速帮你生成文档网站。不同于 GitBook、Hexo 的地�
 
 前往 [GitHub](https://github.com/docsifyjs/docsify) 和 [Gitee(码云)](https://gitee.com/docsifyjs/docsify) 点个Star。
 
-!> docsify 正在参加 [2020 年度 OSC 中国开源项目评选](https://www.oschina.net/project/top_cn_2020) ，请大家给 docsify 投票！！！
+!> docsify 正在参加 [2020 年度 OSC 中国开源项目评选](https://www.oschina.net/project/top_cn_2020#docsify) ，请大家给 docsify 投票！！！
 
 ## 社区
 
