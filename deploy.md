@@ -78,8 +78,8 @@ server {
 ## Netlify
 
 1.  登陆你的[Netlify](https://www.netlify.com/)账号
-2.  在[dashboard](https://app.netlify.com/)页上点击 **New site from Git**.
-3.  选择那个你用来存储文档的git仓库，将 **Build Command** 留空, 将 **Publish directory** 区域填入你的`index.html`所在的目录，例如：填入`docs`(如果你的`index.html`的相对路径是`docs/index.html`的话).
+2.  在[dashboard](https://app.netlify.com/)页上点击 **New site from Git**
+3.  选择那个你用来存储文档的git仓库，将 **Build Command** 留空, 将 **Publish directory** 区域填入你的`index.html`所在的目录，例如：填入`docs`(如果你的`index.html`的相对路径是`docs/index.html`的话)
 
 ### HTML5 路由
 
@@ -93,7 +93,7 @@ server {
 
 1. 安装 [Now CLI](https://zeit.co/download) ： `npm i -g now`
 2. 切换到你的 docsify 网站的文档目录，例如 `cd docs`
-3. 用一个指令来部署： `now` 
+3. 用一个指令来部署： `now`
 
 ## AWS Amplify
 
@@ -118,7 +118,7 @@ version: 0.1
 frontend:
   phases:
     build:
-      commands: 
+      commands:
         - echo "Nothing to build"
   artifacts:
     baseDirectory: /docs
@@ -134,13 +134,47 @@ frontend:
 |----------------|----------------|---------------|
 | /<*>.md        | /<*>.md        | 200 (Rewrite) |
 | /<*>.png       | /<*>.png       | 200 (Rewrite) |
-| /<*>           | /index.html    | 200 (Rewrite) |    
+| /<*>           | /index.html    | 200 (Rewrite) |
 
-## 21云盒子
+## Docker
 
-1. 在 [21云盒子](https://www.21yunbox.com) 中， 创建一个新的 `静态网页` ，使用以下配置部署：
+- 创建 docsify 的文件
 
-- 构建命令：` `
-- 发布目录：填写为你的 docsify 网站的文档目录，例如 `./docs`
+你需要准备好初始文件，而不是在容器中制作。
+请参阅 [快速开始](https://docsify.js.org/#/zh-cn/quickstart) 部分，了解如何手动或使用 [docsify-cli](https://github.com/docsifyjs/docsify-cli) 创建这些文件。
 
-2. 点击 "部署" 按钮！
+```sh
+index.html
+README.md
+```
+
+- 创建 Dockerfile
+
+```Dockerfile
+FROM node:latest
+LABEL description="A demo Dockerfile for build Docsify."
+WORKDIR /docs
+RUN npm install -g docsify-cli@latest
+EXPOSE 3000/tcp
+ENTRYPOINT docsify serve .
+```
+
+创建成功后当前的目录结构应该是这样的：
+
+```sh
+index.html
+README.md
+Dockerfile
+```
+
+- 构建 docker 镜像
+
+```sh
+docker build -f Dockerfile -t docsify/demo .
+```
+
+- 运行 docker 镜像
+
+```sh
+docker run -itp 3000:3000 --name=docsify -v $(pwd):/docs docsify/demo
+```
