@@ -91,4 +91,4 @@ cd docs && python -m SimpleHTTPServer 3000
   </script>
 ```
 
-对比 [el 设置](configuration.md#el)。
+对比 [el 设置](zh-cn/configuration.md#el)。
