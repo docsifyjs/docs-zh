@@ -45,9 +45,7 @@ npm i now docsify-cli -D
 }
 ```
 
-如果你还没有创建文档，可以参考[之前的文章](https://zhuanlan.zhihu.com/p/24540753)。
-
-!> 其中 `basePath` 相当于 webpack 的 `publicPath ，为文档所在的路径，可以填你的 docsify 文档网站。我们可以使用本地或者远程文件。
+!> 其中 `basePath` 相当于 webpack 的 `publicPath` ，为文档所在的路径，可以填你的 docsify 文档网站。我们可以使用本地或者远程文件。
 
 配置好了以后，我们可以在本地预览。
 
@@ -57,13 +55,13 @@ npm start
 # open http://localhost:4000
 ```
 
-Publish it!
+发布！
 
 ```bash
 now -p
 ```
 
-Now, You have a support for SSR the docs site.
+现在，你有一个支持服务端渲染的文档网站了。
 
 ## 定制模板
 
