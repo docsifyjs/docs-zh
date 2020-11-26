@@ -38,6 +38,10 @@ pages:
 
 !> 你可以用 `- cp -r docs/. public` 替换脚本, 如果 `./docs` 是你的 docsify 子文件夹。
 
+## Gitee Pages
+
+在对应的 Gitee 仓库服务中选择 `Gitee Pages`，选择您要部署的分支，填写您要部署的分支上的目录，例如`docs`，填写完成之后点击启动即可。
+
 ## Firebase 主机
 
 !> 你需要先使用谷歌账号登陆 [Firebase 控制台](https://console.firebase.google.com) ，然后使用 `npm i -g firebase-tools` 命令安装 Firebase CLI 。
