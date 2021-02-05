@@ -62,6 +62,12 @@
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 ```
 
+当执行全文搜索时，该插件会忽略双音符（例如，"cafe" 也会匹配 "café"）。像 IE11 这样的旧版浏览器需要使用以下 [String.normalize()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize) polyfill 来忽略双音符：
+
+```html
+<script src="//polyfill.io/v3/polyfill.min.js?features=String.prototype.normalize"></script>
+```
+
 ## 谷歌统计 - Google Analytics
 
 需要配置 track id 才能使用。
@@ -90,6 +96,8 @@
 ```html
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
 ```
+
+?> 如果你不想解析成表情符号，可以使用__colon_<span>_</span>或`&#58;`。如果你需要在标题中使用，我们建议使用`&#58;`。例如，`&#58;100:`。
 
 ## 外链脚本 - External Script
 
