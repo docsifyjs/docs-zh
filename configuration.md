@@ -464,6 +464,18 @@ window.$docsify = {
 };
 ```
 
+## crossOriginLinks
+
+- type: `Array`
+
+当设置了`routerMode:'history'`时，你可能会面临跨域的问题，参见 [#1379](https://github.com/docsifyjs/docsify/issues/1379) 。在 Markdown 内容中，有一个简单的方法可以解决，参见[helpers](zh-cn/helpers.md) 中的跨域链接。
+
+```js
+window.$docsify = {
+  crossOriginLinks: ['https://example.com/cross-origin-link'],
+};
+```
+
 ## noCompileLinks
 
 - 类型: `Array`
@@ -533,7 +545,7 @@ window.$docsify = {
 Example:
 
 - 尝试访问`/de/overview`，如果存在则显示
-- 如果不存在则尝试`/overview`（取决于默认语言），如果存在即显示 
+- 如果不存在则尝试`/overview`（取决于默认语言），如果存在即显示
 - 如果也不存在，显示404页面
 
 ```js
@@ -587,3 +599,104 @@ window.$docsify = {
   topMargin: 90, // default: 0
 };
 ```
+
+## vueComponents
+
+- type: `Object`
+
+创建并注册全局 [Vue组件](https://vuejs.org/v2/guide/components.html) 。组件是以组件名称为键，以包含 Vue 选项的对象为值来指定的。组件`data`对每个实例都是唯一的，并且在用户浏览网站时不会持久。
+
+```js
+window.$docsify = {
+  vueComponents: {
+    'button-counter': {
+      template: `
+        <button @click="count += 1">
+          You clicked me {{ count }} times
+        </button>
+      `,
+      data() {
+        return {
+          count: 0,
+        };
+      },
+    },
+  },
+};
+```
+
+```markdown
+<button-counter></button-counter>
+```
+
+<output data-lang="output">
+  <button-counter></button-counter>
+</output>
+
+## vueGlobalOptions
+
+- type: `Object`
+
+指定 [Vue选项](https://vuejs.org/v2/api/#Options-Data) ，用于未明确使用[vueMounts](#mounting-dom-elements)、[vueComponents](#components)或[markdown脚本](#markdown-script)挂载的 Vue 内容。对全局`data`的更改将持续存在，并在任何使用全局引用的地方得到反映。
+
+```js
+window.$docsify = {
+  vueGlobalOptions: {
+    data() {
+      return {
+        count: 0,
+      };
+    },
+  },
+};
+```
+
+```markdown
+<p>
+  <button @click="count -= 1">-</button>
+  {{ count }}
+  <button @click="count += 1">+</button>
+</p>
+```
+
+<output data-lang="output">
+  <p>
+    <button @click="count -= 1">-</button>
+    {{ count }}
+    <button @click="count += 1">+</button>
+  </p>
+</output>
+
+## vueMounts
+
+- type: `Object`
+
+指定要挂载为 [Vue实例](https://vuejs.org/v2/guide/instance.html) 的 DOM 元素及其相关选项。挂载元素使用 [CSS选择器](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors) 作为键，并使用包含 Vue 选项的对象作为其值。每次加载新页面时，Docsify 将挂载主内容区域中第一个匹配的元素。挂载元素`data`对每个实例来说都是唯一的，并且不会在用户浏览网站时持久存在。
+
+```js
+window.$docsify = {
+  vueMounts: {
+    '#counter': {
+      data() {
+        return {
+          count: 0,
+        };
+      },
+    },
+  },
+};
+```
+
+```markdown
+<div id="counter">
+  <button @click="count -= 1">-</button>
+  {{ count }}
+  <button @click="count += 1">+</button>
+</div>
+```
+
+<output id="counter">
+  <button @click="count -= 1">-</button>
+  {{ count }}
+  <button @click="count += 1">+</button>
+</output>

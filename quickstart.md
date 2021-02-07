@@ -63,8 +63,12 @@ docsify serve docs
 
 如果你的系统里安装了 Python 的话，也可以很容易地启动一个静态服务器去预览你的网站。
 
-```bash
+```python2
 cd docs && python -m SimpleHTTPServer 3000
+```
+
+```python3
+cd docs && python -m http.server 3000
 ```
 
 ## Loading 提示
@@ -74,7 +78,7 @@ cd docs && python -m SimpleHTTPServer 3000
 
 ```html
   <!-- index.html -->
-  
+
   <div id="app">加载中</div>
 ```
 
