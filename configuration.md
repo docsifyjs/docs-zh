@@ -326,7 +326,7 @@ window.$docsify = {
 ```js
 window.$docsify = {
   alias: {
-    '/foo/(+*)': '/bar/$1', // supports regexp
+    '/foo/(.*)': '/bar/$1', // supports regexp
     '/zh-cn/changelog': '/changelog',
     '/changelog':
       'https://raw.githubusercontent.com/docsifyjs/docsify/master/CHANGELOG',
