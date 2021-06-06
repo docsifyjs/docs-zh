@@ -136,7 +136,7 @@ docsify同时支持[Vue](https://njleonzhang.github.io/docsify-demo-box-vue/)和
 在所有的代码块上添加一个简单的`Click to copy`按钮来允许用户从你的文档中轻易地复制代码。由[@jperasmus](https://github.com/jperasmus)提供。
 
 ```html
-<script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
 ```
 
 详情可参考 [README.md](https://github.com/jperasmus/docsify-copy-code/blob/master/README.md) 。
