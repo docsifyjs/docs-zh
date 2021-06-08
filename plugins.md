@@ -171,7 +171,9 @@ Disqus评论系统支持。 https://disqus.com/
     owner: 'Github repo owner',
     admin: ['Github repo collaborators, only these guys can initialize github issues'],
     // facebook-like distraction free mode
-    distractionFreeMode: false
+    distractionFreeMode: false,
+    // 在配置 gittalk 的时候，可能出现 gittalk Error: Validation Failed。相关：https://github.com/gitalk/gitalk/issues/102
+    id:decodeURI(window.location.pathname)
   })
 </script>
 ```
