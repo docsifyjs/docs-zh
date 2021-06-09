@@ -27,7 +27,7 @@ docs/zh-cn/guide.md   => http://domain.com/zh-cn/guide
 
 为了获得侧边栏，您需要创建自己的_sidebar.md，你也可以自定义加载的文件名。默认情况下侧边栏会通过 Markdown 文件自动生成，效果如当前的文档的侧边栏。
 
-首先配置 `loadSidebar` 选项，具体配置规则见[配置项#loadSidebar](zh-cn/configuration.md#loadsidebar)。
+首先配置 `loadSidebar` 选项，具体配置规则见[配置项#loadSidebar](zh-cn/configuration#loadsidebar)。
 
 ```html
 <!-- index.html -->
@@ -85,7 +85,7 @@ docs/zh-cn/guide.md   => http://domain.com/zh-cn/guide
 
 ## 显示目录
 
-自定义侧边栏同时也可以开启目录功能。设置 `subMaxLevel` 配置项，具体介绍见 [配置项#sub-max-level](zh-cn/configuration#sub-max-level)。
+自定义侧边栏同时也可以开启目录功能。设置 `subMaxLevel` 配置项，具体介绍见 [配置项#subMaxLevel](zh-cn/configuration#submaxlevel)。
 
 ```html
 <!-- index.html -->
