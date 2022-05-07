@@ -73,7 +73,7 @@ server {
   server_name  your.domain.com;
 
   location / {
-    alias /path/to/dir/of/docs/;
+    root /path/to/dir/of/docs/;
     index index.html;
   }
 }
