@@ -37,7 +37,7 @@
 <!-- _navbar.md -->
 
 * [En](/)
-* [中文](/zh-cn/)
+* [简体中文](/zh-cn/)
 ```
 
 !> 你需要在 `./docs` 目录下创建一个 `.nojekyll` 文件，以防止 GitHub Pages 忽略下划线开头的文件。
