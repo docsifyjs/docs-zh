@@ -194,11 +194,13 @@ docsify的分页导航插件，由[@imyelo](https://github.com/imyelo)提供。
 它提供了统计中文汉字和英文单词的功能，并且排除了一些markdown语法的特殊字符例如*、-等
 
 **Add JS**
+
 ```html
 <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
 ```
 
 **Add settings**
+
 ```js
 window.$docsify = {
   count:{
@@ -211,23 +213,6 @@ window.$docsify = {
 ```
 
 check [document](https://github.com/827652549/docsify-count)
-
-
-## Code Fund
-
-帮你快速接入[Code Fund](https://codesponsor.io/)的[插件](https://github.com/njleonzhang/docsify-plugin-codefund), 由[@njleonzhang](https://github.com/njleonzhang)提供。
-
-> Code Fund 以前叫 codesponsor
-
-```
-<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-
-window.$docsify = {
-  plugins: [
-    DocsifyCodefund.create('51d43327-eea3-4e27-bd44-e075e67a84fb') // 把这个id改成你的codefund id
-  ]
-}
-```
 
 ## Tabs
 
