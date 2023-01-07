@@ -1,6 +1,6 @@
 # 主题
 
-目前提供三套主题可供选择，模仿 [Vue](//vuejs.org) 和 [buble](//buble.surge.sh) 官网订制的主题样式。还有 [@liril-net](https://github.com/liril-net) 贡献的黑色风格的主题。
+目前提供了一些主题，包括官方和社区制作的。模仿 [Vue](//vuejs.org) 和 [buble](//buble.surge.sh) 官网订制的主题样式，还有 [@liril-net](https://github.com/liril-net) 贡献的黑色风格的主题等。
 
 ```html
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
