@@ -93,11 +93,11 @@ server {
 /* /index.html 200
 ```
 
-## ZEIT Now
+## Vercel
 
-1. 安装 [Now CLI](https://zeit.co/download) ： `npm i -g now`
+1. 安装 [Vercel CLI](https://vercel.com/download) ： `npm i -g vercel`
 2. 切换到你的 docsify 网站的文档目录，例如 `cd docs`
-3. 用一个指令来部署： `now`
+3. 用一个指令来部署： `vercel`
 
 ## AWS Amplify
 
