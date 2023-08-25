@@ -17,7 +17,7 @@ docsify 可以快速帮你生成文档网站。不同于 GitBook、Hexo 的地�
 - 丰富的 API
 - 支持 Emoji
 - 兼容 IE11
-- 支持服务端渲染 SSR ([示例](https://github.com/docsifyjs/docsify-ssr-demo))
+- 实验性服务端渲染（SSR）支持 ([示例](https://github.com/docsifyjs/docsify-ssr-demo))
 
 ## 示例
 

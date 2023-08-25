@@ -1,14 +1,18 @@
 # 服务端渲染（SSR）
 
-先看例子 https://docsify.now.sh
+!> :construction: SSR 支持是实验性的并且尚未完成。我们仍在继续开发。插件和部分 docsify 的特性在 SSR 模式中无法使用。 :construction:
 
-项目地址在 https://github.com/docsifyjs/docsify-ssr-demo
+<!-- 
+  这个地方本来有一个示例链接但是挂了
+  https://docsify.now.sh
+-->
 
-![](https://dn-mhke0kuv.qbox.me/2bfef08c592706108055.png)
+示例项目地址 https://github.com/docsifyjs/docsify-ssr-demo
 
 文档依旧是部署在 GitHub Pages 上，Node 服务部署在 now.sh 里，渲染的内容是从 GitHub Pages 上同步过来的。所以静态部署文档的服务器和服务端渲染的 Node 服务器是分开的，也就是说你还是可以用之前的方式更新文档，并不需要每次都部署。
 
-## 什么是 SSR?
+## 为什么选择 SSR?
+
 - 更好的 SEO
 - 更酷的感觉
 
@@ -109,8 +113,6 @@ module.exports = {
   }
 }
 ```
-
-
 
 
 ## 更多玩法
