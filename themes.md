@@ -26,7 +26,7 @@
 
 #### 点击切换主题
 
-
+```
 <div class="demo-theme-preview">
   <a data-theme="vue">vue.css</a>
   <a data-theme="buble">buble.css</a>
@@ -59,7 +59,7 @@
     });
   };
 </script>
-
+```
 
 ## 其他主题
 
