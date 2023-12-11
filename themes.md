@@ -64,3 +64,4 @@
 ## 其他主题
 
 - [docsify-themeable](https://jhildenbiddle.github.io/docsify-themeable/#/) 一个用于docsify的，简单到令人愉悦的主题系统.
+- [docsify-theme-darcula](https://github.com/A5yncX/docsify-theme-darcula) 一个darcula风格主题
