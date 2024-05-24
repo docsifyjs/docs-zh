@@ -5,8 +5,7 @@ files:
       - '/_coverpage.md'
       - '/_navbar.md'
     translation_replace:
-      - key: zh
-        value: ""
+      "zh": ''
 
 project_id_env: CROWDIN_PROJECT_ID
 api_token_env: CROWDIN_PERSONAL_TOKEN
