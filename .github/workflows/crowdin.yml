@@ -1,0 +1,37 @@
+name: Crowdin Action
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  synchronize-with-crowdin:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: crowdin action
+        uses: crowdin/github-action@v1
+        with:
+          upload_sources: false
+          upload_translations: false
+          download_translations: true
+          download_language: zh-CN
+          download_translations_args: --all
+          localization_branch_name: l10n_crowdin_${{ github.ref_name }}_translations
+          create_pull_request: true
+          crowdin_branch_name: ${{ github.ref_name }}
+          pull_request_team_reviewers: ${{ github.repository }}
+          pull_request_title: 'New Crowdin Translations'
+          pull_request_base_branch_name: ${{ github.ref_name }}
+          base_path: ${{ github.workspace }}/docs
+          config: '.github/crowdin/crowdin.yml'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
