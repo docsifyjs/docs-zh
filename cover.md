@@ -1,22 +1,20 @@
 # 封面
 
-通过设置 `coverpage` 参数，可以开启渲染封面的功能。具体用法见[配置项#coverpage](configuration.md#coverpage)。
+通过设置 `coverpage` 为 **true** 来激活封面功能。 通过设置 `coverpage` 参数，可以开启渲染封面的功能。具体用法见[配置项#coverpage](configuration.md#coverpage)。
 
 ## 基本用法
 
-封面的生成同样是从 markdown 文件渲染来的。开启渲染封面功能后在文档根目录创建 `_coverpage.md` 文件。渲染效果如本文档。
-
-_index.html_
+设置 `coverpage` 为 **true**, 并创建 `_coverpage.md` ：
 
 ```html
 <!-- index.html -->
 
 <script>
   window.$docsify = {
-    coverpage: true
-  }
+    coverpage: true,
+  };
 </script>
-<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify@5/dist/docsify.min.js"></script>
 ```
 
 ```markdown
@@ -38,9 +36,7 @@ _index.html_
 
 ## 自定义背景
 
-目前的背景是随机生成的渐变色，我们自定义背景色或者背景图。在文档末尾用添加图片的 Markdown 语法设置背景。
-
-`_coverpage.md`
+默认情况下随机生成背景颜色。 您可以自定义背景颜色或背景图像：
 
 ```markdown
 <!-- _coverpage.md -->
@@ -61,7 +57,7 @@ _index.html_
 
 ## 封面作为首页
 
-通常封面和首页是同时出现的，当然你也是当封面独立出来通过设置[onlyCover 选项](zh-cn/configuration.md#onlycover)。
+通常，封面页和主页同时出现。 通常封面和首页是同时出现的，当然你也是当封面独立出来通过设置[onlyCover 选项](zh-cn/configuration.md#onlycover)。
 
 ## 多个封面
 
@@ -70,22 +66,22 @@ _index.html_
 例如你的文档目录结构如下
 
 ```text
-.
-└── docs
-    ├── README.md
-    ├── guide.md
-    ├── _coverpage.md
-    └── zh-cn
-        ├── README.md
-        └── guide.md
-        └── _coverpage.md
+..
+--- docs
+    ---README.md
+    --guide.md
+    - *. --_coverpage.md
+    ------zh-cn
+        - --- README.md
+        recent--- guide.md
+        - --_coverpage.md
 ```
 
-那么你可以这么配置
+现在，您可以设置
 
 ```js
 window.$docsify = {
-  coverpage: ['/', '/zh-cn/']
+  coverpage: ['/', '/zh-cn/'],
 };
 ```
 
@@ -95,7 +91,7 @@ window.$docsify = {
 window.$docsify = {
   coverpage: {
     '/': 'cover.md',
-    '/zh-cn/': 'cover.md'
-  }
+    '/zh-cn/': 'cover.md',
+  },
 };
 ```

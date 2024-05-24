@@ -1,66 +1,57 @@
 # 主题
 
-目前提供了一些主题，包括官方和社区制作的。模仿 [Vue](//vuejs.org) 和 [buble](//buble.surge.sh) 官网订制的主题样式，还有 [@liril-net](https://github.com/liril-net) 贡献的黑色风格的主题等。
+Docsify offers several official themes to choose from. Click a theme name below to preview each theme.
+
+- <a href="#" data-theme="vue">Vue</a>
+- <a href="#" data-theme="buble">Buble</a>
+- <a href="#" data-theme="dark">Dark</a>
+- <a href="#" data-theme="pure">Pure</a>
+- <a href="#" data-theme="dolphin">Dolphin</a>
+
+Official themes are available on multiple [CDNs](cdn). Uncompressed themes are also available by omitting the `.min` from the filename.
+
+<!-- prettier-ignore -->
 
 ```html
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/buble.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dark.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/pure.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dolphin.css">
+<!-- Vue -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/themes/vue.min.css" />
+
+<!-- Buble -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/themes/buble.min.css" />
+
+<!-- Dark -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/themes/dark.min.css" />
+
+<!-- Pure -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/themes/pure.min.css" />
+
+<!-- Dolphin -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/themes/dolphin.min.css" />
 ```
 
-!> CSS 的压缩文件位于 `/lib/themes/`
+## Endorsed
 
-```html
-<!-- compressed -->
+The Docsify team endorses the following third-party themes. Click a link below the learn more.
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/buble.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/pure.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dolphin.css">
-```
+- [docsify-themeable](https://jhildenbiddle.github.io/docsify-themeable) - A delightfully simple theme system for docsify.
 
-如果你有其他想法或者想开发别的主题，欢迎提 [PR](https://github.com/docsifyjs/docsify/pulls)。
+## More Themes
 
-#### 点击切换主题
-
-
-<div class="demo-theme-preview">
-  <a data-theme="vue">vue.css</a>
-  <a data-theme="buble">buble.css</a>
-  <a data-theme="dark">dark.css</a>
-  <a data-theme="pure">pure.css</a>
-  <a data-theme="dolphin">dolphin.css</a>
-</div>
-
-
-<style>
-  .demo-theme-preview a {
-    padding-right: 10px;
-  }
-
-  .demo-theme-preview a:hover {
-    cursor: pointer;
-    text-decoration: underline;
-  }
-</style>
+See [Awesome Docsify](awesome) for more themes.
 
 <script>
-  var preview = Docsify.dom.find('.demo-theme-preview');
-  var themes = Docsify.dom.findAll('[rel="stylesheet"]');
+  const previewElm = Docsify.dom.findAll('a[data-theme]');
+  const stylesheetElms = Docsify.dom.findAll('link[rel="stylesheet"]');
 
-  preview.onclick = function (e) {
-    var title = e.target.getAttribute('data-theme')
+  previewElm.forEach(elm => {
+    elm.onclick = (e) => {
+      e.preventDefault();
+      const title = e.target.getAttribute('data-theme');
 
-    themes.forEach(function (theme) {
-      theme.disabled = theme.title !== title
-    });
-  };
+      stylesheetElms.forEach(theme => {
+        theme.disabled = theme.title !== title;
+      });
+    };
+  });
+
 </script>
-
-
-## 其他主题
-
-- [docsify-themeable](https://jhildenbiddle.github.io/docsify-themeable/#/) 一个用于docsify的，简单到令人愉悦的主题系统.

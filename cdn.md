@@ -1,59 +1,58 @@
 # CDN
 
-推荐使用 [jsDelivr](//cdn.jsdelivr.net)，能及时获取到最新版。你也可以在[cdn.jsdelivr.net/npm/docsify/](cdn.jsdelivr.net/npm/docsify/)中浏览npm包的源代码。
+文档化[npm package](https://www.npmjs.com/package/docsify)是自动发布到CDN中的每个版本。 内容可以在每个CDN上查看。
 
-## 获取最新版本
+Docsify 推荐 [jsDelivr](/cdn.jsdelivr.net) 为其首选的 CDN：
 
-不指定特定版本号时将引入最新版。
+- https://cdn.jsdelivr.net/npm/docsify/ (国内外都支持)
+
+在没有jsDelivr的地方，也可能需要其他的CDN：
+
+- https://cdnjs.com/libraries/docsify
+- https://unpkg.com/browse/docsify/
+- https://www.bootcdn.cn/docsify/ (支持国内)
+
+## 指定版本
+
+请注意以下CDN URL中的`@`版本锁定。 这允许指定最新的主要、小、补丁或特定的 [semver](https://semver.org) 版本号。
+
+- MAJOR 版本包括断开更改<br>
+  `1.0.0` → `2.0.0`
+- MINOR 版本包括非破坏性的新功能<br>
+  `1.0.0` → `1.1.0`
+- PATCH版本包括非断裂错误修复<br>
+  `1.0.0` → `1.0.1`
+
+从文件名中省略`.min`，可获取未压缩的资源。
+
+## 最新“主要”版本
+
+指定最新的主要版本允许您的网站在发布时接收所有非破坏性的增强("次级"更新)和错误修复("补丁"更新)。 对于那些宁愿零保养以便随着新版本的发布更新其网站的风险最小化的人来说，这是一个好的选择。
+
+?> 发布新的主要版本时 你需要在你的 CDN URLs 中的 `@` 符号后手动更新主要版本号。
+
+<!-- prettier-ignore -->
 
 ```html
-<!-- 引入 css -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
+<!-- 主题 -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/themes/vue.min.css" />
 
-<!-- 引入 script -->
-<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.js"></script>
+<!-- Docsify -->
+<script src="//cdn.jsdelivr.net/npm/docsify@5/dist/docsify.min.js"></script>
 ```
-
-也可以使用 [压缩版文件](#compressed-file).
 
 ## 获取指定版本
 
-如果担心频繁地版本更新又可能引入未知 Bug，我们也可以使用具体的版本。规则是 `//cdn.jsdelivr.net/npm/docsify@VERSION/`
+指定一个准确的版本可以防止将来的任何更新影响您的网站。 对于那些愿意在发布新版本时手动更新资源的人来说，这是一个很好的选项。
+
+?> 新版本发布后，您需要在您的 CDN URL中的 '@' 符号后手动更新版本号。
+
+<!-- prettier-ignore -->
 
 ```html
-<!-- 引入 css -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4.10.2/themes/vue.css">
+<!-- 主题 -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5.0.0/themes/vue.min.css" />
 
-<!-- 引入 script -->
-<script src="//cdn.jsdelivr.net/npm/docsify@4.10.2/lib/docsify.js"></script>
+<!-- Docsify -->
+<script src="//cdn.jsdelivr.net/npm/docsify@5.0.0/dist/docsify.min.js"></script>
 ```
-
-!> 指定 *VERSION* 为 `latest` 可以强制每次都请求最新版本。
-
-## 压缩版
-
-CSS 的压缩文件位于 `/lib/themes/` 目录下，JS 的压缩文件是原有文件路径的基础上加 `.min` 后缀。
-
-```html
-<!-- 引入 css -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
-
-<!-- 引入 script -->
-<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-```
-
-```html
-<!-- 引入 css -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4.10.2/lib/themes/vue.css">
-
-<!-- 引入 script -->
-<script src="//cdn.jsdelivr.net/npm/docsify@4.10.2/lib/docsify.min.js"></script>
-```
-
-## 其他 CDN
-
-- https://www.bootcdn.cn/docsify/ (支持国内)
-- https://cdn.jsdelivr.net/npm/docsify/ (国内外都支持)
-- https://cdnjs.com/libraries/docsify
-- https://unpkg.com/browse/docsify/
-
