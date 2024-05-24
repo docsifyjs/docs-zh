@@ -30,7 +30,7 @@ jobs:
           pull_request_team_reviewers: ${{ github.repository }}
           pull_request_title: 'New Crowdin Translations'
           pull_request_base_branch_name: ${{ github.ref_name }}
-          base_path: ${{ github.workspace }}/docs
+          base_path: ${{ github.workspace }}
           config: '.github/crowdin/crowdin.yml'
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
