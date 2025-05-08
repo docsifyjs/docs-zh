@@ -1,6 +1,7 @@
 # 自定义导航栏
 
 ## HTML
+
 如果你需要定制导航栏，可以用 HTML 创建一个导航栏。
 
 !> 注意：文档的链接都要以 `#/` 开头。
@@ -17,10 +18,9 @@
 </body>
 ```
 
-## 配置文件
+## Markdown
 
 那我们可以通过 Markdown 文件来配置导航。首先配置 `loadNavbar`，默认加载的文件为 `_navbar.md`。具体配置规则见[配置项#loadNavbar](configuration.md#loadnavbar)。
-
 
 ```html
 <!-- index.html -->
@@ -42,12 +42,11 @@
 
 !> 你需要在 `./docs` 目录下创建一个 `.nojekyll` 文件，以防止 GitHub Pages 忽略下划线开头的文件。
 
-`_navbar.md` 加载逻辑和 `sidebar` 文件一致，从每层目录下获取。例如当前路由为 `/zh-cn/custom-navbar` 那么是从 `/zh-cn/_navbar.md` 获取导航栏。
+`_navbar.md` 加载逻辑和 `sidebar` 文件一致，从每层目录下获取。例如当前路由为 `/zh-cn/custom-navbar` 那么是从 `/zh-cn/_navbar.md` 获取导航栏。 如果当前目录没有 `_navbar.md`，它将返回父目录。 如果导航内容过多，可以写成嵌套的列表，会被渲染成下拉列表的形式。
 
 ## 嵌套
 
-如果导航内容过多，可以写成嵌套的列表，会被渲染成下拉列表的形式。
-
+您可以通过缩进在某个父级下的项目来创建子列表。
 
 ```markdown
 
@@ -69,9 +68,9 @@
   * [代码高亮](zh-cn/language-highlight.md)
 ```
 
-效果图
+渲染为
 
-![嵌套导航栏](../_images/zh-cn/nested-navbar.png '嵌套导航栏')
+![嵌套导航栏](../_images/zh-cn/nested-navbar.png "嵌套导航栏")
 
 ## 整合自定义导航栏与 emoji 插件
 

@@ -1,13 +1,13 @@
 # 代码高亮
 
-**docsify**内置的代码高亮工具是 [Prism](https://github.com/PrismJS/prism)。Prism 默认支持的语言如下：
+Docsify 使用 [Prism](https://prismjs.com) 突出显示您页面中的代码块。 Prism 默认支持以下语言：
 
-* Markup - `markup`, `html`, `xml`, `svg`, `mathml`, `ssml`, `atom`, `rss`
-* CSS - `css`
-* C-like - `clike`
-* JavaScript - `javascript`, `js`
+- Markup - `markup`, `html`, `xml`, `svg`, `mathml`, `ssml`, `atom`, `rss`
+- CSS - `css`
+- Clike - `clike`
+- JavaScript - `javascript`, `js`
 
-[添加额外的语法支持](https://prismjs.com/#supported-languages)需要通过CDN添加相应的[语法文件](https://cdn.jsdelivr.net/npm/prismjs@1/components/) :
+[添加额外的语法支持](https://prismjs.com/#supported-languages)需要通过CDN添加相应的[语法文件](https://cdn.jsdelivr.net/npm/prismjs@1/components/)：
 
 ```html
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
@@ -34,7 +34,7 @@ function getAdder(int $x): int
 ```
 ````
 
-上面代码的渲染结果:
+上面的Markdown 将被渲染为：
 
 ```html
 <p>This is a paragraph</p>
@@ -50,4 +50,15 @@ function getAdder(int $x): int
 {
     return 123;
 }
+```
+
+## 动态内容高亮
+
+通过 [javascript 动态创建](/#/zh-cn/configuration?id=executescript)的代码块，可以使用 `Prism.highlightElement` 方法进行高亮：
+
+```javascript
+var code = document.createElement("code");
+code.innerHTML = "console.log('Hello World!')";
+code.setAttribute("class", "lang-javascript");
+Prism.highlightElement(code);
 ```

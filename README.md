@@ -2,16 +2,16 @@
 
 > 一个神奇的文档网站生成器。
 
-## 概述
+## 是什么
 
-docsify 可以快速帮你生成文档网站。不同于 GitBook、Hexo 的地方是它不会生成静态的 `.html` 文件，所有转换工作都是在运行时。如果你想要开始使用它，只需要创建一个 `index.html` 就可以开始编写文档并直接[部署在 GitHub Pages](zh-cn/deploy.md)。
+docsify 可以快速帮你生成文档网站。 不同于 GitBook、Hexo 的地方是它不会生成静态的 `. html` 文件，所有转换工作都是在运行时。如果你想要开始使用它，只需要创建一个 `index. html` 就可以开始编写文档并直接[部署在 GitHub Pages](zh-cn/deploy. md)。 相反，它智能地加载和解析您的Markdown文件并将其显示为网站。 要开始使用它，您需要创建一个 `index.html` 并[部署在 GitHub Pages](deption.md)。
 
 查看[快速开始](zh-cn/quickstart.md)了解详情。
 
 ## 特性
 
-- 无需构建，写完文档直接发布
-- 容易使用并且轻量 (压缩后 ~21kB)
+- 没有静态生成的 html 文件
+- 简单和轻量度
 - 智能的全文搜索
 - 提供多套主题
 - 丰富的 API
@@ -25,8 +25,8 @@ docsify 可以快速帮你生成文档网站。不同于 GitBook、Hexo 的地�
 
 ## 捐赠
 
-如果你觉得 docsify 对你有帮助，或者想对我微小的工作一点资瓷，欢迎给我[捐赠](https://github.com/QingWei-Li/donate)。
+如果你认为对你有用或我的工作很有价值，请考虑捐赠。 如果你觉得 docsify 对你有帮助，或者想对我微小的工作一点资瓷，欢迎给我[捐赠](https://github.com/QingWei-Li/donate)。 :heart:
 
 ## 社区
 
-在 [Discord](https://discord.gg/3NwKFyR) 的社区里可以找到 docsify 的用户和开发者团队。
+用户和开发团队通常在[Discord](https://discord.gg/3NwKFyR)。

@@ -1,17 +1,19 @@
-# 服务端渲染（SSR）
+# 服务器侧渲染器
 
-先看例子 https://docsify.now.sh
+!> :construction: SSR support is experimental and incomplete. 我们正在为此而努力。 插件和
+一些Docsify功能还不能在 SSR 模式中工作。 :construction:
+
+<!--
+This link is dead.
+See https://docsify.now.sh
+-->
 
 项目地址在 https://github.com/docsifyjs/docsify-ssr-demo
 
-![](https://dn-mhke0kuv.qbox.me/2bfef08c592706108055.png)
-
-文档依旧是部署在 GitHub Pages 上，Node 服务部署在 now.sh 里，渲染的内容是从 GitHub Pages 上同步过来的。所以静态部署文档的服务器和服务端渲染的 Node 服务器是分开的，也就是说你还是可以用之前的方式更新文档，并不需要每次都部署。
-
 ## 什么是 SSR?
+
 - 更好的 SEO
 - 更酷的感觉
-
 
 ## 快速开始
 
@@ -21,7 +23,7 @@
 npm i now docsify-cli -D
 ```
 
-编辑 `package.json`。假设你的文档放在 `./docs` 子目录。
+编辑 `package.json`。假设你的文档放在 `./docs` 子目录。 以下假设文档位于`./docs`子目录中。
 
 ```json
 {
@@ -45,23 +47,23 @@ npm i now docsify-cli -D
 }
 ```
 
-!> 其中 `basePath` 相当于 webpack 的 `publicPath` ，为文档所在的路径，可以填你的 docsify 文档网站。我们可以使用本地或者远程文件。
+!> 其中 `basePath` 相当于 webpack 的 `publicPath` ，为文档所在的路径，可以填你的 docsify 文档网站。我们可以使用本地或者远程文件。 我们可以使用本地或远程文件。
 
-配置好了以后，我们可以在本地预览。
+我们可以预览本地网站以查看它是否正常工作。
 
 ```bash
-npm start
+npm 启动
 
-# open http://localhost:4000
+# 打开 http://localhost:4000
 ```
 
 发布！
 
 ```bash
-now -p
+现在-p
 ```
 
-现在，你有一个支持服务端渲染的文档网站了。
+现在，您支持SSR。
 
 ## 定制模板
 
@@ -88,17 +90,14 @@ now -p
 </html>
 ```
 
-模板可以包含占位符，会自动将渲染后的 html 和配置内容注入到页面上。
+模板应包含这些评论以提供应用内容。
 
- - `<!--inject-app-->`
- - `<!--inject-config-->`
-
+- `<!--inject-app-->`
+- `<!--inject-config-->`
 
 ## 配置
 
 配置可以单独写在配置文件内，然后通过 `--config config.js` 加载，或者写在 `package.json` 中。
-
-渲染的基础模版也可以自定义，配置在 `template` 属性上。
 
 ```js
 module.exports = {
@@ -110,31 +109,24 @@ module.exports = {
 }
 ```
 
-
-
-
-## 更多玩法
+## 为您的 VPS 部署
 
 你可以直接在你的 Node 服务器上执行 `docsify start` 。
 
-`docsify start` 其实是依赖了 [`docsify-server-renderer`](https://npmarket.surge.sh/?name=docsify-server-renderer) 模块，如果你感兴趣，你完全可以用它自己实现一个 server，可以加入缓存等功能。
-
 ```js
-var Renderer = require('docsify-server-renderer')
+var Renderer = require('docsify-server-render')
 var readFileSync = require('fs').readFileSync
 
 // init
-var renderer = new Renderer({
-  template: readFileSync('./docs/index.template.html', 'utf-8'),
-  config: {
+var renderer = new Render(*
+  template: readFileSync('./docs/index.template. tml', 'utf-8'),
+  config: @un.org,
     name: 'docsify',
-    repo: 'docsifyjs/docsify'
+    仓库: 'docsifyjs/docsify'
   }
 })
 
-renderer.renderToString(url)
+渲染器。 enderToString(url)
   .then(html => {})
   .catch(err => {})
 ```
-
-当然文档文件和 server 也是可以部署在一起的，`basePath` 不是一个 URL 的话就会当做文件路径处理，也就是从服务器上加载资源。

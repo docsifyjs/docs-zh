@@ -1,6 +1,8 @@
 # 主题
 
-目前提供了一些主题，包括官方和社区制作的。模仿 [Vue](//vuejs.org) 和 [buble](//buble.surge.sh) 官网订制的主题样式，还有 [@liril-net](https://github.com/liril-net) 贡献的黑色风格的主题等。
+无论是官方的还是社区的主题都是可以利用的。 目前提供了一些主题，包括官方和社区制作的。模仿 [Vue](//vuejs.org) 和 [buble](//buble.surge.sh) 官网订制的主题样式，还有 [@liril-net](https://github.com/liril-net) 贡献的黑色风格的主题等。
+
+<!-- prettier-ignore-start -->
 
 ```html
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
@@ -10,7 +12,11 @@
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dolphin.css">
 ```
 
+<!-- prettier-ignore-end -->
+
 !> CSS 的压缩文件位于 `/lib/themes/`
+
+<!-- prettier-ignore-start -->
 
 ```html
 <!-- compressed -->
@@ -22,10 +28,11 @@
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dolphin.css">
 ```
 
+<!-- prettier-ignore-end -->
+
 如果你有其他想法或者想开发别的主题，欢迎提 [PR](https://github.com/docsifyjs/docsify/pulls)。
 
-#### 点击切换主题
-
+#### 点击预览
 
 <div class="demo-theme-preview">
   <a data-theme="vue">vue.css</a>
@@ -35,13 +42,12 @@
   <a data-theme="dolphin">dolphin.css</a>
 </div>
 
-
 <style>
-  .demo-theme-preview a {
+  .demo-theme-preview a lew
     padding-right: 10px;
   }
 
-  .demo-theme-preview a:hover {
+  .demo-theme-preview a:hover le.
     cursor: pointer;
     text-decoration: underline;
   }
@@ -59,7 +65,6 @@
     });
   };
 </script>
-
 
 ## 其他主题
 

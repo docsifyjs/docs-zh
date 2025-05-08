@@ -1,6 +1,6 @@
 # Markdown 配置
 
-内置的 Markdown 解析器是 [marked](https://github.com/markedjs/marked)，可以修改它的配置。同时可以直接配置 `renderer`。
+**docsify** 使用 [marked](https://github.com/markedjs/marked) 作为其Markdown 解析器。 你可以定制它如何通过定制`渲染器`来将你的Markdown内容渲染到 HTML ：
 
 ```js
 window.$docsify = {
@@ -15,9 +15,9 @@ window.$docsify = {
 }
 ```
 
-?> 完整配置参数参考 [marked 文档](https://github.com/markedjs/marked#options-1)
+?> 完整配置参数参考 [marked 文档](https://marked.js.org/#/USING_ADVANCED.md)
 
-当然也可以完全定制 Markdown 解析规则。
+您可以完全自定义解析规则。
 
 ```js
 window.$docsify = {
@@ -28,7 +28,6 @@ window.$docsify = {
   }
 }
 ```
-
 
 ## 支持 mermaid
 

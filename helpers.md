@@ -2,29 +2,35 @@
 
 docsify 扩展了一些 Markdown 语法，可以让文档更易读。
 
+> 注意：对于特殊代码语法案例来说，最好是将它们放在代码的后端里，以避免配置或表情发生任何冲突。
+
 ## 强调内容
 
-适合显示重要的提示信息，语法为 `!> 内容`。
+重要内容如：
 
 ```markdown
-!> 一段重要的内容，可以和其他 **Markdown** 语法混用。
+!> **时间** 是钱，我的朋友！
 ```
 
-!> 一段重要的内容，可以和其他 **Markdown** 语法混用。
+渲染为：
+
+!> **时间** 是钱，我的朋友！
 
 ## 普通提示
 
-普通的提示信息，比如写 TODO 或者参考内容等。
+一般提示如：
 
 ```markdown
-?> _TODO_ 完善示例
+?> _TODO_单位测试
 ```
 
-?> _TODO_ 完善示例
+渲染为：
+
+?> _TODO_单位测试
 
 ## 忽略编译链接
 
-有时候我们会把其他一些相对路径放到链接上，你必须告诉 docsify 你不需要编译这个链接。 例如：
+有时候我们会把其他一些相对路径放到链接上，你必须告诉 docsify 你不需要编译这个链接。 例如： 例如：
 
 ```md
 [link](/demo/)
@@ -35,15 +41,15 @@ docsify 扩展了一些 Markdown 语法，可以让文档更易读。
 现在你可以做到这一点
 
 ```md
-[link](/demo/ ':ignore')
+[link](/demo/':ignore')
 ```
 
-即将会得到 `<a href="/demo/">link</a>` html 代码。不要担心，你仍然可以为链接设置标题。
+即将会得到 `<a href="/demo/">link</a>` html 代码。不要担心，你仍然可以为链接设置标题。 跨域链接
 
 ```md
-[link](/demo/ ':ignore title')
+[link](/demo/':nove title')
 
-<a href="/demo/" title="title">link</a>
+<a href="/demo/" title="title">链接</a>
 ```
 
 ## 设置链接的 target 属性
@@ -56,15 +62,7 @@ docsify 扩展了一些 Markdown 语法，可以让文档更易读。
 ## 禁用链接
 
 ```md
-[link](/demo ':disabled')
-```
-
-## 跨域链接
-
-只有当你同时设置了 `routerMode: 'history'` 和 `externalLinkTarget: '_self'` 时，你需要为这些跨域链接添加这个配置。
-
-```md
-[example.com](https://example.com/ ':crossorgin')
+[link](/demo ':禁用')
 ```
 
 ## Github 任务列表
@@ -79,10 +77,10 @@ docsify 扩展了一些 Markdown 语法，可以让文档更易读。
 ```
 
 - [ ] foo
-- bar
+- 条形图
 - [x] baz
-- [] bam <~ not working
-  - [ ] bim
+- []bam <~没有工作
+  - [ ] 自行车
   - [ ] lim
 
 ## 图片处理
@@ -99,9 +97,9 @@ docsify 扩展了一些 Markdown 语法，可以让文档更易读。
 ![logo](https://docsify.js.org/_media/icon.svg ':size=10%')
 ```
 
-![logo](https://docsify.js.org/_media/icon.svg ':size=50x100')
-![logo](https://docsify.js.org/_media/icon.svg ':size=100')
-![logo](https://docsify.js.org/_media/icon.svg ':size=10%')
+![logo](https://docsify.js.org/_media/icon.svg ":size=50x100")
+![logo](https://docsify.js.org/_media/icon.svg ":size=100")
+![logo](https://docsify.js.org/_media/icon.svg ":size=10%")
 
 ### 设置图片的 Class
 
@@ -125,6 +123,7 @@ docsify 扩展了一些 Markdown 语法，可以让文档更易读。
 
 你需要在 html 和 Markdown 内容中插入空行。
 当你需要在 details 元素中渲染 Markdown 时很有用。
+这对于在细节元素中渲染Markdown内容是有用的。
 
 ```markdown
 <details>

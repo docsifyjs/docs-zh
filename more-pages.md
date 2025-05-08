@@ -1,6 +1,6 @@
-# 多页文档
+# 更多页面
 
-如果需要创建多个页面，或者需要多级路由的网站，在 docsify 里也能很容易的实现。例如创建一个 `guide.md` 文件，那么对应的路由就是 `/#/guide`。
+如果你需要更多的页面，你可以在你的docsify目录中创建更多的Markdown文件。 如果您创建了一个名为 `guide.md` 的文件，它可以通过 `/#/guide` 访问。
 
 假设你的目录结构如下：
 
@@ -14,7 +14,7 @@
         └── guide.md
 ```
 
-那么对应的访问页面将是
+匹配路径
 
 ```text
 docs/README.md        => http://domain.com
@@ -25,9 +25,9 @@ docs/zh-cn/guide.md   => http://domain.com/zh-cn/guide
 
 ## 定制侧边栏
 
-为了获得侧边栏，您需要创建自己的_sidebar.md，你也可以自定义加载的文件名。默认情况下侧边栏会通过 Markdown 文件自动生成，效果如当前的文档的侧边栏。
+自定义侧边栏同时也可以开启目录功能。设置 `subMaxLevel` 配置项，具体介绍见 [配置项#subMaxLevel](zh-cn/configuration#submaxlevel)。
 
-首先配置 `loadSidebar` 选项，具体配置规则见[配置项#loadSidebar](zh-cn/configuration#loadsidebar)。
+首先配置 `loadSidebar` 选项，具体配置规则见[配置项#loadSidebar](zh-cn/configuration#loadsidebar)。 详细信息可在 [configuration.md#loadsidebar 中查阅。
 
 ```html
 <!-- index.html -->
@@ -51,12 +51,23 @@ docs/zh-cn/guide.md   => http://domain.com/zh-cn/guide
 
 需要在 `./docs` 目录创建 `.nojekyll` 命名的空文件，阻止 GitHub Pages 忽略命名是下划线开头的文件。
 
+如果需要创建多个页面，或者需要多级路由的网站，在 docsify 里也能很容易的实现。例如创建一个 `guide.md` 文件，那么对应的路由就是 `/#/guide`。
+
+示例文件结构：
+
+```text
+intention-- docs/
+    new - - _sidebar.md
+    - --index.md
+    - - - getting-started.md
+
+```
+
 ## 嵌套的侧边栏
 
-你可能想要浏览到一个目录时，只显示这个目录自己的侧边栏，这可以通过在每个文件夹中添加一个 `_sidebar.md` 文件来实现。
+您可能希望侧边栏在导航后更新以反映当前目录。 你可能想要浏览到一个目录时，只显示这个目录自己的侧边栏，这可以通过在每个文件夹中添加一个 `_sidebar.md` 文件来实现。
 
-
-`_sidebar.md` 的加载逻辑是从每层目录下获取文件，如果当前目录不存在该文件则回退到上一级目录。例如当前路径为 `/zh-cn/more-pages` 则从 `/zh-cn/_sidebar.md` 获取文件，如果不存在则从 `/_sidebar.md` 获取。
+当设置了 `subMaxLevel` 时，默认情况下每个标题都会自动添加到目录中。如果你想忽略特定的标题，可以给它添加 `<!-- {docsify-ignore} -->` 。 `_sidebar.md` 的加载逻辑是从每层目录下获取文件，如果当前目录不存在该文件则回退到上一级目录。例如当前路径为 `/zh-cn/more-pages` 则从 `/zh-cn/_sidebar.md` 获取文件，如果不存在则从 `/_sidebar.md` 获取。 例如，如果当前路径是 `/guide/Quick-start`，则`_sidebar.md`将从`/guide/_sidebar.md`加载。
 
 当然你也可以配置 `alias` 避免不必要的回退过程。
 
@@ -75,17 +86,19 @@ docs/zh-cn/guide.md   => http://domain.com/zh-cn/guide
 
 ## 用侧边栏中选定的条目名称作为页面标题
 
-一个页面的 `title` 标签是由侧边栏中选中条目的名称所生成的。为了更好的 SEO ，你可以在文件名后面指定页面标题。
+那么对应的访问页面将是 一个页面的 `title` 标签是由侧边栏中选中条目的名称所生成的。为了更好的 SEO ，你可以在文件名后面指定页面标题。
 
 ```markdown
 <!-- docs/_sidebar.md -->
 * [Home](/)
-* [Guide](guide.md "The greatest guide in the world")
+* [Guide](guid.md "世界上最大的指南")
 ```
 
-## 显示目录
+## 目录
 
-自定义侧边栏同时也可以开启目录功能。设置 `subMaxLevel` 配置项，具体介绍见 [配置项#subMaxLevel](zh-cn/configuration#submaxlevel)。
+为了获得侧边栏，您需要创建自己的_sidebar.md，你也可以自定义加载的文件名。默认情况下侧边栏会通过 Markdown 文件自动生成，效果如当前的文档的侧边栏。
+
+自定义侧边栏也可以通过设置 `subMaxLevel` ，比较[subMaxLevel配置](configuration.md#submaxlevel) 自动生成一个目录表。
 
 ```html
 <!-- index.html -->
@@ -101,7 +114,7 @@ docs/zh-cn/guide.md   => http://domain.com/zh-cn/guide
 
 ## 忽略副标题
 
-当设置了 `subMaxLevel` 时，默认情况下每个标题都会自动添加到目录中。如果你想忽略特定的标题，可以给它添加 `<!-- {docsify-ignore} -->` 。
+当设置子MaxLevel`时，默认情况下将每个标题自动添加到目录中。 如果要忽略某个特定的标题，请添加 `<!-- {docsify-ignore} -->\`。
 
 ```markdown
 # Getting Started
