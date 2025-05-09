@@ -1,57 +1,60 @@
 # Markdown 配置
 
-内置的 Markdown 解析器是 [marked](https://github.com/markedjs/marked)，可以修改它的配置。同时可以直接配置 `renderer`。
+**docsify** 使用 [marked](https://github.com/markedjs/marked) 作为其 Markdown 解析器。 你可以通过自定义 `renderer` 来定制如何将 Markdown 内容渲染为 HTML：
 
 ```js
 window.$docsify = {
   markdown: {
     smartypants: true,
     renderer: {
-      link: function() {
+      link() {
         // ...
-      }
-    }
-  }
-}
+      },
+    },
+  },
+};
 ```
 
-?> 完整配置参数参考 [marked 文档](https://github.com/markedjs/marked#options-1)
+?> 完整配置参数参考 [marked 文档](https://marked.js.org/#/USING_ADVANCED.md)
 
-当然也可以完全定制 Markdown 解析规则。
+你可以完全自定义解析规则。
 
 ```js
 window.$docsify = {
-  markdown: function(marked, renderer) {
+  markdown(marked, renderer) {
     // ...
 
-    return marked
-  }
-}
+    return marked;
+  },
+};
 ```
-
 
 ## 支持 mermaid
 
-```js
-// Import mermaid
-//  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css">
-//  <script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+!> 目前 docsify 不支持异步 mermaid 渲染（最新的 mermaid 版本是 `v9.3.0`）。
 
-var num = 0;
+```js
+//  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css">
+//  <script src="//cdn.jsdelivr.net/npm/mermaid@9.3.0/dist/mermaid.min.js"></script>
+
+let num = 0;
 mermaid.initialize({ startOnLoad: false });
 
 window.$docsify = {
   markdown: {
     renderer: {
-      code: function(code, lang) {
-        if (lang === "mermaid") {
-          return (
-            '<div class="mermaid">' + mermaid.render('mermaid-svg-' + num++, code) + "</div>"
-          );
+      code({ text, lang }) {
+        if (lang === 'mermaid') {
+          return /* html */ `
+            <div class="mermaid">${mermaid.render(
+              'mermaid-svg-' + num++,
+              text,
+            )}</div>
+          `;
         }
         return this.origin.code.apply(this, arguments);
-      }
-    }
-  }
-}
+      },
+    },
+  },
+};
 ```

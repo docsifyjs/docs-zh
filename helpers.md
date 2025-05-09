@@ -2,27 +2,43 @@
 
 docsify 扩展了一些 Markdown 语法，可以让文档更易读。
 
-## 强调内容
+> 注意：对于特殊的代码语法，最好将其放在代码的反斜线内，以避免与配置或表情符号发生冲突。
 
-适合显示重要的提示信息，语法为 `!> 内容`。
+## 标注
 
-```markdown
-!> 一段重要的内容，可以和其他 **Markdown** 语法混用。
-```
+### 强调内容
 
-!> 一段重要的内容，可以和其他 **Markdown** 语法混用。
-
-## 普通提示
-
-普通的提示信息，比如写 TODO 或者参考内容等。
+重要内容如：
 
 ```markdown
-?> _TODO_ 完善示例
+!> **Time** is money, my friend!
 ```
 
-?> _TODO_ 完善示例
+渲染为：
 
-## 忽略编译链接
+!> **Time** is money, my friend!
+
+### 提示
+
+一般提示如：
+
+```markdown
+?> _TODO_ unit test
+```
+
+渲染为：
+
+?> _TODO_ unit test
+
+## 链接属性
+
+### disabled
+
+```md
+[link](/demo ':disabled')
+```
+
+### href
 
 有时候我们会把其他一些相对路径放到链接上，你必须告诉 docsify 你不需要编译这个链接。 例如：
 
@@ -30,7 +46,7 @@ docsify 扩展了一些 Markdown 语法，可以让文档更易读。
 [link](/demo/)
 ```
 
-它将被编译为 `<a href="/#/demo/">link</a>` 并将加载 `/demo/README.md`. 可能你想跳转到 `/demo/index.html`。
+它将被编译为 `<a href="/#/demo/">link</a>` 并将加载 `/demo/README.md`。 可能你想跳转到 `/demo/index.html`。
 
 现在你可以做到这一点
 
@@ -38,7 +54,7 @@ docsify 扩展了一些 Markdown 语法，可以让文档更易读。
 [link](/demo/ ':ignore')
 ```
 
-即将会得到 `<a href="/demo/">link</a>` html 代码。不要担心，你仍然可以为链接设置标题。
+你会得到 `<a href="/demo/">link</a>` html 代码。 不要担心，你仍然可以为链接设置标题。
 
 ```md
 [link](/demo/ ':ignore title')
@@ -46,28 +62,14 @@ docsify 扩展了一些 Markdown 语法，可以让文档更易读。
 <a href="/demo/" title="title">link</a>
 ```
 
-## 设置链接的 target 属性
+### target
 
 ```md
 [link](/demo ':target=_blank')
 [link](/demo2 ':target=_self')
 ```
 
-## 禁用链接
-
-```md
-[link](/demo ':disabled')
-```
-
-## 跨域链接
-
-只有当你同时设置了 `routerMode: 'history'` 和 `externalLinkTarget: '_self'` 时，你需要为这些跨域链接添加这个配置。
-
-```md
-[example.com](https://example.com/ ':crossorgin')
-```
-
-## Github 任务列表
+## 任务清单
 
 ```md
 - [ ] foo
@@ -85,9 +87,21 @@ docsify 扩展了一些 Markdown 语法，可以让文档更易读。
   - [ ] bim
   - [ ] lim
 
-## 图片处理
+## 图片
 
-### 缩放
+### 类名
+
+```md
+![logo](https://docsify.js.org/_media/icon.svg ':class=someCssClass')
+```
+
+### ID
+
+```md
+![logo](https://docsify.js.org/_media/icon.svg ':id=someCssId')
+```
+
+### 大小
 
 ```md
 ![logo](https://docsify.js.org/_media/icon.svg ':size=WIDTHxHEIGHT')
@@ -99,21 +113,9 @@ docsify 扩展了一些 Markdown 语法，可以让文档更易读。
 ![logo](https://docsify.js.org/_media/icon.svg ':size=10%')
 ```
 
-![logo](https://docsify.js.org/_media/icon.svg ':size=50x100')
-![logo](https://docsify.js.org/_media/icon.svg ':size=100')
-![logo](https://docsify.js.org/_media/icon.svg ':size=10%')
-
-### 设置图片的 Class
-
-```md
-![logo](https://docsify.js.org/_media/icon.svg ':class=someCssClass')
-```
-
-### 设置图片的 ID
-
-```md
-![logo](https://docsify.js.org/_media/icon.svg ':id=someCssId')
-```
+![logo](https://docsify.js.org/_media/icon.svg ":size=50x100")
+![logo](https://docsify.js.org/_media/icon.svg ":size=100")
+![logo](https://docsify.js.org/_media/icon.svg ":size=10%")
 
 ## 设置标题的 id 属性
 
@@ -121,10 +123,10 @@ docsify 扩展了一些 Markdown 语法，可以让文档更易读。
 ### 你好，世界！ :id=hello-world
 ```
 
-## html 标签中的 Markdown
+## HTML 标签中的 Markdown
 
-你需要在 html 和 Markdown 内容中插入空行。
-当你需要在 details 元素中渲染 Markdown 时很有用。
+你需要在 html 和 markdown 内容之间插入空格。
+这对于在 details 元素中呈现 markdown 内容非常有用。
 
 ```markdown
 <details>
@@ -158,7 +160,8 @@ Markdown 内容也可以被 html 标签包裹。
 
 <div style='color: red'>
 
-- Abc
-- Abc
+- listitem
+- listitem
+- listitem
 
 </div>
