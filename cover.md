@@ -1,22 +1,15 @@
 # 封面
 
-通过设置 `coverpage` 参数，可以开启渲染封面的功能。具体用法见[配置项#coverpage](configuration.md#coverpage)。
+通过设置 `coverpage` 为 **true** 来开启渲染封面功能。 参见 [coverpage configuration](zh-cn/configuration#coverpage)。
 
 ## 基本用法
 
-封面的生成同样是从 markdown 文件渲染来的。开启渲染封面功能后在文档根目录创建 `_coverpage.md` 文件。渲染效果如本文档。
+设置 `coverpage` 为 **true**, 并创建 `_coverpage.md` ：
 
-_index.html_
-
-```html
-<!-- index.html -->
-
-<script>
-  window.$docsify = {
-    coverpage: true
-  }
-</script>
-<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+```js
+window.$docsify = {
+  coverpage: true,
+};
 ```
 
 ```markdown
@@ -24,44 +17,51 @@ _index.html_
 
 ![logo](_media/icon.svg)
 
-# docsify <small>3.5</small>
+# docsify
 
-> 一个神奇的文档网站生成器。
+> A magical documentation site generator
 
-- 简单、轻便 (压缩后 ~21kB)
-- 无需生成 html 文件
-- 众多主题
+- Simple and lightweight
+- No statically built HTML files
+- Multiple themes
 
 [GitHub](https://github.com/docsifyjs/docsify/)
 [Get Started](#docsify)
 ```
 
-## 自定义背景
+## 定制化
 
-目前的背景是随机生成的渐变色，我们自定义背景色或者背景图。在文档末尾用添加图片的 Markdown 语法设置背景。
+封面页可使用[主题属性](zh-cn/theme#theme-properties)进行自定义：
 
-`_coverpage.md`
+<!-- prettier-ignore -->
+
+```css
+:root {
+  --cover-bg         : url('path/to/image.png');
+  --cover-bg-overlay : rgba(0, 0, 0, 0.5);
+  --cover-color      : #fff;
+  --cover-title-color: var(--theme-color);
+  --cover-title-font : 600 var(--font-size-xxxl) var(--font-family);
+}
+```
+
+或者，可以在封面页面 markdown 中指定背景颜色或图像。
 
 ```markdown
-<!-- _coverpage.md -->
-
-# docsify <small>3.5</small>
-
-[GitHub](https://github.com/docsifyjs/docsify/)
-[Get Started](#quick-start)
-
-<!-- 背景图片 -->
-
-![](_media/bg.png)
-
-<!-- 背景色 -->
+<!-- background color -->
 
 ![color](#f0f0f0)
 ```
 
+```markdown
+<!-- background image -->
+
+![](_media/bg.png)
+```
+
 ## 封面作为首页
 
-通常封面和首页是同时出现的，当然你也是当封面独立出来通过设置[onlyCover 选项](zh-cn/configuration.md#onlycover)。
+通常，封面页和主页同时出现。 当然，你也可以用[`onlyCover`](zh-cn/configuration#onlycover)选项分离封面。
 
 ## 多个封面
 
@@ -81,11 +81,11 @@ _index.html_
         └── _coverpage.md
 ```
 
-那么你可以这么配置
+现在，你可以设置
 
 ```js
 window.$docsify = {
-  coverpage: ['/', '/zh-cn/']
+  coverpage: ['/', '/zh-cn/'],
 };
 ```
 
@@ -95,7 +95,7 @@ window.$docsify = {
 window.$docsify = {
   coverpage: {
     '/': 'cover.md',
-    '/zh-cn/': 'cover.md'
-  }
+    '/zh-cn/': 'cover.md',
+  },
 };
 ```
