@@ -6,7 +6,7 @@
   <summary>查看本页面的 markdown 源代码</summary>
   <div style="max-height: 50vh; overflow: auto;">
 
-[ui-kit.md](ui-kit.md ":include :type=code")
+[ui-kit.md](https://cdn.jsdelivr.net/gh/docsifyjs/docs-zh@main/ui-kit.md ":include :type=code")
 
   </div>
 </details>
@@ -80,47 +80,47 @@ console.log(total); // 3
 <div class="ui-kit-color">
   <figure>
     <div style="background: var(--theme-color-1);"></div>
-    
+
     <figcaption>1<figcaption>
   </figure>
   <figure>
     <div style="background: var(--theme-color-2);"></div>
-    
+
     <figcaption>2<figcaption>
   </figure>
   <figure>
     <div style="background: var(--theme-color-3);"></div>
-    
+
     <figcaption>3<figcaption>
   </figure>
   <figure>
     <div style="background: var(--theme-color-4);"></div>
-    
+
     <figcaption>4<figcaption>
   </figure>
   <figure>
     <div style="background: var(--theme-color);"></div>
-    
+
     <figcaption>主题颜色<figcaption>
   </figure>
   <figure>
     <div style="background: var(--theme-color-5);"></div>
-    
+
     <figcaption>5<figcaption>
   </figure>
   <figure>
     <div style="background: var(--theme-color-6);"></div>
-    
+
     <figcaption>6<figcaption>
   </figure>
   <figure>
     <div style="background: var(--theme-color-7);"></div>
-    
+
     <figcaption>7<figcaption>
   </figure>
   <figure>
     <div style="background: var(--theme-color-8);"></div>
-    
+
     <figcaption>8<figcaption>
   </figure>
 </div>
@@ -130,57 +130,57 @@ console.log(total); // 3
 <div class="ui-kit-color">
   <figure>
     <div style="background: var(--color-mono-min); border: 1px solid var(--color-mono-2);"></div>
-    
+
     <figcaption>Min<figcaption>
   </figure>
   <figure>
     <div style="background: var(--color-mono-1);"></div>
-    
+
     <figcaption>1<figcaption>
   </figure>
   <figure>
     <div style="background: var(--color-mono-2);"></div>
-    
+
     <figcaption>2<figcaption>
   </figure>
   <figure>
     <div style="background: var(--color-mono-3);"></div>
-    
+
     <figcaption>3<figcaption>
   </figure>
   <figure>
     <div style="background: var(--color-mono-4);"></div>
-    
+
     <figcaption>4<figcaption>
   </figure>
   <figure>
     <div style="background: var(--color-mono-5);"></div>
-    
+
     <figcaption>5<figcaption>
   </figure>
   <figure>
     <div style="background: var(--color-mono-6);"></div>
-    
+
     <figcaption>6<figcaption>
   </figure>
   <figure>
     <div style="background: var(--color-mono-7);"></div>
-    
+
     <figcaption>7<figcaption>
   </figure>
   <figure>
     <div style="background: var(--color-mono-8);"></div>
-    
+
     <figcaption>8<figcaption>
   </figure>
   <figure>
     <div style="background: var(--color-mono-9);"></div>
-    
+
     <figcaption>9<figcaption>
   </figure>
   <figure>
     <div style="background: var(--color-mono-max);"></div>
-    
+
     <figcaption>Max<figcaption>
   </figure>
 </div>
