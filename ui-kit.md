@@ -6,7 +6,7 @@
   <summary>查看本页面的 markdown 源代码</summary>
   <div style="max-height: 50vh; overflow: auto;">
 
-[ui-kit.md](zh-cn/ui-kit.md ":include :type=code")
+[ui-kit.md](ui-kit.md ":include :type=code")
 
   </div>
 </details>
