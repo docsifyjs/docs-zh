@@ -34,8 +34,8 @@ Docsify 推荐 [jsDelivr](//cdn.jsdelivr.net) 为其首选的 CDN：
 <!-- prettier-ignore -->
 
 ```html
-<!-- 主题 -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/themes/vue.min.css" />
+<!-- Theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/dist/themes/addons/vue.min.css" />
 
 <!-- Docsify -->
 <script src="//cdn.jsdelivr.net/npm/docsify@5/dist/docsify.min.js"></script>
@@ -50,8 +50,8 @@ Docsify 推荐 [jsDelivr](//cdn.jsdelivr.net) 为其首选的 CDN：
 <!-- prettier-ignore -->
 
 ```html
-<!-- 主题 -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5.0.0/themes/vue.min.css" />
+<!-- Theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5.0.0/dist/themes/addons/vue.min.css" />
 
 <!-- Docsify -->
 <script src="//cdn.jsdelivr.net/npm/docsify@5.0.0/dist/docsify.min.js"></script>

@@ -2,7 +2,7 @@
 
 ## 核心主题 :id=core-theme
 
-Docsify "核心" 主题包含呈现 Docsify 网站所需的所有样式和[主题属性](#theme-properties)。 该主题可单独用作简约主题，与[主题附加组件](#theme-add-ons) 结合使用，使用核心[类](#classes) 进行修改，也可作为[自定义](#customization) 的起点。
+Docsify "核心" 主题包含呈现 Docsify 网站所需的所有样式和[主题属性](#theme-properties)。 该主题可单独用作简约主题，与[主题附加组件](#theme-add-ons)结合使用，使用核心[类](#classes)进行修改，也可作为[自定义](#customization)的起点。
 
 <!-- prettier-ignore -->
 
@@ -13,9 +13,9 @@ Docsify "核心" 主题包含呈现 Docsify 网站所需的所有样式和[主�
 
 ## 主题附加组件
 
-主题附加组件与[核心主题](#core-theme) 结合使用。 附加组件包含修改[主题属性](#theme-properties) 值和/或添加自定义样式声明的 CSS 规则。 它们通常（但不总是）可以与其他附加组件一起使用。
+主题附加组件与[核心主题](#core-theme)结合使用。 附加组件包含修改[主题属性](#theme-properties)值和/或添加自定义样式声明的 CSS 规则。 它们通常（但不总是）可以与其他附加组件一起使用。
 
-!> 主题附加组件必须在 [核心主题](#core-theme) 之后加载。
+!> 主题附加组件必须在[核心主题](#core-theme)之后加载。
 
 <!-- prettier-ignore -->
 
@@ -91,7 +91,7 @@ Docsify "核心" 主题包含呈现 Docsify 网站所需的所有样式和[主�
 
 ## 类
 
-[核心主题](#core-theme) 提供了多个 CSS 类，用于自定义 Docsify 网站。 这些类应用于 `index.html` 页面中的 `<body>` 元素。
+[核心主题](#core-theme)提供了多个 CSS 类，用于自定义 Docsify 网站。 这些类应用于 `index.html` 页面中的 `<body>` 元素。
 
 <!-- prettier-ignore -->
 
@@ -221,7 +221,7 @@ Docsify "核心" 主题包含呈现 Docsify 网站所需的所有样式和[主�
 
 ## 定制
 
-Docsify 提供了 [主题属性](#theme-properties) 以简化对经常修改的样式的自定义。
+Docsify 提供了[主题属性](#theme-properties)以简化对经常修改的样式的自定义。
 
 1. 在 `index.html` 中的主题样式表后添加一个 `<style>` 标签。
 
@@ -265,7 +265,7 @@ Docsify 提供了 [主题属性](#theme-properties) 以简化对经常修改的�
   }
   ```
 
-  自定义[主题属性](#theme-properties) 可有条件地应用于浅色和/或深色模式。
+  自定义[主题属性](#theme-properties)可有条件地应用于浅色和/或深色模式。
 
   <!-- prettier-ignore -->
 
@@ -307,7 +307,7 @@ Docsify 提供了 [主题属性](#theme-properties) 以简化对经常修改的�
   }
   ```
 
-  ?> **主题作者**：考虑提供手动加载推荐网络字体的说明，而不是在主题中使用 `@import`。 这样喜欢不同字体的用户就可以避免不必要地加载你所推荐的网页字体。
+?> **主题作者**：考虑提供手动加载推荐网络字体的说明，而不是在主题中使用 `@import`。 这样喜欢不同字体的用户就可以避免不必要地加载你所推荐的网页字体。
 
 4. 高级样式可能需要自定义 CSS 声明。 这在意料之中，但当 Docsify 发布新版本时，自定义 CSS 声明可能会中断。 在可能的情况下，请使用[主题属性](#theme-properties) 而不是自定义声明，或者将[CDN](zh-cn/cdn) URL 锁定为[特定版本](zh-cn/cdn#specific-version)，以避免在使用自定义 CSS 声明时出现潜在问题。
 
@@ -335,7 +335,7 @@ Docsify 提供了 [主题属性](#theme-properties) 以简化对经常修改的�
 
 ### Advanced
 
-高级主题属性也可供使用，但通常无需修改。 从 [common](#common) 主题属性导出的值，但也可根据需要明确设置。
+Advanced 主题属性也可供使用，但通常无需修改。 从 [common](#common) 主题属性导出的值，但也可根据需要明确设置。
 
 <!-- TODO: Replace TBD with include CSS include below -->
 
