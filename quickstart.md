@@ -52,7 +52,7 @@ docsify serve docs
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
     <!-- Core Theme -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/themes/core.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/dist/themes/core.min.css">
   </head>
   <body class="loading">
     <div id="app"></div>
@@ -85,7 +85,7 @@ docsify serve docs
 
 ```html
 <!-- Core Theme -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/themes/core.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/dist/themes/core.min.css">
 
 <!-- Docsify -->
 <script src="//cdn.jsdelivr.net/npm/docsify@5"></script>
