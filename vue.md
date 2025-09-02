@@ -314,7 +314,7 @@ window.$docsify = {
 
 Vue 内容可以使用 markdown 页面中的 `<script>` 标签进行挂载。
 
-!> 只执行 markdown 文件中的第一个 `<script>` 标签。 你可以直接在 markdown 文件里写 Vue 代码，它将被执行。我们可以用它写一些 Vue 的 Demo 或者示例代码。
+> [!IMPORTANT] 只执行 markdown 文件中的第一个 `<script>` 标签。 如果你想要使用脚本标签挂载多个 Vue 实例, 所有实例都必须挂载在你的 markdown 中的第一个脚本标签中。
 
 ```html
 <script>

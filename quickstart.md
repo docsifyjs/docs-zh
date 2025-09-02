@@ -32,7 +32,7 @@ docsify init ./docs
 docsify serve docs
 ```
 
-?> 更多命令行工具用法，参考 [docsify-cli 文档](https://github.com/docsifyjs/docsify-cli)。
+> [!TIP] 更多命令行工具用法，参考 [docsify-cli 文档](https://github.com/docsifyjs/docsify-cli)。
 
 ## 手动初始化
 
@@ -77,7 +77,7 @@ docsify serve docs
 
 ### 指定 docsify 版本
 
-?> 注意：在下面两个例子中，当 docsify 发布新的主要版本时，需要手动更新 docsify URL（例如，`v5.x.x` => `v6.x.x`）。 定期检查 docsify 网站，以查看新的主要版本是否已发布。
+> [!TIP] 注意：在下面两个例子中，当 docsify 发布新的主要版本时，需要手动更新 docsify URL（例如，`v5.x.x` => `v6.x.x`）。 定期检查 docsify 网站，以查看新的主要版本是否已发布。
 
 在 URL 中指定一个主要版本 (`@5`)，可使你的网站自动接收非破坏性增强（即 "minor" 更新）和错误修复（即 "patch" 更新）。 这是加载 docsify 资源的推荐方式。
 
@@ -116,32 +116,6 @@ cd docs && python -m SimpleHTTPServer 3000
 # Python 3
 cd docs && python -m http.server 3000
 ```
-
-## Loading 提示
-
-如果你想要，你可以在 docsify 开始渲染文档之前显示一个加载提示信息：
-
-```html
-<!-- index.html -->
-
-<div id="app">Please wait...</div>
-```
-
-如果更改了 `el` 的配置，需要将该元素加上 `data-app` 属性：
-
-```html
-<!-- index.html -->
-
-<div data-app id="main">Please wait...</div>
-
-<script>
-  window.$docsify = {
-    el: '#main',
-  };
-</script>
-```
-
-对比 [el 设置](zh-cn/configuration#el)。
 
 <script>
   (function() {

@@ -15,7 +15,7 @@ window.$docsify = {
 };
 ```
 
-?> 完整配置参数参考 [marked 文档](https://marked.js.org/#/USING_ADVANCED.md)
+> [!TIP] 完整配置参数参考 [marked 文档](https://marked.js.org/#/USING_ADVANCED.md)
 
 你可以完全自定义解析规则。
 
@@ -31,7 +31,7 @@ window.$docsify = {
 
 ## 支持 mermaid
 
-!> 目前 docsify 不支持异步 mermaid 渲染（最新的 mermaid 版本是 `v9.3.0`）。
+> [!IMPORTANT] 目前 docsify 不支持异步 mermaid 渲染（最新的 mermaid 版本是 `v9.3.0`）。
 
 ```js
 //  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css">

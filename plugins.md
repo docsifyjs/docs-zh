@@ -125,7 +125,7 @@
 
 显示更多的表情符号短代码。 如果没有这个插件，Docsify 只能渲染数量有限的表情短代码。
 
-!> 自 v4.13 起已弃用。 Docsify 不再需要此插件来提供完整的 emoji 支持。
+> [!IMPORTANT] 废弃于 v4.13。 Docsify 不再需要此插件来提供完整的 emoji 支持。
 
 ```html
 <script src="//cdn.jsdelivr.net/npm/docsify@5/dist/plugins/emoji.min.js"></script>

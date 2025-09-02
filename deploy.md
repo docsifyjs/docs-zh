@@ -14,14 +14,14 @@ GitHub Pages 支持从三个地方读取文件：
 
 ![GitHub Pages](../_images/deploy-github-pages.png)
 
-!> 你也可以在根目录中保存文件并选择 `main branch` 。
-你需要在部署位置下放一个 `.nojekyll` 文件（比如 `/docs` 目录或者 gh-pages 分支）
+> [!IMPORTANT] 你也可以在根目录中保存文件并选择 `main branch` 。
+> 你需要在部署位置下放一个 `.nojekyll` 文件（比如 `/docs` 目录或者 gh-pages 分支）
 
 ## GitLab Pages
 
 如果你正在部署你的主分支, 在 `.gitlab-ci.yml` 中包含以下脚本：
 
-?> `.public` 的解决方法是这样的，`cp` 不会无限循环的将 `public/` 复制到自身。
+> [!TIP]  `.public` 的解决方法是这样的，`cp` 不会无限循环的将 `public/` 复制到自身。
 
 ```YAML
 pages:
@@ -37,11 +37,11 @@ pages:
   - master
 ```
 
-!> 你可以用 `- cp -r docs/. public` 替换脚本，如果 `./docs` 是你的 docsify 子文件夹。
+> !IMPORTANT] 你可以用 `- cp -r docs/. public` 替换脚本，如果 `./docs` 是你的 docsify 子文件夹。
 
 ## Firebase 主机
 
-!> 你需要先使用谷歌账号登录 [Firebase 控制台](https://console.firebase.google.com)，然后使用 `npm i -g firebase-tools` 命令安装 Firebase CLI 。
+> [!IMPORTANT] 你需要先使用谷歌账号登录 [Firebase 控制台](https://console.firebase.google.com)，然后使用 `npm i -g firebase-tools` 命令安装 Firebase CLI 。
 
 使用终端，确定并导航到你的 Firebase 项目目录。 这可能是 `~/Projects/Docs`，等等。 在这里执行 `firebase init` 命令，从菜单中选择 `Hosting`（使用**空格键**选择，**方向键**切换选项，**回车键**确认）。 遵照安装说明。
 
@@ -208,8 +208,8 @@ frontend:
 
 5. 在构建设置过程中，Kinsta 会自动尝试填写**Build command**、**Node version** 和 **Publish directory**。 如果不会，请填写以下内容：
 
-  - Build command：留空
-  - Node version：保留默认选择或特定版本（如 `18.16.0`）
-  - Publish directory：`docs`
+   - Build command：留空
+   - Node version：保留默认选择或特定版本（如 `18.16.0`）
+   - Publish directory：`docs`
 
 6. 点击**Create site**。

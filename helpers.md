@@ -6,35 +6,75 @@ docsify 扩展了一些 Markdown 语法，可以让文档更易读。
 
 ## 标注
 
-### 强调内容
+Docsify 支持 [GitHub 风格](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts) 标注（也称为“警告”或“警报”）。
 
-重要内容如：
+<!-- prettier-ignore -->
+
+> [!CAUTION]
+> **Caution** callouts communicate negative potential consequences of an action.
+
+<!-- prettier-ignore -->
+
+> [!IMPORTANT]
+> **Important** callouts communicate information necessary for users to succeed.
+
+<!-- prettier-ignore -->
+
+> [!NOTE]
+> **Note** callouts communicate information that users should take into account.
+
+<!-- prettier-ignore -->
+
+> [!TIP]
+> **Tip** callouts communicate optional information to help a user be more successful.
+
+<!-- prettier-ignore -->
+
+> [!WARNING]
+> **Warning** callouts communicate potential risks user should be aware of.
+
+**Markdown**
+
+<!-- prettier-ignore -->
 
 ```markdown
-!> **Time** is money, my friend!
+> [!CAUTION]
+> **Caution** callouts communicate negative potential consequences of an action.
+
+> [!IMPORTANT]
+> **Important** callouts communicate information necessary for users to succeed.
+
+> [!NOTE]
+> **Note** callouts communicate information that users should take into account.
+
+> [!TIP]
+> **Tip** callouts communicate optional information to help a user be more successful.
+
+> [!WARNING]
+> **Warning** callouts communicate potential risks user should be aware of.
 ```
 
-渲染为：
+### 传统风格 ⚠️ :id=legacy-style-
 
-!> **Time** is money, my friend!
+以下 Docsify v4 标注语法已被弃用，并将在未来版本中删除。
 
-### 提示
+!> Legacy **Important** callouts are deprecated.
 
-一般提示如：
+?> Legacy **Tip** callouts are deprecated.
+
+**Markdown**
 
 ```markdown
-?> _TODO_ unit test
+!> Legacy **Important** callouts are deprecated.
+
+?> Legacy **Tip** callouts are deprecated.
 ```
-
-渲染为：
-
-?> _TODO_ unit test
 
 ## 链接属性
 
 ### disabled
 
-```md
+```markdown
 [link](/demo ':disabled')
 ```
 
@@ -42,7 +82,7 @@ docsify 扩展了一些 Markdown 语法，可以让文档更易读。
 
 有时候我们会把其他一些相对路径放到链接上，你必须告诉 docsify 你不需要编译这个链接。 例如：
 
-```md
+```markdown
 [link](/demo/)
 ```
 
@@ -50,13 +90,13 @@ docsify 扩展了一些 Markdown 语法，可以让文档更易读。
 
 现在你可以做到这一点
 
-```md
+```markdown
 [link](/demo/ ':ignore')
 ```
 
 你会得到 `<a href="/demo/">link</a>` html 代码。 不要担心，你仍然可以为链接设置标题。
 
-```md
+```markdown
 [link](/demo/ ':ignore title')
 
 <a href="/demo/" title="title">link</a>
@@ -64,14 +104,14 @@ docsify 扩展了一些 Markdown 语法，可以让文档更易读。
 
 ### target
 
-```md
+```markdown
 [link](/demo ':target=_blank')
 [link](/demo2 ':target=_self')
 ```
 
 ## 任务清单
 
-```md
+```markdown
 - [ ] foo
 - bar
 - [x] baz
@@ -91,19 +131,23 @@ docsify 扩展了一些 Markdown 语法，可以让文档更易读。
 
 ### 类名
 
-```md
+```markdown
 ![logo](https://docsify.js.org/_media/icon.svg ':class=someCssClass')
+
+<!-- Multiple class names -->
+
+![logo](https://docsify.js.org/_media/icon.svg ':class=someCssClass :class=anotherCssClass')
 ```
 
 ### ID
 
-```md
+```markdown
 ![logo](https://docsify.js.org/_media/icon.svg ':id=someCssId')
 ```
 
 ### 大小
 
-```md
+```markdown
 ![logo](https://docsify.js.org/_media/icon.svg ':size=WIDTHxHEIGHT')
 ![logo](https://docsify.js.org/_media/icon.svg ':size=50x100')
 ![logo](https://docsify.js.org/_media/icon.svg ':size=100')
@@ -119,7 +163,7 @@ docsify 扩展了一些 Markdown 语法，可以让文档更易读。
 
 ## 设置标题的 id 属性
 
-```md
+```markdown
 ### 你好，世界！ :id=hello-world
 ```
 

@@ -57,7 +57,7 @@ function add(a, b) {
 
 通过加载 Prism [语法文件](https://cdn.jsdelivr.net/npm/prismjs@1/components/)，可支持其他[语言](https://prismjs.com/#supported-languages)：
 
-!> 必须在 Docsify 之后加载 Prism 语法文件。
+> [!IMPORTANT] 必须在 Docsify 之后加载 Prism 语法文件。
 
 ```html
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
@@ -79,7 +79,7 @@ function add(a, b) {
 
 Docsify 的官方[主题](zh-cn/themes)与 Prism 语法高亮主题兼容。
 
-!> Prism 主题必须在 Docsify 主题之后加载。
+> [!IMPORTANT] Prism 主题必须在 Docsify 主题之后加载。
 
 ```html
 <!-- Light and dark mode -->

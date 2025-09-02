@@ -4,7 +4,7 @@
 
 如果你需要定制导航栏，可以用 HTML 创建一个导航栏。
 
-!> 注意：文档的链接都要以 `#/` 开头。
+> [!IMPORTANT] 注意：文档的链接以 `#/` 开头。
 
 ```html
 <!-- index.html -->
@@ -51,7 +51,7 @@
   - [简体中文](/zh-cn/)
 ```
 
-!> 你需要在 `./docs` 目录下创建一个 `.nojekyll` 文件，以防止 GitHub Pages 忽略下划线开头的文件。
+> [!IMPORTANT] 你需要在 `./docs` 目录下创建一个 `.nojekyll` 文件，以防止 GitHub Pages 忽略下划线开头的文件。
 
 `_navbar.md` 会从每一级目录加载。 如果当前目录中没有 `_navbar.md`，则会返回上一级目录。 例如，如果当前路径是 `/guide/quick-start`，则将从 `/guide/_navbar.md` 加载 `_navbar.md`。
 
