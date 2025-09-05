@@ -50,11 +50,64 @@
 
 ## 标注 :id=callouts
 
-!> **Important** 使用`内联代码`和额外的占位符文本用于
-强制包装内容和换行。
+<!-- prettier-ignore -->
 
-?> **Tip** 使用`内联代码`和额外的占位符文本用于
-强制包装内容和换行。
+> [!CAUTION]
+> **Caution** callout with `inline code`.
+
+<!-- prettier-ignore -->
+
+> [!IMPORTANT]
+> **Important** callout with `inline code`.
+
+<!-- prettier-ignore -->
+
+> [!NOTE]
+> **Note** callout with `inline code`.
+
+<!-- prettier-ignore -->
+
+> [!TIP]
+> **Tip** callout with `inline code`.
+
+<!-- prettier-ignore -->
+
+> [!WARNING]
+> **Warning** callout with `inline code`.
+
+**多行**
+
+<!-- prettier-ignore -->
+
+> [!NOTE]
+>
+> - List item 1
+> - List item 2
+>
+> Text
+>
+> ```html
+> <p>Hello, World!</p>
+> ```
+
+**嵌套**
+
+<!-- prettier-ignore -->
+
+> [!NOTE]
+> Level 1
+>
+> > [!NOTE]
+> > Level 2
+> >
+> > > [!NOTE]
+> > > Level 3
+
+**旧版风格**
+
+!> Legacy **Important** callout with `inline code`.
+
+?> Legacy **Tip** with `inline code`.
 
 ## 代码 :id=code
 
@@ -424,27 +477,27 @@ Text after rule.
 
 1. Ordered
 2. Ordered
- 1. Nested
- 2. Nested (Wrapping): Similique tempora et. Voluptatem consequuntur ut. Rerum minus et sed beatae. Consequatur ut nemo laboriosam quo architecto quia qui. Corrupti aut omnis velit.
+   1. Nested
+   2. Nested (Wrapping): Similique tempora et. Voluptatem consequuntur ut. Rerum minus et sed beatae. Consequatur ut nemo laboriosam quo architecto quia qui. Corrupti aut omnis velit.
 3. Ordered (Wrapping): Error minima modi rem sequi facere voluptatem. Est nihil veritatis doloribus et corporis ipsam. Pariatur eos ipsam qui odit labore est voluptatem enim. Veritatis est qui ut pariatur inventore.
 
 ### 无序列表 :id=unordered-list
 
 - Unordered
 - Unordered
- - Nested
- - Nested (Wrapping): Quia consectetur sint vel ut excepturi ipsa voluptatum suscipit hic. Ipsa error qui molestiae harum laboriosam. Rerum non amet illo voluptatem odio pariatur. Ut minus enim.
+  - Nested
+  - Nested (Wrapping): Quia consectetur sint vel ut excepturi ipsa voluptatum suscipit hic. Ipsa error qui molestiae harum laboriosam. Rerum non amet illo voluptatem odio pariatur. Ut minus enim.
 - Unordered (Wrapping): Fugiat qui tempore ratione amet repellendus repudiandae non. Rerum nisi officia enim. Itaque est alias voluptatibus id molestiae accusantium. Cupiditate sequi qui omnis sed faceere aliquid quia ut.
 
 ### 任务清单 :id=task-list
 
 - [x] Task
 - [ ] Task
- - [ ] Subtask
- - [ ] Subtask
- - [x] Subtask
+  - [ ] Subtask
+  - [ ] Subtask
+  - [x] Subtask
 - [ ] Task (Wrapping): Earum consequuntur itaque numquam sunt error omnis ipsum repudiandae. Est assumenda neque eum quia quisquam laborum beatae autem ad. Fuga fugiat perspiciatis harum quia dignissimos molestiae. Officia quo eveniet tempore modi voluptates consequatur. Eum odio adipisci labore.
- - [x] Subtask (Wrapping): Vel possimus eaque laborum. Voluptates qui debitis quaerat atque molestiae quia explicabo doloremque. Reprehenderit perspiciatis a aut impedit temporibus aut quasi quia. Incidunt sed recusandae vitae asperiores sit in.
+  - [x] Subtask (Wrapping): Vel possimus eaque laborum. Voluptates qui debitis quaerat atque molestiae quia explicabo doloremque. Reprehenderit perspiciatis a aut impedit temporibus aut quasi quia. Incidunt sed recusandae vitae asperiores sit in.
 
 ## Output
 

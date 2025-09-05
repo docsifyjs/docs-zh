@@ -67,7 +67,7 @@ docs/zh-cn/guide.md   => http://domain.com/#/zh-cn/guide
 
 需要在 `./docs` 目录创建 `.nojekyll` 命名的空文件，阻止 GitHub Pages 忽略命名是下划线开头的文件。
 
-!> Docsify 只查找当前文件夹中的 `_sidebar.md`，并使用它，否则会返回到使用 `window.$docsify.loadSidebar` 配置。
+> [!IMPORTANT] Docsify 只查找当前文件夹中的 `_sidebar.md`，并使用它，否则会返回到使用 `window.$docsify.loadSidebar` 配置。
 
 示例文件结构：
 
@@ -98,7 +98,7 @@ docs/zh-cn/guide.md   => http://domain.com/#/zh-cn/guide
 </script>
 ```
 
-!> 你可以在一个子目录中创建一个 `README.md` 文件来作为路由的默认网页。
+> [!IMPORTANT] 你可以在一个子目录中创建一个 `README.md` 文件来作为路由的默认网页。
 
 ## 用侧边栏中选定的条目名称作为页面标题
 

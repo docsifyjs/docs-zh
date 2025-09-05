@@ -27,6 +27,5 @@
   - [文件嵌入](zh-cn/embed-files.md)
   - [UI Kit](zh-cn/ui-kit.md)
 
-- [Awesome docsify](zh-cn/awesome.md)
-
-- [Changelog](zh-cn/changelog.md)
+* [Awesome docsify](zh-cn/awesome.md)
+* [Changelog](zh-cn/changelog.md)

@@ -72,7 +72,9 @@ window.$docsify = {
 - 类型：`Boolean`
 - 默认：`false`
 
-同时设置 `loadSidebar` 和 `autoHeader` 后，可以根据 `_sidebar.md` 的内容自动为每个页面增加标题。 参见 [#78](https://github.com/docsifyjs/docsify/issues/78)。
+如果同时启用了 `loadSidebar` 和 `autoHeader` 功能，则对于 `_sidebar.md`中的每个链接，都会在将其转换为 HTML 之前为页面预置一个标题，但前提是该页面尚未包含 H1 标题。
+
+参见 [#78](https://github.com/docsifyjs/docsify/issues/78)。
 
 ```js
 window.$docsify = {
@@ -105,14 +107,14 @@ window.$docsify = {
 - 类型：`Boolean`
 - 默认：`true`
 
-决定 Docsify 是否应自动处理未捕获的 _synchronous_ 插件错误。 这可以防止插件错误影响 docsify 正确呈现实时网站内容的能力。
+决定 Docsify 是否应自动处理未捕获的 _synchronous_ 插件错误。 这可以防止插件错误影响 docsify 正常渲染网站内容的能力。
 
 ## cornerExternalLinkTarget
 
 - 类型：`String`
 - 默认：`'_blank'`
 
-右上角外部链接的打开方式。 默认为 `'_blank'` （在新窗口或者标签页中打开）
+右上角的外部链接打开方式。 默认为 `'_blank'` （在新窗口或者标签页中打开）
 
 ```js
 window.$docsify = {
@@ -163,7 +165,7 @@ window.$docsify = {
 - 类型：`Boolean`
 - 默认：`null`
 
-执行页面上的脚本。 仅解析第一个脚本标签（[demo](themes)）。 如果检测到 Vue ，默认情况下是 `true` 。
+执行页面上的脚本。 仅解析第一个脚本标签（[demo](zh-cn/themes)）。 如果检测到 Vue ，默认情况下是 `true` 。
 
 ```js
 window.$docsify = {
@@ -179,7 +181,7 @@ window.$docsify = {
 </script>
 ```
 
-注意，如果运行的是外部脚本，例如嵌入的 jsfidle demo，请务必包含 [external-script](zh-cn/plugins.md?id=external-script) 插件。
+注意，如果运行的是外部脚本，例如嵌入的 jsfidle demo，请确保引入 [external-script](zh-cn/plugins.md?id=external-script) 插件。
 
 ## ext
 
@@ -212,7 +214,7 @@ window.$docsify = {
 - 类型：`String`
 - 默认：`'_blank'`
 
-在 markdown 中打开外部链接的目标。 外部链接的打开方式。默认为 `'_blank'` （在新窗口或者标签页中打开）
+在 markdown 中打开外部链接的目标。 默认为 `'_blank'` （在新窗口或者标签页中打开）
 
 ```js
 window.$docsify = {
@@ -229,8 +231,8 @@ window.$docsify = {
 示例：
 
 - 尝试获取 `/de/overview` 页面。 如果该页面存在，就会显示出来。
-- 如果不存在则尝试 `/overview`（取决于默认语言），如果存在即显示。 如果该页面存在，就会显示出来。
-- 然后显示 404 页面。
+- 然后尝试获取默认页面 `/overview`（取决于默认语言）。 如果该页面存在，就会显示出来。
+- 如果也不存在，显示404页面。
 
 ```js
 window.$docsify = {
@@ -262,7 +264,7 @@ window.$docsify = {
 - 类型：`Boolean`
 - 默认：`true`
 
-该选项将完全隐藏侧边栏，不会在侧边显示任何内容。
+该选项将完全隐藏侧边栏，不会在侧边栏显示任何内容。
 
 ```js
 window.$docsify = {
@@ -297,11 +299,11 @@ window.$docsify = {
 
 将组合键绑定到自定义回调函数。
 
-键 `bindings` 定义为用 `+` 分隔的大小写不敏感的字符串值。 修改键值包括 `alt`、`ctrl`、`meta` 和 `shift`。 非修饰符键值应与键盘事件的 [key](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key) 或 [code](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code) 值相匹配。
+键 `bindings` 定义为用 `+` 分隔的大小写不敏感的字符串值。 修饰符键值包括 `alt`、`ctrl`、`meta` 和 `shift`。 非修饰符键值应与键盘事件的 [key](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key) 或 [code](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code) 值相匹配。
 
 `callback` 函数接收[按键事件](https://developer.mozilla.org/en-US/docs/Web/API/Element/keydown_event)作为参数。
 
-!> 让网站访问者知道你的自定义按键绑定功能可用！ 如果绑定与 DOM 元素相关联，可考虑插入一个 `<kbd>` 元素作为视觉提示（如<kbd>alt</kbd>+<kbd>a</kbd>），或添加 [title](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/title) 和 [aria-keyshortcuts](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-keyshortcuts) 属性作为悬停/焦点提示。
+> [!IMPORTANT] 让网站访问者知道你的自定义按键是可用的 ！ 如果绑定与 DOM 元素相关联，可考虑插入一个 `<kbd>` 元素作为视觉提示（如<kbd>alt</kbd>+<kbd>a</kbd>），或添加 [title](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/title) 和 [aria-keyshortcuts](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-keyshortcuts) 属性作为悬停/焦点提示。
 
 ```js
 window.$docsify = {
@@ -376,7 +378,7 @@ window.$docsify = {
 
 在侧边栏显示的网站 Logo。 你可以使用 CSS 调整它的大小。
 
-!> 只有同时设置了 `name`，Logo 才会可见。 请参阅 [name](#name) 配置。
+> [!IMPORTANT] 只有同时设置了 `name`，Logo 才会可见。 请参阅 [name](#name) 配置。
 
 ```js
 window.$docsify = {
@@ -415,7 +417,7 @@ window.$docsify = {
 - 类型：`Number`
 - 默认：`6`
 
-最大表格内容级别。
+内容级别的最大值。
 
 ```js
 window.$docsify = {
@@ -448,11 +450,11 @@ window.$docsify = {
 };
 ```
 
-名称字段也可包含自定义 HTML，以方便定制：
+name 项也可以包含自定义 HTML 代码来方便地定制：
 
 ```js
 window.$docsify = {
-  name: '<0>docsify</0>',
+  name: '<span>docsify</span>',
 };
 ```
 
@@ -506,7 +508,7 @@ window.$docsify = {
   <img class="emoji" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44e.png" alt="-1">
 </output>
 
-`false` 时为原生字符的图像：
+`true` 时为原生表情符号字符的图像：
 
 <output data-lang="output">
   <span class="emoji">😄︎</span>
@@ -532,7 +534,7 @@ window.$docsify = {
 
 - 类型：`Array<string>`
 
-有时我们不希望 docsify 处理我们的链接。  参考 [#203](https://github.com/docsifyjs/docsify/issues/203)。 我们可以通过指定字符串数组来跳过某些链接的编译。 每个字符串都会被转换成正则表达式 (`RegExp`)，链接的 _whole_ href 会与之匹配。
+有时我们不希望 docsify 处理我们的链接： 参见 [#203](https://github.com/docsifyjs/docsify/issues/203)。 我们可以通过指定字符串数组来跳过某些链接的编译。 每个字符串都会被转换成正则表达式 (`RegExp`)，链接的 _whole_ href 会与之匹配。
 
 ```js
 window.$docsify = {
@@ -584,7 +586,7 @@ window.$docsify = {
 - 类型：`Boolean|String|Object`
 - 默认：`false`
 
-显示默认 "404 - Not Found" 消息：
+显示默认 “404 - Not Found” 消息：
 
 ```js
 window.$docsify = {
@@ -592,7 +594,7 @@ window.$docsify = {
 };
 ```
 
-在找不到指定页面时加载 `_404.md`：
+加载 `_404.md` 文件：
 
 ```js
 window.$docsify = {
@@ -600,7 +602,7 @@ window.$docsify = {
 };
 ```
 
-加载自定义404页面：
+加载 404 页面的自定义路径：
 
 ```js
 window.$docsify = {
@@ -608,7 +610,7 @@ window.$docsify = {
 };
 ```
 
-加载正确的本地化过的404页面：
+根据本地化情况加载正确的 404 页面：
 
 ```js
 window.$docsify = {
@@ -725,42 +727,16 @@ window.$docsify = {
 };
 ```
 
-对于静态部署的站点（如 在 GitHub 页面上）基于哈希的路由设置更简单。 对于可以重写 URL 的网站，基于历史记录的格式
-更好（特别是对于搜索引擎优化而言，基于哈希值的路由对搜索引擎并不
-那么友好）。
+对于静态部署的站点（如 在 GitHub 页面上）基于 hash 的路由设置更简单。 对于可以重写 URL 的网站，基于历史记录的格式更好（特别是对于搜索引擎优化而言，基于哈希值的路由对搜索引擎并不那么友好）。
 
-基于哈希值的路由选择意味着所有 URL 路径都将在
-地址栏中以 `/#/` 作为前缀。 这是一种技巧，它允许网站加载 `/index.html`，然后
-使用 `#` 后面的路径来决定加载哪些 markdown 文件。 例如，
-一个完整的基于哈希值的 URL 可以如下所示：
-`https://example.com/#/path/to/page`。 浏览器将实际加载
-`https://example.com`（假设你的静态服务器默认提供
-`index.html`，大多数服务器都是这样做的），然后 Docsify JavaScript 代码将
-查看 `/#/...`，并确定要加载和渲染的标记符文件。
-此外，点击链接时，Docsify 路由器会动态更改哈希值之后的
-内容。 无论如何，`location.pathname` 的值仍将是
-`/`。 当在浏览器中访问这样的 URL 时，哈希路径的部分_不会_被发送到服务器。
+基于 hash 值的路由选择意味着所有 URL 路径都将在地址栏中以 `/#/` 作为前缀。 这是一种技巧，它允许网站加载 `/index.html`，然后使用 `#` 后面的路径来决定加载哪些 markdown 文件。 例如，一个完整的基于 hash 值的 URL 可以如下所示：`https://example.com/#/path/to/page`。 浏览器将实际加载 `https://example.com`（假设你的静态服务器默认提供`index.html`，大多数服务器都是这样做的），然后 Docsify JavaScript 代码将查看 `/#/...`，并确定要加载和渲染的 markdown 文件。
+此外，点击链接时，Docsify 路由器会动态更改 hash 值之后的内容。 无论如何，`location.pathname` 的值仍将是 `/`。 当在浏览器中访问这样的 URL 时，hash 路径的部分 _不会_ 被发送到服务器。
 
-另一方面，基于历史的路由意味着 Docsify JavaScript 将使用
-[History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API)
-来动态更改 URL，而无需使用 `#`。 这意味着，搜索引擎将把所有网址
-视为"真实"网址，在浏览器中访问网址时，完整路径将被发送到
-服务器。 例如，URL 可能看起来像
-`https://example.com/path/to/page`。 浏览器将尝试直接从服务器加载完整的 URL
-，而不仅仅是 `https://example.com`。 这样做的好处是这些类型的 URL 对搜索引擎更友好，可以被索引（耶！）。 但缺点是，你的服务器或
-存放网站文件的地方必须能够处理这些 URL。 各种静态
-网站托管服务允许配置"重写规则"，这样就可以配置
-服务器，使其无论访问
-的路径是什么，都始终发回 `/index.html`。 `location.pathname `的值将显示 `/path/to/page`，因为
-实际上已经发送到服务器。
+另一方面，基于历史的路由意味着 Docsify JavaScript 将使用 [History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API) 来动态更改 URL，而无需使用 `#`。 这意味着，搜索引擎将把所有网址视为“真实”网址，在浏览器中访问网址时，完整路径将被发送到服务器。 例如，URL 可能看起来像 `https://example.com/path/to/page`。 浏览器将尝试直接从服务器加载完整的 URL，而不仅仅是 `https://example.com`。 这样做的好处是这些类型的 URL 对搜索引擎更友好，可以被索引（耶！）。 但缺点是，你的服务器或存放网站文件的地方必须能够处理这些 URL。 各种静态网站托管服务允许配置“重写规则”，这样就可以配置服务器，使其无论访问的路径是什么，都始终发回 `/index.html`。 `location.pathname` 的值将显示 `/path/to/page`，因为实际上已经发送到服务器。
 
-简要说明：从 `hash` 路由开始（默认）。 如果你有冒险精神，可以学习
-如何配置服务器，然后切换到 `history` 模式，以获得更好的体验
-，URL 中不含 `#`，并进行搜索引擎优化。
+太长不看版：优先使用 `hash` 路由（默认）。 如果你有冒险精神，可以学习如何配置服务器，然后切换到 `history` 模式，以获得更好的体验，URL 中不含 `#`，并进行搜索引擎优化。
 
-> **注意** 如果使用 `routerMode: 'history'`，可能需要添加
-> [`alias`]（#alias），以便无论访问哪个路径，都能
-> 加载 `_sidebar.md` 和 `_navbar.md` 文件。
+> **注意** 如果使用 `routerMode: 'history'`，可能需要添加[`alias`](#alias)，以便无论访问哪个路径，都能加载 `_sidebar.md` 和 `_navbar.md` 文件。
 >
 > ```js
 > window.$docsify = {
@@ -895,7 +871,7 @@ window.$docsify = {
 - 类型：`Number`
 - 默认：`0`
 
-在自定义侧边栏中添加目录 (TOC)。
+在自定义侧边栏中添加目录（TOC）。
 
 ```js
 window.$docsify = {
@@ -911,11 +887,11 @@ window.$docsify = {
   - [Another page](another.md)
 ```
 
-详见[#1131](https://github.com/docsifyjs/docsify/issues/1131)。
+参见 [#1131](https://github.com/docsifyjs/docsify/issues/1131)。
 
-## themeColor ⚠️
+## themeColor ⚠️ :id=themecolor
 
-!> 自 v5 起已弃用。 使用 `--theme-color` [主题属性](zh-cn/themes#theme-properties) [自定义](zh-cn/themes#customization) 主题颜色。
+> [!IMPORTANT] 废弃于 v5。 使用 `--theme-color` [主题属性](zh-cn/themes#theme-properties) [自定义](zh-cn/themes#customization) 主题颜色。
 
 - 类型：`String`
 
@@ -927,14 +903,14 @@ window.$docsify = {
 };
 ```
 
-## topMargin ⚠️
+## topMargin ⚠️ :id=topmargin
 
-!> 自 v5 起已弃用。 在使用粘性导航栏时，使用 `--scroll-padding-top` [主题属性](zh-cn/themes#theme-properties) 指定滚动边距。
+> [!IMPORTANT] 废弃于 v5。 在使用粘性导航栏时，使用 `--scroll-padding-top` [主题属性](zh-cn/themes#theme-properties) 指定滚动边距。
 
 - 类型：`Number|String`
 - 默认：`0`
 
-在视口顶部添加滚动填充。 当你添加了一个粘性或"固定"元素，并希望自动滚动与元素底部对齐时，该功能非常有用。
+在视口顶部添加滚动填充。 当你添加了一个粘性或“固定”元素，并希望自动滚动与元素底部对齐时，该功能非常有用。
 
 ```js
 window.$docsify = {
@@ -953,9 +929,9 @@ window.$docsify = {
   vueComponents: {
     'button-counter': {
       template: `
-        <0>
+        <button @click="count += 1">
           You clicked me {{ count }} times
-        </0>
+        </button>
       `,
       data() {
         return {
@@ -994,11 +970,11 @@ window.$docsify = {
 ```
 
 ```markdown
-<0>
-  <1>-</1>
+<p>
+  <button @click="count -= 1">-</button>
   {{ count }}
-  <2>+</2>
-</0>
+  <button @click="count += 1">+</button>
+</p>
 ```
 
 <output data-lang="output">
@@ -1013,7 +989,7 @@ window.$docsify = {
 
 - 类型：`Object`
 
-指定要挂载为 Vue 实例的 DOM 元素及其相关选项。  每次加载新页面时，Docsify 都会在主内容区域挂载第一个匹配元素。 挂载元素 `data` 是每个实例的唯一特性，不会在用户导航站点时持续存在。
+指定要挂载为 Vue 实例的 DOM 元素及其相关选项。 挂载元素是使用 [CSS 选择器](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors) 作为键，包含 Vue 选项的对象作为值来指定的。 每次加载新页面时，Docsify 都会在主内容区域挂载第一个匹配元素。 挂载元素 `data` 是每个实例的唯一特性，不会在用户导航站点时持续存在。
 
 ```js
 window.$docsify = {

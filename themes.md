@@ -15,7 +15,7 @@ Docsify "核心" 主题包含呈现 Docsify 网站所需的所有样式和[主�
 
 主题附加组件与[核心主题](#core-theme)结合使用。 附加组件包含修改[主题属性](#theme-properties)值和/或添加自定义样式声明的 CSS 规则。 它们通常（但不总是）可以与其他附加组件一起使用。
 
-!> 主题附加组件必须在[核心主题](#core-theme)之后加载。
+> [!IMPORTANT] 主题附加组件必须在[核心主题](#core-theme)之后加载。
 
 <!-- prettier-ignore -->
 
@@ -225,123 +225,115 @@ Docsify 提供了[主题属性](#theme-properties)以简化对经常修改的样
 
 1. 在 `index.html` 中的主题样式表后添加一个 `<style>` 标签。
 
-  <!-- prettier-ignore -->
+   <!-- prettier-ignore -->
 
-  ```html
-  <!-- Theme -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/dist/themes/core.min.css" />
+   ```html
+   <!-- Theme -->
+   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/dist/themes/core.min.css" />
 
-  <!-- Custom theme styles -->
-  <style>
-    :root {
-      /* ... */
-    }
-  </style>
-  ```
+   <!-- Custom theme styles -->
+   <style>
+     :root {
+       /* ... */
+     }
+   </style>
+   ```
 
-  主题属性也可以在 markdown 中按页面设置。
+   主题属性也可以在 markdown 中按页面设置。
 
-  ```markdown
-  # My Heading
+   ```markdown
+   # My Heading
 
-  Hello, World!
+   Hello, World!
 
-  <style>
-    :root {
-      /* ... */
-    }
-  </style>
-  ```
+   <style>
+     :root {
+       /* ... */
+     }
+   </style>
+   ```
 
 2. 在 `:root` 声明中设置自定义[主题属性](#theme-properties)。
 
-  <!-- prettier-ignore -->
+   <!-- prettier-ignore -->
 
-  ```css
-  :root {
-    --theme-color: red;
-    --font-size  : 15px;
-    --line-height: 1.5;
-  }
-  ```
+   ```css
+   :root {
+     --theme-color: red;
+     --font-size  : 15px;
+     --line-height: 1.5;
+   }
+   ```
 
-  自定义[主题属性](#theme-properties)可有条件地应用于浅色和/或深色模式。
+   自定义[主题属性](#theme-properties)可有条件地应用于浅色和/或深色模式。
 
-  <!-- prettier-ignore -->
+   <!-- prettier-ignore -->
 
-  ```css
-  /* Light and dark mode */
-  :root {
-    --theme-color: pink;
-  }
+   ```css
+   /* Light and dark mode */
+   :root {
+     --theme-color: pink;
+   }
 
-  /* Light mode only */
-  @media (prefers-color-scheme: light) {
-    :root {
-      --color-bg  : #eee;
-      --color-text: #444;
-    }
-  }
+   /* Light mode only */
+   @media (prefers-color-scheme: light) {
+     :root {
+       --color-bg  : #eee;
+       --color-text: #444;
+     }
+   }
 
-  /* Dark mode only */
-  @media screen and (prefers-color-scheme: dark) {
-    :root {
-      --color-bg  : #222;
-      --color-text: #ddd;
-    }
-  }
-  ```
+   /* Dark mode only */
+   @media screen and (prefers-color-scheme: dark) {
+     :root {
+       --color-bg  : #222;
+       --color-text: #ddd;
+     }
+   }
+   ```
 
 3. 可通过添加网络字体资源并根据需要修改 `--font-family` 属性来使用自定义字体：
 
-  <!-- prettier-ignore -->
+   <!-- prettier-ignore -->
 
-  ```css
-  /* Fonts: Noto Sans, Noto Emoji, Noto Mono */
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+   ```css
+   /* Fonts: Noto Sans, Noto Emoji, Noto Mono */
+   @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-  :root {
-    --font-family      : 'Noto Sans', sans-serif;
-    --font-family-emoji: 'Noto Color Emoji', sans-serif;
-    --font-family-mono : 'Noto Sans Mono', monospace;
-  }
-  ```
+   :root {
+     --font-family      : 'Noto Sans', sans-serif;
+     --font-family-emoji: 'Noto Color Emoji', sans-serif;
+     --font-family-mono : 'Noto Sans Mono', monospace;
+   }
+   ```
 
-?> **主题作者**：考虑提供手动加载推荐网络字体的说明，而不是在主题中使用 `@import`。 这样喜欢不同字体的用户就可以避免不必要地加载你所推荐的网页字体。
+   > [!TIP] **主题作者**：考虑提供手动加载推荐网络字体的说明，而不是在主题中使用 `@import`。 这样喜欢不同字体的用户就可以避免不必要地加载你所推荐的网页字体。
 
 4. 高级样式可能需要自定义 CSS 声明。 这在意料之中，但当 Docsify 发布新版本时，自定义 CSS 声明可能会中断。 在可能的情况下，请使用[主题属性](#theme-properties) 而不是自定义声明，或者将[CDN](zh-cn/cdn) URL 锁定为[特定版本](zh-cn/cdn#specific-version)，以避免在使用自定义 CSS 声明时出现潜在问题。
 
-  ```css
-  .sidebar li.active > a {
-    border-right: 3px solid var(--theme-color);
-  }
-  ```
+   ```css
+   .sidebar li.active > a {
+     border-right: 3px solid var(--theme-color);
+   }
+   ```
 
 ## 主题属性 :id=theme-properties
 
 以下属性在所有官方 Docsify 主题中都可用。 显示的是"核心"主题的默认值。
 
-?> **主题和插件作者**：我们鼓励你利用这些自定义主题属性，并在你的项目中提供类似的自定义选项。
+> [!TIP] **主题和插件作者**：我们鼓励你利用这些自定义主题属性，并在你的项目中提供类似的自定义选项。
 
 ### Common
 
 以下是最常修改的主题属性。 [Advanced](#advanced) 主题属性也可以使用，但通常不需要修改。
 
-<!-- TODO: Replace TBD with include CSS include below -->
-
-**TBD**
-
-<!-- [vars.css](https://raw.githubusercontent.com/docsifyjs/docsify/main/src/themes/shared/_vars.css ':include') -->
+[\_vars.css](https://raw.githubusercontent.com/docsifyjs/docsify/refs/heads/develop/src/themes/shared/_vars.css ":include")
 
 ### Advanced
 
 Advanced 主题属性也可供使用，但通常无需修改。 从 [common](#common) 主题属性导出的值，但也可根据需要明确设置。
 
-<!-- TODO: Replace TBD with include CSS include below -->
-
-**TBD**
-
-<!-- [vars.css](https://raw.githubusercontent.com/docsifyjs/docsify/main/src/themes/shared/_vars.css ':include') -->
+[\_vars-advanced.css](https://raw.githubusercontent.com/docsifyjs/docsify/refs/heads/develop/src/themes/shared/_vars-advanced.css ":include")
 
 ## 社区
 

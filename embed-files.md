@@ -75,7 +75,7 @@ Front Matter 通常在 Jekyl 等博客系统中使用，用于定义文档的元
 
 如果你嵌入文件是一个 `iframe`、`audio` 或者 `video`，你可以给这些标签设置属性。
 
-?> 注意，对于 `audio` 和 `video` 类型，默认情况下，对应添加 `controlls` 属性。 当你想要添加更多属性时，需要手动添加 `controls` 属性。
+> [!TIP] 注意，对于 `audio` 和 `video` 类型，默认情况下，对应添加 `controlls` 属性。 当你想要添加更多属性时，需要手动添加 `controls` 属性。
 
 ```md
 [filename](../_media/example.mp4 ':include :type=video controls width=100%')
@@ -101,13 +101,13 @@ Front Matter 通常在 Jekyl 等博客系统中使用，用于定义文档的元
 
 [](../_media/example.html ":include :type=code text")
 
-?> 如何设置高亮？ 你可以查看[此处](zh-cn/language-highlight.md)。
+> [!TIP] 如何设置高亮？ 你可以查看[此处](zh-cn/language-highlight.md)。
 
 ## 嵌入 Gist
 
 你可以将 Gist 作为 Markdown 内容或代码块嵌入。这是基于[嵌入文件](#embed-files)部分开头的方法，不过是嵌入一个原始的 Gist URL。
 
-?> **无需**更改插件或应用程序配置即可运行。 事实上，即使你使用插件或修改配置来允许加载外部脚本，从 Gist 复制的 Embed `script` 标签也_无法_加载。
+> [!TIP] **无需**更改插件或应用程序配置即可运行。 事实上，即使你使用插件或修改配置来允许加载外部脚本，从 Gist 复制的 Embed `script` 标签也_无法_加载。
 
 ### 确定 Gist 的元数据
 
@@ -132,7 +132,7 @@ Front Matter 通常在 Jekyl 等博客系统中使用，用于定义文档的元
 - https://gist.githubusercontent.com/anikethsaha/f88893bb563bb7229d6e575db53a8c15/raw/content.md
 - https://gist.githubusercontent.com/anikethsaha/f88893bb563bb7229d6e575db53a8c15/raw/script.js
 
-?> 或者，你可以直接点击 Gist 文件上的 _Raw_ 按钮获取原始 URL。 但如果你使用这种方法， 请务必**移除** `raw/` 和文件名之间的版本号，以便 URL 与上面的模式相匹配。 否则，当 Gist 更新时，你的嵌入式 Gist 将**不会**显示最新内容。
+> [!TIP] 或者，你可以直接点击 Gist 文件上的 _Raw_ 按钮获取原始 URL。 但如果你使用这种方法， 请务必**移除** `raw/` 和文件名之间的版本号，以便 URL 与上面的模式相匹配。 否则，当 Gist 更新时，你的嵌入式 Gist 将**不会**显示最新内容。
 
 继续下面的一个部分，将 Gist 嵌入到 Docsify 页面上。
 
