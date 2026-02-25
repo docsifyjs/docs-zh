@@ -213,3 +213,30 @@ frontend:
    - Publish directory：`docs`
 
 6. 点击**Create site**。
+
+## DeployHQ
+
+[DeployHQ](https://www.deployhq.com/) 是一个部署自动化平台，可将你的代码部署到 SSH/SFTP 服务器、FTP 服务器、云存储（亚马逊 S3、Cloudflare R2）和现代托管平台（Netlify、Heroku）。
+
+> [!IMPORTANT] DeployHQ 不会托管你的网站。 它能自动将 Docsify 文件部署到你选择的托管服务提供商或服务器上。
+
+使用 DeployHQ 部署 Docsify 网站：
+
+1. 注册 [DeployHQ 账户](https://www.deployhq.com/) 并验证你的电子邮件。
+
+2. 点击 **Projects** 和 **New Project**，创建第一个项目。 连接 Git 仓库（GitHub、GitLab、Bitbucket 或任何私有仓库）。 授权 DeployHQ 访问你的版本库。
+
+3. 添加服务器并输入服务器详细信息：
+
+   - 给你的服务器一个名称
+   - 选择协议（SSH/SFTP、FTP 或云平台）
+   - 输入服务器主机名、用户名和密码/SSH 密钥
+   - 设置 **Deployment Path** 到你的 web 根目录(例如，`public_html/`)
+
+4. 由于 Docsify 不需要构建步骤，你可以直接部署文件。 如果你的 Docsify 文件在 `docs/` 文件夹中，配置你的服务器设置中的 **Source Path** 到 `docs/`。
+
+5. 单击 **Deploy Project**，然后选择服务器并单击 **Deploy**，开始首次部署。
+
+你的 Docsify 网站将部署到你的服务器上。 你可以启用自动部署功能，在每次 Git 推送时进行部署，也可以安排在特定时间进行部署。
+
+有关高级部署功能的更多信息，请参阅 [DeployHQ 文档](https://www.deployhq.com/support)。
