@@ -65,9 +65,21 @@ Front Matter 通常在 Jekyl 等博客系统中使用，用于定义文档的元
 ```
 
 在你的代码文件中，你需要用斜线 `/// [demo]` 包裹该片段（片段的前后都要有）。
-或者你也可以使用 `### [demo]`。
+或者你也可以使用 `### [demo]`。 默认情况下，只省略标识符。 要省略片段输出中包含标识符的整行，请添加 `:omitFragmentLine` 选项。 如你的代码片段是 HTML 等，而你想隐藏 Docsify 片段标识符，使其不显示在 HTML 源代码中，则此功能非常有用。 `<!-- /// [demo] -->` 在源文件中，而 `:omitFragmentLine` 将使 `-->` 不显示在 Docsify 代码片段中。
 
-示例：
+示例：在源文件 \_media/example.js 中，包含了 `/// [demo]` 标识符：
+
+```markdown
+[filename](../_media/example.js ':include :type=code')
+```
+
+[filename](../_media/example.js ":include :type=code")
+
+添加 `:fragment=demo` 的结果如下：
+
+```markdown
+[filename](../_media/example.js ':include :type=code :fragment=demo')
+```
 
 [filename](../_media/example.js ":include :type=code :fragment=demo")
 
@@ -82,10 +94,10 @@ Front Matter 通常在 Jekyl 等博客系统中使用，用于定义文档的元
 ```
 
 ```markdown
-[cinwell website](https://cinwell.com ':include :type=iframe width=100% height=400px')
+[cinwell website](https://google.com ':include :type=iframe width=100% height=400px')
 ```
 
-[cinwell website](https://cinwell.com ":include :type=iframe width=100% height=400px")
+[cinwell website](https://google.com ":include :type=iframe width=100% height=400px")
 
 你看到它了吗？ 你只需要直接写入属性。 每个标签有哪些属性建议你查看 [MDN 文档](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe)。
 

@@ -1,5 +1,9 @@
 # 插件列表
 
+这些是 Docsify 的内置和外部插件。
+
+也可以参阅如何[编写插件](zh-cn/write-a-plugin.md)。
+
 ## 全文搜索
 
 默认情况下，当前页面上的超链接会被识别，内容会被保存到 `IndexedDB`。 你也可以指定文件的路径。
@@ -26,7 +30,7 @@
       insertBefore: '.sidebar-nav', // CSS selector in .sidebar scope
 
       maxAge: 86400000, // Expiration time, the default one day
-      paths: [], // or 'auto'
+      paths: [], // string[] of files to search in, or 'auto' for discovery based on your sidebar
       placeholder: 'Type to search',
 
       // Localization
