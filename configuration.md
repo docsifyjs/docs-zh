@@ -240,6 +240,22 @@ window.$docsify = {
 };
 ```
 
+## fallbackDefaultLanguage
+
+- 类型：`String`
+- 默认：`''`
+
+当请求的页面不存在给定的语言时，Docsify 将回退到此选项指定的语言。
+
+例如，在上述情况下，如果 `/de/overview` 不存在，而 `fallbackDefaultLanguage` 被配置为 `zh-cn`，Docsify 将获取 `/zh-cn/overview` 而不是 `/overview`。
+
+```js
+window.$docsify = {
+  fallbackLanguages: ['fr', 'de'],
+  fallbackDefaultLanguage: 'zh-cn', // default: ''
+};
+```
+
 ## formatUpdated
 
 - 类型：`String|Function`
@@ -262,7 +278,7 @@ window.$docsify = {
 ## hideSidebar
 
 - 类型：`Boolean`
-- 默认：`true`
+- 默认：`false`
 
 该选项将完全隐藏侧边栏，不会在侧边栏显示任何内容。
 
@@ -390,7 +406,7 @@ window.$docsify = {
 
 - 类型：`Function`
 
-参考 [Markdown 配置](zh-cn/markdown.md)。
+请参见 [Markdown 配置](zh-cn/markdown.md)。
 
 ```js
 window.$docsify = {
@@ -440,7 +456,7 @@ window.$docsify = {
 
 ## name
 
-- 类型：`String`
+- 类型：`Boolean | String`
 
 在侧边栏中显示的网站名称。
 
@@ -455,6 +471,22 @@ name 项也可以包含自定义 HTML 代码来方便地定制：
 ```js
 window.$docsify = {
   name: '<span>docsify</span>',
+};
+```
+
+如果`true`, 网站名称将从文档的 `<title>` 标签中推出。
+
+```js
+window.$docsify = {
+  name: true,
+};
+```
+
+如果 `false` 或为空，则不显示名称。
+
+```js
+window.$docsify = {
+  name: false,
 };
 ```
 
@@ -518,7 +550,7 @@ window.$docsify = {
   <span class="emoji">👎︎</span>
 </output>
 
-要渲染短代码作为文本，用“&colon;”HTML实体替换`:`字符。
+要渲染短代码作为文本，请将 `:` 字符替换为 `&colon;` HTML 实体。
 
 ```markdown
 &colon;100&colon;
@@ -636,6 +668,10 @@ window.$docsify = {
 };
 ```
 
+## plugins
+
+请参见[插件列表](zh-cn/plugins.md)。
+
 ## relativePath
 
 - 类型：`Boolean`
@@ -689,6 +725,8 @@ window.$docsify = {
   repo: 'https://github.com/docsifyjs/docsify/',
 };
 ```
+
+如果未定义或为空，则不显示 GitHub corner。
 
 ## requestHeaders
 
@@ -841,9 +879,9 @@ window.$docsify = {
 决定是否/如何显示网站的 [skip navigation link](https://webaim.org/techniques/skipnav/)。
 
 ```js
-// Render skip link for all routes (default)
+// Render skip link for all routes
 window.$docsify = {
-  skipLink: 'Skip to main content',
+  skipLink: 'Skip to content',
 };
 ```
 
@@ -863,6 +901,13 @@ window.$docsify = {
 // Do not render skip link
 window.$docsify = {
   skipLink: false,
+};
+```
+
+```js
+// Use default
+window.$docsify = {
+  skipLink: true, // "Skip to main content"
 };
 ```
 

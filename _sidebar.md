@@ -27,5 +27,9 @@
   - [文件嵌入](zh-cn/embed-files.md)
   - [UI Kit](zh-cn/ui-kit.md)
 
+- 升级
+
+  - [v4 到 v5](zh-cn/v5-upgrade.md)
+
 * [Awesome docsify](zh-cn/awesome.md)
 * [Changelog](zh-cn/changelog.md)

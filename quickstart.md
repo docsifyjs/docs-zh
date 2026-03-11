@@ -22,7 +22,7 @@ docsify init ./docs
 - `README.md` 会做为主页内容渲染
 - `.nojekyll` 用于阻止 GitHub Pages 忽略掉下划线开头的文件
 
-直接编辑 `docs/README.md` 就能更新文档内容，当然也可以[添加更多页面](zh-cn/adding-pages)。
+直接编辑 `docs/README.md` 就能更新文档内容，当然也可以[添加更多页面](zh-cn/adding-pages.md)。
 
 ## 本地预览
 
@@ -91,7 +91,7 @@ docsify serve docs
 <script src="//cdn.jsdelivr.net/npm/docsify@5"></script>
 ```
 
-如果你希望将 docsify 锁定到特定版本，请在 URL 中的 `@` 符号后指定完整版本。 这是最安全的方法，可确保无论 docsify 的未来版本如何更改，你的网站都将以相同的方式显示和运行。
+如果您想确保绝对不会出现会破坏网站的更改（非主要更新可能会无意中引入破坏性更改，尽管它们的目的不是这样），请在 URL 中的 `@` 符号后指定完整版本。 这是最安全的方法，可确保无论 docsify 的未来版本如何更改，你的网站都将以相同的方式显示和运行。
 
 <!-- prettier-ignore -->
 
@@ -103,9 +103,11 @@ docsify serve docs
 <script src="//cdn.jsdelivr.net/npm/docsify@5.0.0"></script>
 ```
 
+JSDelivr 支持 [npm-compatible semver ranges](https://docs.npmjs.com/cli/v11/configuring-npm/package-json#dependencies)，因此也可以使用版本语法，例如 `@^5.0.0` 表示最新的 v5 版本，`@5.0.x` 表示最新的 v5.0 补丁版本（例如 你将收到 5.0.4，但不是 5.1.0），`@5.x` 表示最新的 v5 次版本和补丁版本（实际上与 `@5` 和 `@^5.0.0` 相同），等等。
+
 ### 手动预览你的网站
 
-如果你的系统里安装了 Python 的话，也可以很容易地启动一个静态服务器去预览你的网站。
+如果你的系统上安装了 Python，你可以很容易地使用它来运行静态服务器来预览你的网站，而不是使用 `docsify-cli` 中的 `docsify serve`。
 
 ```python
 # Python 2

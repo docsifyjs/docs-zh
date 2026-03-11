@@ -4,13 +4,11 @@
 
 ## 概述
 
-docsify 可以快速帮你生成文档网站。 不同于 GitBook 的地方是它不会生成静态的 `.html` 文件。 相反，它能智能加载和解析 Markdown 文件，并将其显示为网站。 要开始使用它，只需创建一个 `index.html` 并将其[部署到 GitHub Pages](zh-cn/deploy.md)。
-
-查看[快速开始](zh-cn/quickstart.md)了解详情。
+Docsify turns your Markdown files into a documentation website instantly. Unlike most other documentation site generator tools, it doesn't need to build HTML files. Instead, it dynamically loads and parses your Markdown files and displays them as a website. To get started, create an `index.html` file and [deploy it on GitHub Pages](deploy.md) (for more details see the [Quick start](quickstart.md) guide).
 
 ## 特性
 
-- 没有静态生成的 html 文件
+- No statically built HTML files
 - 简单和轻量
 - 智能的全文搜索
 - 提供多套主题
