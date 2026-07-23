@@ -58,18 +58,34 @@ pages:
 
 完成后，执行 `docsify init ./site` 构建起始模板（将`site`替换为你在运行`firebase init`时确定的部署目录 - 默认情况下为`public`）。 添加/编辑文档，然后在项目根目录执行 `firebase deploy`。
 
-## VPS
+## Nginx
 
-使用以下 nginx 配置。
+使用以下 Nginx 配置。
 
 ```nginx
 server {
   listen 80;
-  server_name  your.domain.com;
+  server_name your.domain.com;
 
   location / {
     alias /path/to/dir/of/docs/;
     index index.html;
+  }
+}
+```
+
+如果 [`routerMode`](zh-cn/configuration.md#routermode) 设置为 `history`，请改用以下配置：
+
+```nginx
+server {
+  listen 80;
+  server_name your.domain.com;
+
+  root /path/to/dir/of/docs;
+  index index.html;
+
+  location / {
+    try_files $uri $uri/ /index.html;
   }
 }
 ```
