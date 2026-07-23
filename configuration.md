@@ -275,6 +275,24 @@ window.$docsify = {
 };
 ```
 
+## pageTitleFormatter
+
+- 类型：`Function`
+- 默认：`null`
+
+一个可选函数，用于自定义在生成文档标题时如何使用站点 `name`。 如果提供了该函数，Docsify 将使用配置的 `name`（其中可能包含 HTML）调用此函数，并将返回的字符串用作站点名称的标题部分。Docsify 不会自动去除 HTML 标签，也不会以其他方式修改该值。 如果未提供，Docsify 将采用默认行为，即从 `name` 中移除 HTML 标签。
+
+基本示例 —— 去除 HTML 标签并移除两侧的空白字符（相当于 Docsify 的默认行为）：
+
+```js
+window.$docsify = {
+  name: '<span>My Site</span>',
+  pageTitleFormatter(name) {
+    return name ? name.replace(/<[^>]+>/g, '').trim() : '';
+  },
+};
+```
+
 ## hideSidebar
 
 - 类型：`Boolean`
@@ -456,7 +474,7 @@ window.$docsify = {
 
 ## name
 
-- 类型：`Boolean | String`
+- 类型：`Boolean|String`
 
 在侧边栏中显示的网站名称。
 

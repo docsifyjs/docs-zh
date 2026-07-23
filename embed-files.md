@@ -7,7 +7,7 @@
 这是一个嵌入 Markdown 文件的例子。 你只需要这样做：
 
 ```markdown
-[filename](../_media/example.md ':include')
+[filename](_media/example.md ':include')
 ```
 
 `example.md` 文件的内容将会直接显示在这里：
@@ -35,7 +35,7 @@
 当然，你也可以强制指定类型。 例如，通过设置 `:type=code`，可将 Markdown 文件嵌入为代码块。
 
 ```markdown
-[filename](../_media/example.md ':include :type=code')
+[filename](_media/example.md ':include :type=code')
 ```
 
 你会看到：
@@ -48,8 +48,12 @@ Front Matter 通常在 Jekyl 等博客系统中使用，用于定义文档的元
 
 当使用 Markdown 时，YAML 元数据将从渲染的内容中删除。 在这种情况下不能使用属性。
 
+```html
+<script src="//cdn.jsdelivr.net/npm/docsify@5/dist/plugins/front-matter.min.js"></script>
+```
+
 ```markdown
-[filename](../_media/example-with-yaml.md ':include')
+[filename](_media/example-with-yaml.md ':include')
 ```
 
 你将只获得内容
@@ -61,7 +65,7 @@ Front Matter 通常在 Jekyl 等博客系统中使用，用于定义文档的元
 有时你不想嵌入整个文件。 也许是因为你只需要几行，但你想在 CI 中编译和测试该文件。
 
 ```markdown
-[filename](../_media/example.js ':include :type=code :fragment=demo')
+[filename](_media/example.js ':include :type=code :fragment=demo')
 ```
 
 在你的代码文件中，你需要用斜线 `/// [demo]` 包裹该片段（片段的前后都要有）。
@@ -70,7 +74,7 @@ Front Matter 通常在 Jekyl 等博客系统中使用，用于定义文档的元
 示例：在源文件 \_media/example.js 中，包含了 `/// [demo]` 标识符：
 
 ```markdown
-[filename](../_media/example.js ':include :type=code')
+[filename](_media/example.js ':include :type=code')
 ```
 
 [filename](../_media/example.js ":include :type=code")
@@ -78,7 +82,7 @@ Front Matter 通常在 Jekyl 等博客系统中使用，用于定义文档的元
 添加 `:fragment=demo` 的结果如下：
 
 ```markdown
-[filename](../_media/example.js ':include :type=code :fragment=demo')
+[filename](_media/example.js ':include :type=code :fragment=demo')
 ```
 
 [filename](../_media/example.js ":include :type=code :fragment=demo")
@@ -90,7 +94,7 @@ Front Matter 通常在 Jekyl 等博客系统中使用，用于定义文档的元
 > [!TIP] 注意，对于 `audio` 和 `video` 类型，默认情况下，对应添加 `controlls` 属性。 当你想要添加更多属性时，需要手动添加 `controls` 属性。
 
 ```md
-[filename](../_media/example.mp4 ':include :type=video controls width=100%')
+[filename](_media/example.mp4 ':include :type=video controls width=100%')
 ```
 
 ```markdown
@@ -106,7 +110,7 @@ Front Matter 通常在 Jekyl 等博客系统中使用，用于定义文档的元
 嵌入任何类型的源代码文件，你可以指定高亮语言或自动标识。
 
 ```markdown
-[](../_media/example.html ':include :type=code text')
+[](_media/example.html ':include :type=code text')
 ```
 
 ⬇️
