@@ -1,4 +1,4 @@
-# 部署
+# 部署 :id=deploy
 
 与 [GitBook](https://www.gitbook.com) 类似，你可以将文件部署到 GitHub Pages、GitLab Pages或 VPS 上。
 
@@ -39,7 +39,7 @@ pages:
 
 > !IMPORTANT] 你可以用 `- cp -r docs/. public` 替换脚本，如果 `./docs` 是你的 docsify 子文件夹。
 
-## Firebase 主机
+## Firebase 主机 :id=firebase-hosting
 
 > [!IMPORTANT] 你需要先使用谷歌账号登录 [Firebase 控制台](https://console.firebase.google.com)，然后使用 `npm i -g firebase-tools` 命令安装 Firebase CLI 。
 
@@ -100,7 +100,7 @@ server {
 6. 在**Publish directory**区域，如果你在**Base Directory**中添加了 `docs`，你会看到 Publish directory 中填充了 `docs/`
 7. Netlify 很聪明，会在 `docs/` 文件夹中查找 `index.html` 文件。
 
-### HTML5 路由
+### HTML5 路由 :id=html5-router
 
 当使用 HTML5 路由时，你需要设置一条将所有请求重定向到你的 `index.html` 的重定向规则。 当你使用Netlify时这相当简单。 只需在 docs 目录中创建一个名为 `_redirects` 的文件，并将此代码段添加到文件中，就可以了：
 
@@ -210,7 +210,7 @@ frontend:
   docker run -itp 3000:3000 --name=docsify -v $(pwd):/docs docsify/demo
   ```
 
-## Kinsta 静态网站托管
+## Kinsta 静态网站托管 :id=kinsta-static-site-hosting
 
 你可以将 **Docsify** 作为静态网站部署到 [Kinsta](https://kinsta.com/static-site-hosting/) 上。
 

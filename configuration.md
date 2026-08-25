@@ -306,6 +306,35 @@ window.$docsify = {
 };
 ```
 
+## collapseSidebarGroups
+
+- 类型：`Boolean`
+- 默认：`false`
+
+Initially collapses all root sidebar groups. Visitors can still expand and
+collapse each group by selecting its title. Their choices are preserved while
+navigating between pages.
+
+```js
+window.$docsify = {
+  collapseSidebarGroups: true,
+};
+```
+
+## sidebarPosition
+
+- 类型：`String`
+- 默认：`'left'`
+
+Controls which side of the page displays the sidebar. Set this to `'right'` to
+place the sidebar and its toggle on the right.
+
+```js
+window.$docsify = {
+  sidebarPosition: 'right',
+};
+```
+
 ## homepage
 
 - 类型：`String`

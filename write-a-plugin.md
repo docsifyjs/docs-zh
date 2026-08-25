@@ -1,8 +1,8 @@
-# 编写插件
+# 编写插件 :id=write-a-plugin
 
 docsify 插件是一个能够在 Docsify 生命周期的各个阶段执行自定义 JavaScript 代码的函数。
 
-## 设置
+## 设置 :id=setup
 
 Docsify 插件可直接添加到 `plugins` 数组中：
 
@@ -39,7 +39,7 @@ window.$docsify = {
 <script src="docsify-plugin-myplugin.js"></script>
 ```
 
-## 模板
+## 模板 :id=template
 
 下面是一个插件模板，其中包含所有可用生命周期钩子的占位符。
 
@@ -94,7 +94,7 @@ window.$docsify = {
 }
 ```
 
-## 生命周期钩子
+## 生命周期钩子 :id=lifecycle-hooks
 
 生命周期钩子是通过 `hook` 参数传递给插件函数提供的。
 
@@ -188,16 +188,16 @@ hook.ready(() => {
 });
 ```
 
-## 小技巧
+## 小技巧 :id=tips
 
 - 使用 `window.Docsify` 访问 Docsify 方法和属性
 - 使用 `vm` 参数访问当前的 Docsify 实例
 - 喜欢使用调试器的开发人员可以将 [`catchPluginErrors`](zh-cn/configuration#catchpluginerrors) 配置选项设置为 `false`，以允许调试器在出现错误时暂停 JavaScript 的执行
 - 在发布之前，请确保在所有支持的平台上测试你的插件，并使用相关配置选项（如适用）进行测试
 
-## 例子
+## 例子 :id=examples
 
-#### 页脚
+#### 页脚 :id=page-footer
 
 ```js
 window.$docsify = {
@@ -219,7 +219,7 @@ window.$docsify = {
 };
 ```
 
-### 编辑按钮 (GitHub)
+### 编辑按钮 (GitHub) :id=edit-button-github
 
 ```js
 window.$docsify = {
