@@ -1,10 +1,10 @@
-# 插件列表
+# 插件列表 :id=list-of-plugins
 
 这些是 Docsify 的内置和外部插件。
 
 也可以参阅如何[编写插件](zh-cn/write-a-plugin.md)。
 
-## 全文搜索
+## 全文搜索 :id=full-text-search
 
 默认情况下，当前页面上的超链接会被识别，内容会被保存到 `IndexedDB`。 你也可以指定文件的路径。
 
@@ -66,6 +66,11 @@
       // You can provide a regexp to match prefixes. In this case,
       // the matching substring will be used to identify the index
       pathNamespaces: /^(\/(zh-cn|ru-ru))?(\/(v1|v2))?/,
+
+      // Show where each result comes from (default: 'none')
+      // 'page': the page title, e.g. "Guide"
+      // 'breadcrumb': the sidebar path, e.g. "Basics › Guide"
+      resultSource: 'none',
     },
   };
 </script>
@@ -75,7 +80,7 @@
 
 在进行全文搜索时，该插件会忽略变音标记（例如："cafe" 也会匹配 "café"）。
 
-## 谷歌统计 - Google Analytics
+## 谷歌统计 - Google Analytics :id=google-analytics
 
 > 从 2023 年 7 月 1 日起，谷歌的通用分析服务将不再处理标准属性中的新数据。 通过设置并切换到 Google Analytics 4 属性和 docsify 的 gtag.js 插件做好准备。
 
@@ -135,7 +140,7 @@
 <script src="//cdn.jsdelivr.net/npm/docsify@5/dist/plugins/emoji.min.js"></script>
 ```
 
-## 外链脚本 - External Script
+## 外链脚本 - External Script :id=external-script
 
 如果文档里的 script 是内联脚本，可以直接执行；而如果是外链脚本（即 js 文件内容由 `src` 属性引入），则需要使用此插件。
 
@@ -143,7 +148,7 @@
 <script src="//cdn.jsdelivr.net/npm/docsify@5/dist/plugins/external-script.min.js"></script>
 ```
 
-## 图片缩放 - Zoom image
+## 图片缩放 - Zoom image :id=zoom-image
 
 Medium's 风格的图片缩放插件。 基于 [medium-zoom](https://github.com/francoischalifour/medium-zoom)。
 
@@ -157,18 +162,18 @@ Medium's 风格的图片缩放插件。 基于 [medium-zoom](https://github.com/
 ![](image.png ':no-zoom')
 ```
 
-## 在 GitHub 上编辑
+## 在 GitHub 上编辑 :id=edit-on-github
 
 在每一页上添加 `Edit on github` 按钮。 由[@njleonzhang](https://github.com/njleonzhang) 提供，查看[文档](https://github.com/njleonzhang/docsify-edit-on-github)
 
-## 代码即时预览和 jsfiddle 集成
+## 代码即时预览和 jsfiddle 集成 :id=demo-code-with-instant-preview-and-jsfiddle-integration
 
 有了这个插件，示例代码就能立即呈现在页面上，这样读者就能立即看到预览效果。
 当读者展开演示框时，源代码和说明就会显示出来。 如果点击 `Try in Jsfiddle` 按钮，`jsfiddle.net` 就会打开这个例子的代码，让读者自己修改代码和测试。
 
 [Vue](https://njleonzhang.github.io/docsify-demo-box-vue/) 和 [React](https://njleonzhang.github.io/docsify-demo-box-react/) 都支持。
 
-## 复制到剪贴板
+## 复制到剪贴板 :id=copy-to-clipboard
 
 在所有的代码块上添加一个简单的 `Click to copy` 按钮来允许用户从你的文档中轻易地复制代码。 由 [@jperasmus](https://github.com/jperasmus) 提供
 
@@ -234,6 +239,6 @@ docsify 的分页导航插件。 由 [@imyelo](https://github.com/imyelo) 提供
 
 由 [@jhildenbiddle](https://github.com/jhildenbiddle/docsify-tabs) 提供。
 
-## 更多插件
+## 更多插件 :id=more-plugins
 
 参考 [awesome-docsify](zh-cn/awesome?id=plugins)

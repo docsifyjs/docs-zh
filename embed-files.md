@@ -1,4 +1,4 @@
-# 文件嵌入
+# 文件嵌入 :id=embed-files
 
 从 Docsify 4.6 起可以嵌入任何类型的文件。
 
@@ -20,7 +20,7 @@
 
 外部链接也可以使用 - 只是替换目标。 如果你想要使用 gist URL，请查看[嵌入 gist](#embed-a-gist) 部分。
 
-## 嵌入文件类型
+## 嵌入文件类型 :id=embedded-file-type
 
 目前，文件扩展名自动识别并以不同方式嵌入。
 
@@ -42,7 +42,7 @@
 
 [filename](../_media/example.md ":include :type=code")
 
-## Markdown 与 YAML 元数据结合
+## Markdown 与 YAML 元数据结合 :id=markdown-with-yaml-front-matter
 
 Front Matter 通常在 Jekyl 等博客系统中使用，用于定义文档的元数据。 [front-matter.js](https://www.npmjs.com/package/front-matter) 包便于从文档中提取元数据(front matter)。
 
@@ -60,7 +60,7 @@ Front Matter 通常在 Jekyl 等博客系统中使用，用于定义文档的元
 
 [filename](../_media/example-with-yaml.md ":include")
 
-## 嵌入代码片段
+## 嵌入代码片段 :id=embedded-code-fragments
 
 有时你不想嵌入整个文件。 也许是因为你只需要几行，但你想在 CI 中编译和测试该文件。
 
@@ -87,7 +87,7 @@ Front Matter 通常在 Jekyl 等博客系统中使用，用于定义文档的元
 
 [filename](../_media/example.js ":include :type=code :fragment=demo")
 
-## 标签属性
+## 标签属性 :id=tag-attribute
 
 如果你嵌入文件是一个 `iframe`、`audio` 或者 `video`，你可以给这些标签设置属性。
 
@@ -105,7 +105,7 @@ Front Matter 通常在 Jekyl 等博客系统中使用，用于定义文档的元
 
 你看到它了吗？ 你只需要直接写入属性。 每个标签有哪些属性建议你查看 [MDN 文档](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe)。
 
-## 代码块高亮
+## 代码块高亮 :id=the-code-block-highlight
 
 嵌入任何类型的源代码文件，你可以指定高亮语言或自动标识。
 
@@ -119,13 +119,13 @@ Front Matter 通常在 Jekyl 等博客系统中使用，用于定义文档的元
 
 > [!TIP] 如何设置高亮？ 你可以查看[此处](zh-cn/language-highlight.md)。
 
-## 嵌入 Gist
+## 嵌入 Gist :id=embed-a-gist
 
 你可以将 Gist 作为 Markdown 内容或代码块嵌入。这是基于[嵌入文件](#embed-files)部分开头的方法，不过是嵌入一个原始的 Gist URL。
 
 > [!TIP] **无需**更改插件或应用程序配置即可运行。 事实上，即使你使用插件或修改配置来允许加载外部脚本，从 Gist 复制的 Embed `script` 标签也_无法_加载。
 
-### 确定 Gist 的元数据
+### 确定 Gist 的元数据 :id=identify-the-gists-metadata
 
 从查看 `gist.github.com` 上的 Gist 开始。 为了本指南的目的，我们使用这个 Gist：
 
@@ -152,7 +152,7 @@ Front Matter 通常在 Jekyl 等博客系统中使用，用于定义文档的元
 
 继续下面的一个部分，将 Gist 嵌入到 Docsify 页面上。
 
-### 渲染 Gist 中的 Markdown 内容
+### 渲染 Gist 中的 Markdown 内容 :id=render-markdown-content-from-a-gist
 
 这是将内容**无缝**嵌入到你的文档中的好方法，而不需要将别人引到外部链接。 这种方法非常适合在多个版本库的文档站点上重复使用安装说明要点。 这个方法与你的帐户或其他用户拥有的 Gist 同样有效。
 
@@ -174,7 +174,7 @@ Front Matter 通常在 Jekyl 等博客系统中使用，用于定义文档的元
 
 `LABEL` 可以是你想要的任何文本。 如果链接被破坏，它可以作为一个 _fallback_ 信息。所以在这里重复文件名是很有用的，万一你需要修复一个破坏的链接。 它还可以使嵌入的元素一目了然。
 
-### 渲染 Gist 中的代码块
+### 渲染 Gist 中的代码块 :id=render-a-codeblock-from-a-gist
 
 格式与上一节相同，但在 alt 文本中添加了 `:type=code`。 与[嵌入文件类型](#embedded-file-type)部分一样，语法高亮将从扩展名(如 `.js` 或 `.py`)中**推断**，所以你可以将 `type` 设置为 `code`。
 

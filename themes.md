@@ -1,4 +1,4 @@
-# 主题
+# 主题 :id=themes
 
 ## 核心主题 :id=core-theme
 

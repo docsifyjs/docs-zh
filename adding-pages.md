@@ -1,4 +1,4 @@
-# 添加页面
+# 添加页面 :id=adding-pages
 
 如果你需要更多页面，你可以简单地在 docsify 目录中创建更多 markdown 文件。 如果创建了名为 `guide.md` 的文件，则可通过 `/#/guide` 访问该文件。
 
@@ -23,7 +23,7 @@ docs/zh-cn/README.md  => http://domain.com/#/zh-cn/
 docs/zh-cn/guide.md   => http://domain.com/#/zh-cn/guide
 ```
 
-## 侧边栏
+## 侧边栏 :id=sidebar
 
 为了拥有侧边栏，你可以创建自己的侧边栏 `_sidebar.md`（有关示例，请参阅[本文档的侧边栏](https://github.com/docsifyjs/docsify/blob/main/docs/_sidebar.md)）：
 
@@ -79,7 +79,7 @@ docs/zh-cn/guide.md   => http://domain.com/#/zh-cn/guide
     └── running-services.md
 ```
 
-## 嵌套侧边栏
+## 嵌套侧边栏 :id=nested-sidebars
 
 你可能希望侧边栏在导航后更新以反映当前目录。 这可以通过在每个文件夹中添加一个 `_sidebar.md` 文件来实现。
 
@@ -100,7 +100,7 @@ docs/zh-cn/guide.md   => http://domain.com/#/zh-cn/guide
 
 > [!IMPORTANT] 你可以在一个子目录中创建一个 `README.md` 文件来作为路由的默认网页。
 
-## 用侧边栏中选定的条目名称作为页面标题
+## 用侧边栏中选定的条目名称作为页面标题 :id=set-page-titles-from-sidebar-selection
 
 页面的 `title` 标签是根据_选定的_侧边栏项目名称生成的。 为了更好地进行搜索引擎优化，你可以在文件名后指定一个字符串来自定义标题。
 
@@ -111,7 +111,7 @@ docs/zh-cn/guide.md   => http://domain.com/#/zh-cn/guide
 - [Guide](guide.md 'The greatest guide in the world')
 ```
 
-## 目录
+## 目录 :id=table-of-contents
 
 创建 `_sidebar.md` 后，侧边栏内容将根据 markdown 文件中的标题自动生成。
 
@@ -129,7 +129,7 @@ docs/zh-cn/guide.md   => http://domain.com/#/zh-cn/guide
 <script src="//cdn.jsdelivr.net/npm/docsify@5/dist/docsify.min.js"></script>
 ```
 
-## 忽略副标题
+## 忽略副标题 :id=ignoring-subheaders
 
 当设置了 `subMaxLevel` 时，默认情况下每个标题都会自动添加到目录中。 如果你想忽略特定的标题，可以给它添加 `<!-- {docsify-ignore} -->` 。
 

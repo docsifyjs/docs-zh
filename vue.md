@@ -1,10 +1,10 @@
-# 兼容 Vue
+# 兼容 Vue :id=vue-compatibility
 
 Docsify 允许 [Vue.js](https://vuejs.org) 内容直接添加到你的 markdown 页面。 这可以极大地简化与数据的工作并将反应添加到你的站点。
 
 Vue [template syntax](https://vuejs.org/guide/essentials/template-syntax) 可以用来将动态内容添加到你的页面。 当使用 [data](#data)、[computed properties](#computed-properties)、[methods](#methods) 和 [lifecycle hooks](#lifecycle-hooks) 时，Vue 内容会变得更加有趣。 这些选项可以指定为 [全局选项](#global-options) 或 DOM [mounts](#mounts) 和 [components](#components)。
 
-## 设置
+## 设置 :id=setup
 
 若要开始，请将 Vue.js 添加到你的 `index.html` 文件。 为你的站点选择合适的生产版本或开发版本，以获得有用的控制台警告和 [Vue.js devtools](https://github.com/vuejs/vue-devtools) 支持。
 

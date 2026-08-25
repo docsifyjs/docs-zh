@@ -1,4 +1,4 @@
-# Markdown 配置
+# Markdown 配置 :id=markdown-configuration
 
 **docsify** 使用 [marked](https://github.com/markedjs/marked) 作为其 Markdown 解析器。 你可以通过自定义 `renderer` 来定制如何将 Markdown 内容渲染为 HTML：
 
@@ -29,7 +29,7 @@ window.$docsify = {
 };
 ```
 
-## 支持 mermaid
+## 支持 mermaid :id=supports-mermaid
 
 > [!IMPORTANT] 目前 docsify 不支持异步 mermaid 渲染（最新的 mermaid 版本是 `v9.3.0`）。
 

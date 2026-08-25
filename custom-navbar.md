@@ -1,4 +1,4 @@
-# 自定义导航栏
+# 自定义导航栏 :id=custom-navbar
 
 ## HTML
 
@@ -55,7 +55,7 @@
 
 `_navbar.md` 会从每一级目录加载。 如果当前目录中没有 `_navbar.md`，则会返回上一级目录。 例如，如果当前路径是 `/guide/quick-start`，则将从 `/guide/_navbar.md` 加载 `_navbar.md`。
 
-## 嵌套
+## 嵌套 :id=nesting
 
 你可以通过缩进在某个父级下的项目来创建子列表。
 
@@ -82,7 +82,7 @@
 
 ![嵌套导航栏](../_images/zh-cn/nested-navbar.png "嵌套导航栏")
 
-## 整合自定义导航栏与 emoji 插件
+## 整合自定义导航栏与 emoji 插件 :id=combining-custom-navbars-with-the-emoji-plugin
 
 如果你使用 [emoji 插件](zh-cn/plugins#emoji)：
 

@@ -12,7 +12,7 @@ Docsify 推荐 [jsDelivr](//cdn.jsdelivr.net) 为其首选的 CDN：
 - https://unpkg.com/browse/docsify/
 - https://www.bootcdn.cn/docsify/ (支持国内)
 
-## 指定版本
+## 指定版本 :id=specifying-versions
 
 请注意以下 CDN URL 中的`@`版本锁定。 这样就可以指定最新的主版本、次版本、补丁或特定 [semver](https://semver.org) 版本号。
 
@@ -25,7 +25,7 @@ Docsify 推荐 [jsDelivr](//cdn.jsdelivr.net) 为其首选的 CDN：
 
 从文件名中移除`.min`，可获取未压缩的资源。
 
-## 最新主要版本
+## 最新主要版本 :id=latest-major-version
 
 指定最新的主要版本允许你的网站在发布时接收所有非破坏性的增强("次级"更新)和错误修复("补丁"更新)。 对于那些倾向于零维护又可以随着新版本的发布更新其网站的风险最小化的人来说，这是一个好的选择。
 

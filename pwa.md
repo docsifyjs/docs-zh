@@ -1,10 +1,10 @@
-# 离线模式
+# 离线模式 :id=offline-mode
 
 [Progressive Web Apps](https://developers.google.com/web/progressive-web-apps/)(PWA) 是一项融合 Web 和 Native 应用各项优点的解决方案。 我们可以利用其支持离线功能的特点，让我们的网站可以在信号差或者**离线状态**下正常运行。
 
 要使用它也非常容易。
 
-## 创建 serviceWorker
+## 创建 serviceWorker :id=create-serviceworker
 
 这里已经整理好了一份代码，你只需要在网站根目录下创建一个 `sw.js` 文件，并粘贴下面的代码。
 
@@ -103,7 +103,7 @@ self.addEventListener('fetch', event => {
 });
 ```
 
-## 注册
+## 注册 :id=register
 
 现在，到 `index.html` 里注册它。 它只适用于一些较新的浏览器，所以我们需要检查：
 
@@ -117,6 +117,6 @@ _index.html_
 </script>
 ```
 
-## 体验一下
+## 体验一下 :id=enjoy-it
 
 发布你的网站，并开始享受离线模式的魔力吧！

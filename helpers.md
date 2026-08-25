@@ -1,10 +1,10 @@
-# 文档助手
+# 文档助手 :id=doc-helper
 
 docsify 扩展了一些 Markdown 语法，可以让文档更易读。
 
 > 注意：对于特殊的代码语法，最好将其放在代码的反斜线内，以避免与配置或表情符号发生冲突。
 
-## 标注
+## 标注 :id=callouts
 
 Docsify 支持 [GitHub 风格](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts) 标注（也称为“警告”或“警报”）。
 
@@ -70,7 +70,7 @@ Docsify 支持 [GitHub 风格](https://docs.github.com/en/get-started/writing-on
 ?> Legacy **Tip** callouts are deprecated.
 ```
 
-## 链接属性
+## 链接属性 :id=link-attributes
 
 ### disabled
 
@@ -109,7 +109,7 @@ Docsify 支持 [GitHub 风格](https://docs.github.com/en/get-started/writing-on
 [link](/demo2 ':target=_self')
 ```
 
-## 任务清单
+## 任务清单 :id=task-lists
 
 ```markdown
 - [ ] foo
@@ -127,9 +127,9 @@ Docsify 支持 [GitHub 风格](https://docs.github.com/en/get-started/writing-on
   - [ ] bim
   - [ ] lim
 
-## 图片
+## 图片 :id=images
 
-### 类名
+### 类名 :id=class-names
 
 ```markdown
 ![logo](https://docsify.js.org/_media/icon.svg ':class=someCssClass')
@@ -145,7 +145,7 @@ Docsify 支持 [GitHub 风格](https://docs.github.com/en/get-started/writing-on
 ![logo](https://docsify.js.org/_media/icon.svg ':id=someCssId')
 ```
 
-### 大小
+### 大小 :id=sizes
 
 ```markdown
 ![logo](https://docsify.js.org/_media/icon.svg ':size=WIDTHxHEIGHT')
@@ -161,13 +161,13 @@ Docsify 支持 [GitHub 风格](https://docs.github.com/en/get-started/writing-on
 ![logo](https://docsify.js.org/_media/icon.svg ":size=100")
 ![logo](https://docsify.js.org/_media/icon.svg ":size=10%")
 
-## 设置标题的 id 属性
+## 设置标题的 id 属性 :id=heading-ids
 
 ```markdown
 ### 你好，世界！ :id=hello-world
 ```
 
-## HTML 标签中的 Markdown
+## HTML 标签中的 Markdown :id=markdown--html
 
 你需要在 html 和 markdown 内容之间插入空格。
 这对于在 details 元素中呈现 markdown 内容非常有用。

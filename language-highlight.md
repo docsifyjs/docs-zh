@@ -1,4 +1,4 @@
-# 代码高亮
+# 代码高亮 :id=language-highlighting
 
 ## Prism
 
@@ -129,7 +129,7 @@ Docsify 的官方[主题](zh-cn/themes)与 Prism 语法高亮主题兼容。
 </style>
 ```
 
-## 动态内容
+## 动态内容 :id=dynamic-content
 
 可以使用 Prism 的 [`highlightElement()`](https://prismjs.com/docs/Prism.html#.highlightElement) 方法高亮显示动态生成的代码块：
 
