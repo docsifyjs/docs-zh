@@ -12,21 +12,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - name: crowdin action
-        uses: crowdin/github-action@v2
+      - uses: crowdin/github-action@v2
         with:
           upload_sources: false
           upload_translations: false
           download_translations: true
           download_language: zh-CN
           download_translations_args: --all
-          localization_branch_name: l10n_crowdin_${{ github.ref_name }}_translations
+          localization_branch_name: l10n_crowdin_translations
           create_pull_request: true
-          crowdin_branch_name: ${{ github.ref_name }}
-          pull_request_base_branch_name: ${{ github.ref_name }}
+          crowdin_branch_name: "develop"
           base_path: ${{ github.workspace }}
           config: .github/crowdin/config.yml
         env:
