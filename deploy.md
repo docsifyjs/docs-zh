@@ -1,4 +1,4 @@
-# 部署
+# 部署 :id=deploy
 
 与 [GitBook](https://www.gitbook.com) 类似，你可以将文件部署到 GitHub Pages、GitLab Pages或 VPS 上。
 
@@ -10,12 +10,11 @@ GitHub Pages 支持从三个地方读取文件：
 - master 分支
 - gh-pages 分支
 
-建议将文件保存到仓库 `main` 分支的 `./docs` 子文件夹中。 在设置页面开启 **GitHub Pages** 功能并选择 `main branch /docs folder` 选项。
+建议将文件保存到仓库 `main` 分支的 `./docs` 子文件夹中。在设置页面开启 **GitHub Pages** 功能并选择 `main branch /docs folder` 选项。
 
 ![GitHub Pages](../_images/deploy-github-pages.png)
 
-> [!IMPORTANT] 你也可以在根目录中保存文件并选择 `main branch` 。
-> 你需要在部署位置下放一个 `.nojekyll` 文件（比如 `/docs` 目录或者 gh-pages 分支）
+> [!IMPORTANT] 你也可以在根目录中保存文件并选择 `main branch` 。你需要在部署位置下放一个 `.nojekyll` 文件（比如 `/docs` 目录或者 gh-pages 分支）
 
 ## GitLab Pages
 
@@ -39,11 +38,11 @@ pages:
 
 > !IMPORTANT] 你可以用 `- cp -r docs/. public` 替换脚本，如果 `./docs` 是你的 docsify 子文件夹。
 
-## Firebase 主机
+## Firebase 主机 :id=firebase-hosting
 
 > [!IMPORTANT] 你需要先使用谷歌账号登录 [Firebase 控制台](https://console.firebase.google.com)，然后使用 `npm i -g firebase-tools` 命令安装 Firebase CLI 。
 
-使用终端，确定并导航到你的 Firebase 项目目录。 这可能是 `~/Projects/Docs`，等等。 在这里执行 `firebase init` 命令，从菜单中选择 `Hosting`（使用**空格键**选择，**方向键**切换选项，**回车键**确认）。 遵照安装说明。
+使用终端，确定并导航到你的 Firebase 项目目录。这可能是 `~/Projects/Docs`，等等。在这里执行 `firebase init` 命令，从菜单中选择 `Hosting`（使用**空格键**选择，**方向键**切换选项，**回车键**确认）。遵照安装说明。
 
 你的 `firebase.json` 文件应该与此相似（我将部署目录从 `public` 改为了 `site`）：
 
@@ -56,7 +55,7 @@ pages:
 }
 ```
 
-完成后，执行 `docsify init ./site` 构建起始模板（将`site`替换为你在运行`firebase init`时确定的部署目录 - 默认情况下为`public`）。 添加/编辑文档，然后在项目根目录执行 `firebase deploy`。
+完成后，执行 `docsify init ./site` 构建起始模板（将`site`替换为你在运行`firebase init`时确定的部署目录 - 默认情况下为`public`）。添加/编辑文档，然后在项目根目录执行 `firebase deploy`。
 
 ## Nginx
 
@@ -95,14 +94,14 @@ server {
 1. 登录你的[Netlify](https://www.netlify.com/)账号。
 2. 在 [dashboard](https://app.netlify.com/) 页面，单击 **Add New Site**。
 3. 选择 GitHub。
-4. 选择存放文档的存储库，在**Base Directory**中添加存放文件的子文件夹。 例如，应为 `docs`。
+4. 选择存放文档的存储库，在**Base Directory**中添加存放文件的子文件夹。例如，应为 `docs`。
 5. 在**Build Command**区域留空。
 6. 在**Publish directory**区域，如果你在**Base Directory**中添加了 `docs`，你会看到 Publish directory 中填充了 `docs/`
 7. Netlify 很聪明，会在 `docs/` 文件夹中查找 `index.html` 文件。
 
-### HTML5 路由
+### HTML5 路由 :id=html5-router
 
-当使用 HTML5 路由时，你需要设置一条将所有请求重定向到你的 `index.html` 的重定向规则。 当你使用Netlify时这相当简单。 只需在 docs 目录中创建一个名为 `_redirects` 的文件，并将此代码段添加到文件中，就可以了：
+当使用 HTML5 路由时，你需要设置一条将所有请求重定向到你的 `index.html` 的重定向规则。当你使用Netlify时这相当简单。只需在 docs 目录中创建一个名为 `_redirects` 的文件，并将此代码段添加到文件中，就可以了：
 
 ```sh
 /*    /index.html   200
@@ -130,7 +129,7 @@ server {
 2. 登录到你的 [AWS 控制台](https://aws.amazon.com)。
 3. 到 [AWS Amplify 仪表盘](https://aws.amazon.com/amplify)。
 4. 选择 **Deploy** 路径来设置你的项目。
-5. 若有提示，如果你希望在项目根目录下保存你的文档，保持构建设置为空。 如果你从不同目录提供文档，请自定义你的 amplify.yml
+5. 若有提示，如果你希望在项目根目录下保存你的文档，保持构建设置为空。如果你从不同目录提供文档，请自定义你的 amplify.yml
 
 ```yml
 version: 0.1
@@ -147,9 +146,9 @@ frontend:
     paths: []
 ```
 
-6. 在其显示的顺序中添加以下重定向规则。 请注意，第二项记录是一个 PNG 图像，您可以在其中使用任何图像格式来更改它。
+6. 在其显示的顺序中添加以下重定向规则。请注意，第二项记录是一个 PNG 图像，您可以在其中使用任何图像格式来更改它。
 
-| Source address                                     | Target address                                     | Type                             |
+| 源地址                                                | 目标地址                                               | 类型                               |
 | -------------------------------------------------- | -------------------------------------------------- | -------------------------------- |
 | /<\*>.md  | /<\*>.md  | 200 (Rewrite) |
 | /<\*>.png | /<\*>.png | 200 (Rewrite) |
@@ -160,7 +159,7 @@ frontend:
 1. 登录到你的 [Stormkit](https://www.stormkit.io) 帐户。
 2. 使用用户界面，从支持 Git 提供商中(GitHub 、GitLab或 Bitbucket) 导入你的文档项目。
 3. 前往 Stormkit 中的项目生产环境或在需要时创建一个新环境。
-4. 在你的 Stormkit 配置中验证构建命令。 默认情况下，Stormkit CI 将运行 `npm run build` 但你可以在此页面上指定一个自定义构建命令。
+4. 在你的 Stormkit 配置中验证构建命令。默认情况下，Stormkit CI 将运行 `npm run build` 但你可以在此页面上指定一个自定义构建命令。
 5. 将输出文件夹设置为 `docs`
 6. 点击“立即部署”按钮来部署你的站点。
 
@@ -170,8 +169,7 @@ frontend:
 
 - 创建 docsify 的文件
 
-  你需要准备初始文件，而不是将其设在容器内。
-  请参阅 [快速开始](zh-cn/quickstart) 部分，了解如何手动或使用 [docsify-cli](https://github.com/docsifyjs/docsify-cli) 创建这些文件。
+  你需要准备初始文件，而不是将其设在容器内。请参阅 [快速开始](zh-cn/quickstart) 部分，了解如何手动或使用 [docsify-cli](https://github.com/docsifyjs/docsify-cli) 创建这些文件。
 
   ```sh
   index.html
@@ -210,7 +208,7 @@ frontend:
   docker run -itp 3000:3000 --name=docsify -v $(pwd):/docs docsify/demo
   ```
 
-## Kinsta 静态网站托管
+## Kinsta 静态网站托管 :id=kinsta-static-site-hosting
 
 你可以将 **Docsify** 作为静态网站部署到 [Kinsta](https://kinsta.com/static-site-hosting/) 上。
 
@@ -222,7 +220,7 @@ frontend:
 
 4. 选择要部署的版本库和分支。
 
-5. 在构建设置过程中，Kinsta 会自动尝试填写**Build command**、**Node version** 和 **Publish directory**。 如果不会，请填写以下内容：
+5. 在构建设置过程中，Kinsta 会自动尝试填写**Build command**、**Node version** 和 **Publish directory**。如果不会，请填写以下内容：
 
    - Build command：留空
    - Node version：保留默认选择或特定版本（如 `18.16.0`）
@@ -234,13 +232,13 @@ frontend:
 
 [DeployHQ](https://www.deployhq.com/) 是一个部署自动化平台，可将你的代码部署到 SSH/SFTP 服务器、FTP 服务器、云存储（亚马逊 S3、Cloudflare R2）和现代托管平台（Netlify、Heroku）。
 
-> [!IMPORTANT] DeployHQ 不会托管你的网站。 它能自动将 Docsify 文件部署到你选择的托管服务提供商或服务器上。
+> [!IMPORTANT] DeployHQ 不会托管你的网站。它能自动将 Docsify 文件部署到你选择的托管服务提供商或服务器上。
 
 使用 DeployHQ 部署 Docsify 网站：
 
 1. 注册 [DeployHQ 账户](https://www.deployhq.com/) 并验证你的电子邮件。
 
-2. 点击 **Projects** 和 **New Project**，创建第一个项目。 连接 Git 仓库（GitHub、GitLab、Bitbucket 或任何私有仓库）。 授权 DeployHQ 访问你的版本库。
+2. 点击 **Projects** 和 **New Project**，创建第一个项目。连接 Git 仓库（GitHub、GitLab、Bitbucket 或任何私有仓库）。授权 DeployHQ 访问你的版本库。
 
 3. 添加服务器并输入服务器详细信息：
 
@@ -249,10 +247,21 @@ frontend:
    - 输入服务器主机名、用户名和密码/SSH 密钥
    - 设置 **Deployment Path** 到你的 web 根目录(例如，`public_html/`)
 
-4. 由于 Docsify 不需要构建步骤，你可以直接部署文件。 如果你的 Docsify 文件在 `docs/` 文件夹中，配置你的服务器设置中的 **Source Path** 到 `docs/`。
+4. 由于 Docsify 不需要构建步骤，你可以直接部署文件。如果你的 Docsify 文件在 `docs/` 文件夹中，配置你的服务器设置中的 **Source Path** 到 `docs/`。
 
 5. 单击 **Deploy Project**，然后选择服务器并单击 **Deploy**，开始首次部署。
 
-你的 Docsify 网站将部署到你的服务器上。 你可以启用自动部署功能，在每次 Git 推送时进行部署，也可以安排在特定时间进行部署。
+你的 Docsify 网站将部署到你的服务器上。你可以启用自动部署功能，在每次 Git 推送时进行部署，也可以安排在特定时间进行部署。
 
 有关高级部署功能的更多信息，请参阅 [DeployHQ 文档](https://www.deployhq.com/support)。
+
+## deed.page
+
+[deed.page](https://deed.page) 可通过一次 HTTP `PUT` 请求托管静态网站。无需注册账号或执行构建步骤，直接上传 `docs` 文件夹即可：
+
+```bash
+tar -C docs -czf site.tar.gz .
+curl -T site.tar.gz "https://deed.page/v1/sites?slug=my-docs"
+```
+
+响应中会返回可访问的 `https://my-docs.deed.page/` 地址和令牌。若要更新同一个站点，请在相同命令中加入 `-H "Authorization: Bearer <token>"`。单次上传上限为 4 MB；更大的网站请参阅 [deed.page 文档](https://deed.page/docs)。

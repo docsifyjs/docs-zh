@@ -1,4 +1,4 @@
-# 代码高亮
+# 代码高亮 :id=language-highlighting
 
 ## Prism
 
@@ -77,7 +77,7 @@ function add(a, b) {
 
 ## 主题支持 :id=theme-support
 
-Docsify 的官方[主题](zh-cn/themes)与 Prism 语法高亮主题兼容。
+Docsify 官方[主题](zh-cn/themes.md)与 Prism 语法高亮主题兼容。
 
 > [!IMPORTANT] Prism 主题必须在 Docsify 主题之后加载。
 
@@ -107,7 +107,7 @@ Docsify 的官方[主题](zh-cn/themes)与 Prism 语法高亮主题兼容。
 />
 ```
 
-以下 Docsify [主题属性](zh-cn/themes#theme-properties) 默认覆盖 Prism 主题样式：
+默认情况下，以下 Docsify [主题属性](zh-cn/themes.md#theme-properties)会覆盖 Prism 主题样式：
 
 ```text
 --border-radius
@@ -129,7 +129,7 @@ Docsify 的官方[主题](zh-cn/themes)与 Prism 语法高亮主题兼容。
 </style>
 ```
 
-## 动态内容
+## 动态内容 :id=dynamic-content
 
 可以使用 Prism 的 [`highlightElement()`](https://prismjs.com/docs/Prism.html#.highlightElement) 方法高亮显示动态生成的代码块：
 

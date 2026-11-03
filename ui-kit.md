@@ -3,7 +3,7 @@
 # UI Kit
 
 <details>
-  <summary>查看本页面的 markdown 源代码</summary>
+  <summary>查看此页面的 Markdown 源代码</summary>
   <div style="max-height: 50vh; overflow: auto;">
 
 [ui-kit.md](https://cdn.jsdelivr.net/gh/docsifyjs/docs-zh@main/ui-kit.md ":include :type=code")
@@ -11,44 +11,44 @@
   </div>
 </details>
 
-## 块引用 :id=blockquotes
+## Blockquotes
 
 > Cras aliquet nulla quis metus tincidunt, sed placerat enim cursus. Etiam
 > turpis nisl, posuere eu condimentum ut, interdum a risus. Sed non luctus mi.
 > Quisque malesuada risus sit amet tortor aliquet, a posuere ex iaculis. Vivamus
 > ultrices enim dui, eleifend porttitor elit aliquet sed.
 >
-> _- 引用来源_
+> _- Quote Source_
 
-#### 嵌套 :id=nested
+#### Nested
 
 <!-- prettier-ignore -->
 
-> 第 1 级
+> Level 1
 >
-> > 第 2 级
+> > Level 2
 > >
-> > > 第 3 级
+> > > Level 3
 
-## 按钮 :id=buttons
+## Buttons
 
-#### 默认按钮 :id=default
+#### Default
 
-<button>按钮</button>
+<button>Button</button>
 
-#### 基础按钮 :id=basic
+#### Basic
 
-<button type="button">按钮</button> <a href="javascript:void(0);" class="button">链接按钮</a> <input type="button" value="Input Button" class="button">
+<button type="button">Button</button> <a href="javascript:void(0);" class="button">Link Button</a> <input type="button" value="Input Button" class="button">
 
-#### 主按钮 :id=primary
+#### Primary
 
-<button type="button" class="primary">按钮</button> <a href="javascript:void(0);" class="button primary">链接按钮</a> <input type="button" value="Input Button" class="primary">
+<button type="button" class="primary">Button</button> <a href="javascript:void(0);" class="button primary">Link Button</a> <input type="button" value="Input Button" class="primary">
 
-#### 次要按钮 :id=secondary
+#### Secondary
 
-<button type="button" class="secondary">按钮</button> <a href="javascript:void(0);" class="button secondary">链接按钮</a> <input type="button" value="Input Button" class="secondary">
+<button type="button" class="secondary">Button</button> <a href="javascript:void(0);" class="button secondary">Link Button</a> <input type="button" value="Input Button" class="secondary">
 
-## 标注 :id=callouts
+## Callouts
 
 <!-- prettier-ignore -->
 
@@ -75,7 +75,7 @@
 > [!WARNING]
 > **Warning** callout with `inline code`.
 
-**多行**
+**Multi Line**
 
 <!-- prettier-ignore -->
 
@@ -90,7 +90,7 @@
 > <p>Hello, World!</p>
 > ```
 
-**嵌套**
+**Nested**
 
 <!-- prettier-ignore -->
 
@@ -103,15 +103,15 @@
 > > > [!NOTE]
 > > > Level 3
 
-**旧版风格**
+**Legacy Style**
 
 !> Legacy **Important** callout with `inline code`.
 
 ?> Legacy **Tip** with `inline code`.
 
-## 代码 :id=code
+## Code
 
-这是 `内联代码`
+This is `inline code`
 
 ```javascript
 const add = (num1, num2) => num1 + num2;
@@ -126,9 +126,9 @@ console.log(total); // 3
 </body>
 ```
 
-## 颜色 :id=colors
+## Colors
 
-#### 主题 :id=theme
+#### Theme
 
 <div class="ui-kit-color">
   <figure>
@@ -154,7 +154,7 @@ console.log(total); // 3
   <figure>
     <div style="background: var(--theme-color);"></div>
     
-    <figcaption>主题颜色<figcaption>
+    <figcaption>Theme Color<figcaption>
   </figure>
   <figure>
     <div style="background: var(--theme-color-5);"></div>
@@ -178,7 +178,7 @@ console.log(total); // 3
   </figure>
 </div>
 
-#### 单色 :id=monochromatic
+#### Monochromatic
 
 <div class="ui-kit-color">
   <figure>
@@ -238,23 +238,23 @@ console.log(total); // 3
   </figure>
 </div>
 
-## 详细信息 :id=details
+## Details
 
 <details>
-  <summary>详细信息（点击打开）</summary>
+  <summary>Details (click to open)</summary>
 
 Suscipit nemo aut ex suscipit voluptatem laboriosam odio velit. Ipsum eveniet labore sequi non optio vel. Ut culpa ad accusantium est aut harum ipsam voluptatum. Velit eum incidunt non sint. Et molestiae veniam natus autem vel assumenda ut numquam esse. Non nisi id qui vero corrupti quos et.
 
 </details>
 
 <details open>
-  <summary>详细信息（默认打开）</summary>
+  <summary>Details (open by default)</summary>
 
 Suscipit nemo aut ex suscipit voluptatem laboriosam odio velit. Ipsum eveniet labore sequi non optio vel. Ut culpa ad accusantium est aut harum ipsam voluptatum. Velit eum incidunt non sint. Et molestiae veniam natus autem vel assumenda ut numquam esse. Non nisi id qui vero corrupti quos et.
 
 </details>
 
-## 表格要素 :id=form-elements
+## Form Elements
 
 ### Fieldset
 
@@ -377,7 +377,7 @@ Commodo sit veniam nulla cillum labore ullamco aliquip quis. Consequat nulla fug
 
 ###### Heading 6 {docsify-ignore}
 
-Ipsum ea amet dolore mollit incididunt fugiat nulla laboris est sint voluptate. Ex culpa id amet ipsum amet pariaturipsum officia sit laborum irure ullamco deserunt. Consequat qui tempor occaecat nostrud proident.
+Ipsum ea amet dolore mollit incididunt fugiat nulla laboris est sint voluptate. Ex culpa id amet ipsum amet pariatur ipsum officia sit laborum irure ullamco deserunt. Consequat qui tempor occaecat nostrud proident.
 
 ## Horizontal Rule
 
@@ -415,7 +415,7 @@ Text after rule.
 
 #### Default
 
-<kbd>&#8963</kbd><kbd>&#8997</kbd><kbd>&#9003</kbd>
+<kbd>&#8963;</kbd><kbd>&#8997;</kbd><kbd>&#9003;</kbd>
 
 <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>Del</kbd>
 
@@ -423,7 +423,7 @@ Text after rule.
 
 #### Alternate
 
-<kbd class="alt">&#8963</kbd><kbd class="alt">&#8997</kbd><kbd class="alt">&#9003</kbd>
+<kbd class="alt">&#8963;</kbd><kbd class="alt">&#8997;</kbd><kbd class="alt">&#9003;</kbd>
 
 <kbd class="alt">Ctrl</kbd><kbd class="alt">Alt</kbd><kbd class="alt">Del</kbd>
 
@@ -455,15 +455,15 @@ Text after rule.
   <div><kbd class="alt">&#8676;</kbd></div> <div><kbd>&#8676;</kbd></div> <div>Tab + Shift</div>
  </div>
 
-## 链接 :id=links
+## Links
 
-[内联链接](https://google.com)
+[Inline link](https://google.com)
 
-[带标题的内联链接](https://google.com "Google")
+[Inline link with title](https://google.com "Google")
 
-[参考链接名称][link1]
+[Reference link by name][link1]
 
-[引用链接编号][1]
+[Reference link by number][1]
 
 [Reference link by self]
 
@@ -471,9 +471,9 @@ Text after rule.
 [1]: https://google.com
 [Reference link by self]: https://google.com
 
-## 列表 :id=lists
+## Lists
 
-### 有序列表 :id=ordered-list
+### Ordered List
 
 1. Ordered
 2. Ordered
@@ -481,15 +481,15 @@ Text after rule.
    2. Nested (Wrapping): Similique tempora et. Voluptatem consequuntur ut. Rerum minus et sed beatae. Consequatur ut nemo laboriosam quo architecto quia qui. Corrupti aut omnis velit.
 3. Ordered (Wrapping): Error minima modi rem sequi facere voluptatem. Est nihil veritatis doloribus et corporis ipsam. Pariatur eos ipsam qui odit labore est voluptatem enim. Veritatis est qui ut pariatur inventore.
 
-### 无序列表 :id=unordered-list
+### Unordered List
 
 - Unordered
 - Unordered
   - Nested
   - Nested (Wrapping): Quia consectetur sint vel ut excepturi ipsa voluptatum suscipit hic. Ipsa error qui molestiae harum laboriosam. Rerum non amet illo voluptatem odio pariatur. Ut minus enim.
-- Unordered (Wrapping): Fugiat qui tempore ratione amet repellendus repudiandae non. Rerum nisi officia enim. Itaque est alias voluptatibus id molestiae accusantium. Cupiditate sequi qui omnis sed faceere aliquid quia ut.
+- Unordered (Wrapping): Fugiat qui tempore ratione amet repellendus repudiandae non. Rerum nisi officia enim. Itaque est alias voluptatibus id molestiae accusantium. Cupiditate sequi qui omnis sed facere aliquid quia ut.
 
-### 任务清单 :id=task-list
+### Task List
 
 - [x] Task
 - [ ] Task
@@ -510,15 +510,15 @@ Text after rule.
   </ol>
 </output>
 
-## 表格 :id=tables
+## Tables
 
 ### Alignment
 
-| Left Align | Center Align | Right Align | Non&#8209;Breaking&amp;nbsp;Header |
-| ---------- | :----------: | ----------: | -------------------------------------------------------------------------- |
-| A1         |      A2      |          A3 | A4                                                                         |
-| B1         |      B2      |          B3 | B4                                                                         |
-| C1         |      C2      |          C3 | C4                                                                         |
+| Left Align | Center Align | Right Align | Non&#8209;Breaking&nbsp;Header |
+| ---------- | :----------: | ----------: | ---------------------------------------------------------------------- |
+| A1         |      A2      |          A3 | A4                                                                     |
+| B1         |      B2      |          B3 | B4                                                                     |
+| C1         |      C2      |          C3 | C4                                                                     |
 
 ### Headerless
 
@@ -530,11 +530,11 @@ Text after rule.
 
 ### Scrolling
 
-| Header                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Dicta&amp;nbsp;in&amp;nbsp;nobis&amp;nbsp;dolor&amp;nbsp;adipisci&amp;nbsp;qui.&amp;nbsp;Accusantium&amp;nbsp;voluptates&amp;nbsp;est&amp;nbsp;dolor&amp;nbsp;laboriosam&amp;nbsp;qui&amp;nbsp;voluptatibus.&amp;nbsp;Veritatis&amp;nbsp;eos&amp;nbsp;aspernatur&amp;nbsp;iusto&amp;nbsp;et&amp;nbsp;dicta&amp;nbsp;quas.&amp;nbsp;Fugit&amp;nbsp;voluptatem&amp;nbsp;dolorum&amp;nbsp;qui&amp;nbsp;quisquam.&amp;nbsp;nihil |
-| Aut&amp;nbsp;praesentium&amp;nbsp;officia&amp;nbsp;aut&amp;nbsp;delectus.&amp;nbsp;Quas&amp;nbsp;atque&amp;nbsp;reprehenderit&amp;nbsp;saepe.&amp;nbsp;Et&amp;nbsp;voluptatibus&amp;nbsp;qui&amp;nbsp;dolores&amp;nbsp;rem&amp;nbsp;facere&amp;nbsp;in&amp;nbsp;dignissimos&amp;nbsp;id&amp;nbsp;aut.&amp;nbsp;Debitis&amp;nbsp;excepturi&amp;nbsp;delectus&amp;nbsp;et&amp;nbsp;quos&amp;nbsp;numquam&amp;nbsp;magnam.      |
-| Sed&amp;nbsp;eum&amp;nbsp;atque&amp;nbsp;at&amp;nbsp;laborum&amp;nbsp;aut&amp;nbsp;et&amp;nbsp;repellendus&amp;nbsp;ullam&amp;nbsp;dolor.&amp;nbsp;Cupiditate&amp;nbsp;saepe&amp;nbsp;voluptatibus&amp;nbsp;odit&amp;nbsp;est&amp;nbsp;pariatur&amp;nbsp;qui.&amp;nbsp;Hic&amp;nbsp;sunt&amp;nbsp;nihil&amp;nbsp;optio&amp;nbsp;enim&amp;nbsp;eum&amp;nbsp;laudantium.&amp;nbsp;Repellendus&amp;nbsp;voluptate.              |
+| Header                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Dicta&nbsp;in&nbsp;nobis&nbsp;dolor&nbsp;adipisci&nbsp;qui.&nbsp;Accusantium&nbsp;voluptates&nbsp;est&nbsp;dolor&nbsp;laboriosam&nbsp;qui&nbsp;voluptatibus.&nbsp;Veritatis&nbsp;eos&nbsp;aspernatur&nbsp;iusto&nbsp;et&nbsp;dicta&nbsp;quas.&nbsp;Fugit&nbsp;voluptatem&nbsp;dolorum&nbsp;qui&nbsp;quisquam.&nbsp;nihil |
+| Aut&nbsp;praesentium&nbsp;officia&nbsp;aut&nbsp;delectus.&nbsp;Quas&nbsp;atque&nbsp;reprehenderit&nbsp;saepe.&nbsp;Et&nbsp;voluptatibus&nbsp;qui&nbsp;dolores&nbsp;rem&nbsp;facere&nbsp;in&nbsp;dignissimos&nbsp;id&nbsp;aut.&nbsp;Debitis&nbsp;excepturi&nbsp;delectus&nbsp;et&nbsp;quos&nbsp;numquam&nbsp;magnam.      |
+| Sed&nbsp;eum&nbsp;atque&nbsp;at&nbsp;laborum&nbsp;aut&nbsp;et&nbsp;repellendus&nbsp;ullam&nbsp;dolor.&nbsp;Cupiditate&nbsp;saepe&nbsp;voluptatibus&nbsp;odit&nbsp;est&nbsp;pariatur&nbsp;qui.&nbsp;Hic&nbsp;sunt&nbsp;nihil&nbsp;optio&nbsp;enim&nbsp;eum&nbsp;laudantium.&nbsp;Repellendus&nbsp;voluptate.              |
 
 ## Text Elements
 

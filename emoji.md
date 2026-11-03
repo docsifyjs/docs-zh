@@ -1,6 +1,6 @@
 # Emoji
 
-下面是一个完整的表情短代码列表。 Docsify 可以使用 [`nativeEmoji`](zh-cn/configuration#nativeemoji) 配置选项使用 GitHub 风格表情图像或原生表情符号字符来渲染表情符号。
+下面是一个完整的表情短代码列表。下面是完整的表情短代码列表。可以通过 [`nativeEmoji`](zh-cn/configuration.md#nativeemoji) 配置项，选择让 Docsify 使用 GitHub 风格的表情图片或原生表情字符来显示表情。
 
 <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));">
 

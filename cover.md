@@ -1,8 +1,8 @@
-# 封面
+# 封面 :id=cover
 
-通过设置 `coverpage` 为 **true** 来开启渲染封面功能。 参见 [coverpage configuration](zh-cn/configuration#coverpage)。
+通过将 `coverpage` 设为 **true** 来启用封面页。详见 [`coverpage` 配置](zh-cn/configuration.md#coverpage)。
 
-## 基本用法
+## 基本用法 :id=basic-usage
 
 设置 `coverpage` 为 **true**, 并创建 `_coverpage.md` ：
 
@@ -29,9 +29,9 @@ window.$docsify = {
 [Get Started](#docsify)
 ```
 
-## 定制化
+## 定制化 :id=customization
 
-封面页可使用[主题属性](zh-cn/theme#theme-properties)进行自定义：
+可以使用[主题属性](zh-cn/themes.md#theme-properties)自定义封面页：
 
 <!-- prettier-ignore -->
 
@@ -59,11 +59,11 @@ window.$docsify = {
 ![](_media/bg.png)
 ```
 
-## 封面作为首页
+## 封面作为首页 :id=coverpage-as-homepage
 
-通常，封面页和主页同时出现。 当然，你也可以用[`onlyCover`](zh-cn/configuration#onlycover)选项分离封面。
+通常，封面页和主页同时出现。当然，也可以通过 [`onlyCover`](zh-cn/configuration.md#onlycover) 选项将封面页单独显示。
 
-## 多个封面
+## 多个封面 :id=multiple-covers
 
 如果你的文档网站是多语言的，或许你需要设置多个封面。
 

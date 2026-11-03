@@ -1,8 +1,8 @@
-# 主题
+# 主题 :id=themes
 
 ## 核心主题 :id=core-theme
 
-Docsify "核心" 主题包含呈现 Docsify 网站所需的所有样式和[主题属性](#theme-properties)。 该主题可单独用作简约主题，与[主题附加组件](#theme-add-ons)结合使用，使用核心[类](#classes)进行修改，也可作为[自定义](#customization)的起点。
+Docsify "核心" 主题包含呈现 Docsify 网站所需的所有样式和[主题属性](#theme-properties)。该主题可单独用作简约主题，与[主题附加组件](#theme-add-ons)结合使用，使用核心[类](#classes)进行修改，也可作为[自定义](#customization)的起点。
 
 <!-- prettier-ignore -->
 
@@ -13,7 +13,7 @@ Docsify "核心" 主题包含呈现 Docsify 网站所需的所有样式和[主�
 
 ## 主题附加组件 :id=theme-add-ons
 
-主题附加组件与[核心主题](#core-theme)结合使用。 附加组件包含修改[主题属性](#theme-properties)值和/或添加自定义样式声明的 CSS 规则。 它们通常（但不总是）可以与其他附加组件一起使用。
+主题附加组件与[核心主题](#core-theme)结合使用。附加组件包含修改[主题属性](#theme-properties)值和/或添加自定义样式声明的 CSS 规则。它们通常（但不总是）可以与其他附加组件一起使用。
 
 > [!IMPORTANT] 主题附加组件必须在[核心主题](#core-theme)之后加载。
 
@@ -29,7 +29,7 @@ Docsify "核心" 主题包含呈现 Docsify 网站所需的所有样式和[主�
 
 ### 核心深色（附加组件） :id=core-dark-add-on
 
-[核心主题](#core-theme)的深色模式样式。 只有在操作系统的暗模式激活时，才能通过指定 `media` 属性来应用样式。
+[核心主题](#core-theme)的深色模式样式。只有在操作系统的暗模式激活时，才能通过指定 `media` 属性来应用样式。
 
 <label>
   <input
@@ -39,7 +39,7 @@ Docsify "核心" 主题包含呈现 Docsify 网站所需的所有样式和[主�
     data-group="addon"
     data-sheet
   >
-  Preview Core Dark
+  预览 Core Dark
 </label>
 <br>
 <label>
@@ -50,7 +50,7 @@ Docsify "核心" 主题包含呈现 Docsify 网站所需的所有样式和[主�
     data-group="addon"
     data-sheet
   >
-  Preview Core Dark (Dark Mode Only)
+  预览 Core Dark（仅深色模式）
 </label>
 
 <!-- prettier-ignore -->
@@ -79,7 +79,7 @@ Docsify "核心" 主题包含呈现 Docsify 网站所需的所有样式和[主�
    data-group="addon"
    data-sheet
   >
-  Preview Vue
+  预览 Vue
 </label>
 
 <!-- prettier-ignore -->
@@ -91,7 +91,7 @@ Docsify "核心" 主题包含呈现 Docsify 网站所需的所有样式和[主�
 
 ## 类 :id=classes
 
-[核心主题](#core-theme)提供了多个 CSS 类，用于自定义 Docsify 网站。 这些类应用于 `index.html` 页面中的 `<body>` 元素。
+[核心主题](#core-theme)提供了多个 CSS 类，用于自定义 Docsify 网站。这些类应用于 `index.html` 页面中的 `<body>` 元素。
 
 <!-- prettier-ignore -->
 
@@ -117,12 +117,18 @@ Docsify "核心" 主题包含呈现 Docsify 网站所需的所有样式和[主�
 
 在侧边栏的页面链接上显示展开/折叠图标。
 
+只有启用 [`collapsibleSidebarGroups`](zh-cn/configuration.md?id=collapsiblesidebargroups) 后，顶层分组标题才会显示箭头。
+
 <label>
-  <input class="toggle" type="checkbox" value="sidebar-chevron-right" data-class data-group="sidebar-chevron"> Preview <code>sidebar-chevron-right</code>
+  <input class="toggle" type="checkbox" value="sidebar-chevron-right" data-class data-group="sidebar-chevron"> 预览 <code>sidebar-chevron-right</code>
 </label>
 <br>
 <label>
-  <input class="toggle" type="checkbox" value="sidebar-chevron-left" data-class data-group="sidebar-chevron"> Preview <code>sidebar-chevron-left</code>
+  <input class="toggle" type="checkbox" value="sidebar-chevron-left" data-class data-group="sidebar-chevron"> 预览 <code>sidebar-chevron-left</code>
+</label>
+<br>
+<label>
+  <input class="toggle" type="checkbox" value="sidebar-chevron-root-hidden" data-class> 使用 <code>sidebar-chevron-root-hidden</code> 隐藏顶层箭头
 </label>
 
 <!-- prettier-ignore -->
@@ -135,6 +141,14 @@ Docsify "核心" 主题包含呈现 Docsify 网站所需的所有样式和[主�
 
 ```html
 <body class="sidebar-chevron-left">
+```
+
+若要隐藏所有顶层页面链接和分组标题旁的箭头，同时保留嵌套页面链接旁的箭头，请添加 `sidebar-chevron-root-hidden` 类：
+
+<!-- prettier-ignore -->
+
+```html
+<body class="sidebar-chevron-right sidebar-chevron-root-hidden">
 ```
 
 要防止在特定页面链接上显示 chevrons，请添加 `no-chevron` 类，如下所示：
@@ -159,11 +173,11 @@ Docsify "核心" 主题包含呈现 Docsify 网站所需的所有样式和[主�
 在侧边栏的链接组之间添加视觉区分。
 
 <label>
-  <input class="toggle" type="checkbox" value="sidebar-group-box" data-class data-group="sidebar-group"> Preview <code>sidebar-group-box</code>
+  <input class="toggle" type="checkbox" value="sidebar-group-box" data-class data-group="sidebar-group"> 预览 <code>sidebar-group-box</code>
 </label>
 <br>
 <label>
-  <input class="toggle" type="checkbox" value="sidebar-group-underline" data-class data-group="sidebar-group"> Preview <code>sidebar-group-underline</code>
+  <input class="toggle" type="checkbox" value="sidebar-group-underline" data-class data-group="sidebar-group"> 预览 <code>sidebar-group-underline</code>
 </label>
 
 <!-- prettier-ignore -->
@@ -184,7 +198,7 @@ Docsify "核心" 主题包含呈现 Docsify 网站所需的所有样式和[主�
 
 <label>
   <input class="toggle" type="checkbox" value="sidebar-link-clamp" data-class>
-  Preview <code>sidebar-link-clamp</code>
+  预览 <code>sidebar-link-clamp</code>
 </label>
 
 <!-- prettier-ignore -->
@@ -195,16 +209,16 @@ Docsify "核心" 主题包含呈现 Docsify 网站所需的所有样式和[主�
 
 ### 侧边栏切换 :id=sidebar-toggle
 
-在侧边栏切换按钮中显示 "hamburger" 图标（三行），而不是默认的 "kebab" 图标。
+在侧边栏切换按钮中显示“汉堡菜单”图标（三条横线），而不是默认的“三点菜单”图标。
 
 <label>
   <input class="toggle" type="checkbox" value="sidebar-toggle-chevron" data-class data-group="sidebar-toggle">
-  Preview <code>sidebar-toggle-chevron</code>
+  预览 <code>sidebar-toggle-chevron</code>
 </label>
 <br>
 <label>
   <input class="toggle" type="checkbox" value="sidebar-toggle-hamburger" data-class data-group="sidebar-toggle">
-  Preview <code>sidebar-toggle-hamburger</code>
+  预览 <code>sidebar-toggle-hamburger</code>
 </label>
 
 <!-- prettier-ignore -->
@@ -307,9 +321,9 @@ Docsify 提供了[主题属性](#theme-properties)以简化对经常修改的样
    }
    ```
 
-   > [!TIP] **主题作者**：考虑提供手动加载推荐网络字体的说明，而不是在主题中使用 `@import`。 这样喜欢不同字体的用户就可以避免不必要地加载你所推荐的网页字体。
+   > [!TIP] **主题作者**：考虑提供手动加载推荐网络字体的说明，而不是在主题中使用 `@import`。这样喜欢不同字体的用户就可以避免不必要地加载你所推荐的网页字体。
 
-4. 高级样式可能需要自定义 CSS 声明。 这在意料之中，但当 Docsify 发布新版本时，自定义 CSS 声明可能会中断。 在可能的情况下，请使用[主题属性](#theme-properties) 而不是自定义声明，或者将[CDN](zh-cn/cdn) URL 锁定为[特定版本](zh-cn/cdn#specific-version)，以避免在使用自定义 CSS 声明时出现潜在问题。
+4. 高级样式可能需要自定义 CSS 声明。这在意料之中，但当 Docsify 发布新版本时，自定义 CSS 声明可能会中断。尽可能使用[主题属性](#theme-properties)代替自定义声明，或者将 [CDN](zh-cn/cdn.md) URL 固定到[特定版本](zh-cn/cdn.md#specific-version)，以避免相关问题。
 
    ```css
    .sidebar li.active > a {
@@ -319,25 +333,25 @@ Docsify 提供了[主题属性](#theme-properties)以简化对经常修改的样
 
 ## 主题属性 :id=theme-properties
 
-以下属性在所有官方 Docsify 主题中都可用。 显示的是"核心"主题的默认值。
+以下属性在所有官方 Docsify 主题中都可用。显示的是"核心"主题的默认值。
 
 > [!TIP] **主题和插件作者**：我们鼓励你利用这些自定义主题属性，并在你的项目中提供类似的自定义选项。
 
-### Common :id=common
+### 通用 :id=common
 
 以下是最常修改的主题属性。 [Advanced](#advanced) 主题属性也可以使用，但通常不需要修改。
 
 [\_vars.css](https://raw.githubusercontent.com/docsifyjs/docsify/refs/heads/develop/src/themes/shared/_vars.css ":include")
 
-### Advanced :id=advanced
+### 高级 :id=advanced
 
-Advanced 主题属性也可供使用，但通常无需修改。 从 [common](#common) 主题属性导出的值，但也可根据需要明确设置。
+Advanced 主题属性也可供使用，但通常无需修改。从 [common](#common) 主题属性导出的值，但也可根据需要明确设置。
 
 [\_vars-advanced.css](https://raw.githubusercontent.com/docsifyjs/docsify/refs/heads/develop/src/themes/shared/_vars-advanced.css ":include")
 
 ## 社区 :id=community
 
-有关其他社区主题，请参见 [Awesome Docsify](zh-cn/awesome)。
+查看 [Awesome Docsify](zh-cn/awesome?id=themes)，获取更多社区主题。
 
 <script>
   (function () {
