@@ -1,4 +1,4 @@
-# 自定义导航栏
+# 自定义导航栏 :id=custom-navbar
 
 ## HTML
 
@@ -20,7 +20,7 @@
 
 ## Markdown
 
-或者，你也可以将 `loadNavbar` 设置为 **true**，并创建 `_navbar.md`，从而创建基于 markdown 的自定义导航文件。比较 [loadNavbar configuration](zh-cn/configuration#loadnavbar)。
+或者，将 `loadNavbar` 设为 **true** 并创建 `_navbar.md`，即可使用自定义的 Markdown 导航文件。详见 [`loadNavbar` 配置](zh-cn/configuration.md#loadnavbar)。
 
 ```html
 <!-- index.html -->
@@ -53,9 +53,9 @@
 
 > [!IMPORTANT] 你需要在 `./docs` 目录下创建一个 `.nojekyll` 文件，以防止 GitHub Pages 忽略下划线开头的文件。
 
-`_navbar.md` 会从每一级目录加载。 如果当前目录中没有 `_navbar.md`，则会返回上一级目录。 例如，如果当前路径是 `/guide/quick-start`，则将从 `/guide/_navbar.md` 加载 `_navbar.md`。
+`_navbar.md` 会从每一级目录加载。如果当前目录中没有 `_navbar.md`，则会返回上一级目录。例如，如果当前路径是 `/guide/quick-start`，则将从 `/guide/_navbar.md` 加载 `_navbar.md`。
 
-## 嵌套
+## 嵌套 :id=nesting
 
 你可以通过缩进在某个父级下的项目来创建子列表。
 
@@ -82,9 +82,9 @@
 
 ![嵌套导航栏](../_images/zh-cn/nested-navbar.png "嵌套导航栏")
 
-## 整合自定义导航栏与 emoji 插件
+## 整合自定义导航栏与 emoji 插件 :id=combining-custom-navbars-with-the-emoji-plugin
 
-如果你使用 [emoji 插件](zh-cn/plugins#emoji)：
+如果使用 [emoji 插件](zh-cn/plugins.md#emoji)：
 
 ```html
 <!-- index.html -->

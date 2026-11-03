@@ -1,4 +1,4 @@
-# 快速开始
+# 快速开始 :id=quick-start
 
 推荐全局安装 `docsify-cli` 工具，可以方便地创建及在本地预览生成的文档。
 
@@ -6,7 +6,7 @@
 npm i docsify-cli -g
 ```
 
-## 初始化项目
+## 初始化项目 :id=initialize
 
 如果想在项目的 `./docs` 目录里写文档，直接通过 `init` 初始化项目。
 
@@ -14,7 +14,7 @@ npm i docsify-cli -g
 docsify init ./docs
 ```
 
-## 写入内容
+## 写入内容 :id=writing-content
 
 在 `init` 完成后，你可以看到 `./docs` 子目录中的文件列表。
 
@@ -24,9 +24,9 @@ docsify init ./docs
 
 直接编辑 `docs/README.md` 就能更新文档内容，当然也可以[添加更多页面](zh-cn/adding-pages.md)。
 
-## 本地预览
+## 本地预览 :id=preview-your-site
 
-使用 `docsify serve` 运行本地服务器。 你可以在 `http://localhost:3000` 上预览你的网站。
+使用 `docsify serve` 运行本地服务器。你可以在 `http://localhost:3000` 上预览你的网站。
 
 ```bash
 docsify serve docs
@@ -34,7 +34,7 @@ docsify serve docs
 
 > [!TIP] 更多命令行工具用法，参考 [docsify-cli 文档](https://github.com/docsifyjs/docsify-cli)。
 
-## 手动初始化
+## 手动初始化 :id=manual-initialization
 
 下载或使用以下代码创建一个 `index.html` 模板：
 
@@ -75,11 +75,11 @@ docsify serve docs
 
 </div>
 
-### 指定 docsify 版本
+### 指定 docsify 版本 :id=specifying-docsify-versions
 
-> [!TIP] 注意：在下面两个例子中，当 docsify 发布新的主要版本时，需要手动更新 docsify URL（例如，`v5.x.x` => `v6.x.x`）。 定期检查 docsify 网站，以查看新的主要版本是否已发布。
+> [!TIP] 注意：在下面两个例子中，当 docsify 发布新的主要版本时，需要手动更新 docsify URL（例如，`v5.x.x` => `v6.x.x`）。定期检查 docsify 网站，以查看新的主要版本是否已发布。
 
-在 URL 中指定一个主要版本 (`@5`)，可使你的网站自动接收非破坏性增强（即 "minor" 更新）和错误修复（即 "patch" 更新）。 这是加载 docsify 资源的推荐方式。
+在 URL 中指定一个主要版本 (`@5`)，可使你的网站自动接收非破坏性增强（即 "minor" 更新）和错误修复（即 "patch" 更新）。这是加载 docsify 资源的推荐方式。
 
 <!-- prettier-ignore -->
 
@@ -91,7 +91,7 @@ docsify serve docs
 <script src="//cdn.jsdelivr.net/npm/docsify@5"></script>
 ```
 
-如果您想确保绝对不会出现会破坏网站的更改（非主要更新可能会无意中引入破坏性更改，尽管它们的目的不是这样），请在 URL 中的 `@` 符号后指定完整版本。 这是最安全的方法，可确保无论 docsify 的未来版本如何更改，你的网站都将以相同的方式显示和运行。
+如果您想确保绝对不会出现会破坏网站的更改（非主要更新可能会无意中引入破坏性更改，尽管它们的目的不是这样），请在 URL 中的 `@` 符号后指定完整版本。这是最安全的方法，可确保无论 docsify 的未来版本如何更改，你的网站都将以相同的方式显示和运行。
 
 <!-- prettier-ignore -->
 
@@ -103,9 +103,9 @@ docsify serve docs
 <script src="//cdn.jsdelivr.net/npm/docsify@5.0.0"></script>
 ```
 
-JSDelivr 支持 [npm-compatible semver ranges](https://docs.npmjs.com/cli/v11/configuring-npm/package-json#dependencies)，因此也可以使用版本语法，例如 `@^5.0.0` 表示最新的 v5 版本，`@5.0.x` 表示最新的 v5.0 补丁版本（例如 你将收到 5.0.4，但不是 5.1.0），`@5.x` 表示最新的 v5 次版本和补丁版本（实际上与 `@5` 和 `@^5.0.0` 相同），等等。
+JSDelivr 支持 [npm-compatible semver ranges](https://docs.npmjs.com/cli/v11/configuring-npm/package-json#dependencies)，因此也可以使用版本语法，例如 `@^5.0.0` 表示最新的 v5 版本，`@5.0.x` 表示最新的 v5.0 补丁版本（例如你将收到 5.0.4，但不是 5.1.0），`@5.x` 表示最新的 v5 次版本和补丁版本（实际上与 `@5` 和 `@^5.0.0` 相同），等等。
 
-### 手动预览你的网站
+### 手动预览你的网站 :id=manually-preview-your-site
 
 如果你的系统上安装了 Python，你可以很容易地使用它来运行静态服务器来预览你的网站，而不是使用 `docsify-cli` 中的 `docsify serve`。
 
